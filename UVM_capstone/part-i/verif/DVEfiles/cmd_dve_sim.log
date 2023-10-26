@@ -1,0 +1,123 @@
+ucliGUI::start /home/user100/VM/UVM_capstone/part-i/verif/simv -ucligui 
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synopsys::xml set_array_limit <data limit="50" />
+synopsys::xml set_depth_limit <data limit="100" />
+synopsys::xml set_string_limit <data limit="1000" />
+synopsys::xml set_only_active_frame <data value="1" />
+synopsys::xml set_variable_frame_id <data value="1" />
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /home/user100/VM/UVM_capstone/part-i/verif/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD1
+set ::dve_fid VPD1
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpMQGYyc
+synUtils::sendTool -active {_icl_start_rpc -version "L-2016.06_Full64" -sync_file /tmp/vcs_dve_rpc.user.36281}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user.36281}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+# Begin_DVE_Session_Save_Info
+# DVE restart session
+# Saved on Thu Oct 26 16:24:42 2023
+# Designs open: 1
+#   Sim: /home/user100/VM/UVM_capstone/part-i/verif/simv
+# Toplevel windows open: 2
+# 	TopLevel.1
+# 	TopLevel.2
+#   Source.1: uvm_pkg.\uvm_root::run_test
+#   Wave.1: 76 signals
+#   Group count = 2
+#   Group u_ibex_tracer signal count = 229
+#   Group u_top signal count = 76
+# End_DVE_Session_Save_Info
+# DVE version: L-2016.06_Full64
+# DVE build date: May 24 2016 21:01:02
+#<Session mode="Restart" path=".restartSimSession.tcl" type="Debug">
+# Application preferences
+#<WindowLayout>
+# DVE top-level session
+# Create and position top-level window: TopLevel.1
+set TopLevel.1 TopLevel.1
+# Docked window settings
+set HSPane.1 HSPane.1
+set Hier.1 Hier.1
+set Stack.1 Stack.1
+set Class.1 Class.1
+set Object.1 Object.1
+set DLPane.1 DLPane.1
+set Data.1 Data.1
+set Local.1 Local.1
+set Member.1 Member.1
+set Console.1 Console.1
+# MDI window settings
+set Source.1 Source.1
+# End MDI window settings
+# Create and position top-level window: TopLevel.2
+set TopLevel.2 TopLevel.2
+# Docked window settings
+# MDI window settings
+set Wave.1 Wave.1
+# End MDI window settings
+#</WindowLayout>
+#<Database>
+#</Database>
+# DVE Global setting session:
+# Global: Breakpoints
+# Global: Bus
+# Global: Expressions
+# Global: Signal Time Shift
+# Global: Signal Compare
+# Global: Signal Groups
+synopsys::dump -add {tb_top.u_top} -scope "." -depth 1 -fid VPD1
+synopsys::dump -add {tb_top.u_top.u_ibex_tracer} -scope "." -depth 1 -fid VPD1
+set _session_group_1 u_ibex_tracer
+set u_ibex_tracer "$_session_group_1"
+set _session_group_2 u_top
+set u_top "$_session_group_2"
+# Global: Highlighting
+# Global: Stack
+# Post database loading setting...
+# Save global setting...
+# Wave/List view global setting
+# Close all empty TopLevel windows
+foreach __top [gui_ekki_get_window_ids -type TopLevel] {     if { [llength [gui_ekki_get_window_ids -parent $__top]] == 0} {         gui_close_window -window $__top     } }
+# DVE View/pane content session:
+# Hier 'Hier.1'
+catch {gui_list_expand -id ${Hier.1} tb_top}
+catch {gui_list_select -id ${Hier.1} {tb_top.u_top}}
+# Class 'Class.1'
+# Member 'Member.1'
+# Data 'Data.1'
+# Source 'Source.1'
+# Warning: Class view not found.
+# View 'Wave.1'
+set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+set origGroupCreationState [gui_list_create_group_when_add -wave]
+synopsys::dump -add {_vcs_unit__514606211 } -aggregates  -fid VPD1
+if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+if { $groupExD } {  gui_msg_report -code DVWW028 }
+# Restore toplevel window zorder
+# The toplevel window could be closed if it has no view/pane
+if {[gui_exist_window -window ${TopLevel.1}]} { 	gui_set_active_window -window ${TopLevel.1} 	gui_set_active_window -window ${Source.1} 	gui_set_active_window -window ${HSPane.1} }
+if {[gui_exist_window -window ${TopLevel.2}]} { 	gui_set_active_window -window ${TopLevel.2} 	gui_set_active_window -window ${Wave.1} }
+#</Session>
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(40:203:3081)" viewId="Local.1" />}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(40:203:3081)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="149521408" frame_id="frame(40:203:3081)" viewId="Hidden 2" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}

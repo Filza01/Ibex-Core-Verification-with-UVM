@@ -1,0 +1,611 @@
+16:24:42    74 --> ...                                                                                                  [tcl] ucliGUI::start /home/user100/VM/UVM_capstone/part-i/verif/simv -ucligui 
+16:24:42    75 --> ...  [tcl] set ucliGUI::state
+16:24:42    76 --> ...      [tcl] gui_update_simulator_buttons
+16:24:43    77 --> ...          [tcl] set ucliGUI::state
+16:24:43    78 --> ...              [tcl] ucliCore::getToolPID
+16:24:43    79 --> ...                  [tcl] synopsys::env hasTB
+16:24:43    80 --> ...                      [tcl] trigger_hier_stack_context_switch 0
+16:24:43    81 --> ...                          [tcl] synopsys::xml set_array_limit <data limit="50" />
+16:24:44    82 --> ...                              [tcl] synopsys::xml set_depth_limit <data limit="100" />
+16:24:44    83 --> ...                                  [tcl] synopsys::xml set_string_limit <data limit="1000" />
+16:24:44    84 --> ...                                      [tcl] synopsys::xml set_only_active_frame <data value="1" />
+16:24:44    85 --> ...                                          [tcl] synopsys::xml set_variable_frame_id <data value="1" />
+16:24:44    86 --> ...                                              [tcl] synUtils::setDVEInitPhase 1
+16:24:44    87 --> ...                                                  [tcl] gui_get_env SIMSETUP::SIMVPD
+16:24:44    88 --> ...                                                      [tcl] synopsys::dump -type VPD -file /home/user100/VM/UVM_capstone/part-i/verif/inter.vpd -locking
+16:24:44    89 --> ...                                                          [tcl] synopsys::dump -autoflush on -fid VPD1
+16:24:44    90 --> ...                                                              [tcl] set ::dve_fid VPD1
+16:24:44    91 --> ...                                                                  [tcl] synUtils::setDVEInitPhase 0
+16:24:44    92 --> ...                                                                      [tcl] ucliCore::getToolPID
+16:24:44    93 --> ...                                                                          [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpMQGYyc
+16:24:44    94 --> ...                                                                              [tcl] synUtils::sendTool -active {_icl_start_rpc -version "L-2016.06_Full64" -sync_file /tmp/vcs_dve_rpc.user.36281}
+16:24:44    95 --> ...                                                                                  [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user.36281}
+16:24:44    96 --> ...                                                                                      [tcl] config endofsim noexit
+16:24:44    97 --> ...                                                                                          [tcl] config onfail enable all
+16:24:44    98 --> ...                                                                                              [tcl] config syscaddplainmembers
+16:24:44    99 --> ...                                                                                                  [tcl] config syscaddsourcenames
+16:24:44    100 --> ...  [tcl] config syscaddstructtypes
+16:24:44    101 --> ...      [tcl] synopsys::listing -disable
+16:24:44    102 --> ...          [tcl] # Begin_DVE_Session_Save_Info
+16:24:44    103 --> ...              [tcl] # DVE restart session
+16:24:44    104 --> ...                  [tcl] # Saved on Thu Oct 26 16:24:42 2023
+16:24:44    105 --> ...                      [tcl] # Designs open: 1
+16:24:44    106 --> ...                          [tcl] #   Sim: /home/user100/VM/UVM_capstone/part-i/verif/simv
+16:24:44    107 --> ...                              [tcl] # Toplevel windows open: 2
+16:24:44    108 --> ...                                  [tcl] # 	TopLevel.1
+16:24:44    109 --> ...                                      [tcl] # 	TopLevel.2
+16:24:44    110 --> ...                                          [tcl] #   Source.1: uvm_pkg.\uvm_root::run_test
+16:24:44    111 --> ...                                              [tcl] #   Wave.1: 76 signals
+16:24:44    112 --> ...                                                  [tcl] #   Group count = 2
+16:24:44    113 --> ...                                                      [tcl] #   Group u_ibex_tracer signal count = 229
+16:24:44    114 --> ...                                                          [tcl] #   Group u_top signal count = 76
+16:24:44    115 --> ...                                                              [tcl] # End_DVE_Session_Save_Info
+16:24:44    116 --> ...                                                                  [tcl] # DVE version: L-2016.06_Full64
+16:24:44    117 --> ...                                                                      [tcl] # DVE build date: May 24 2016 21:01:02
+16:24:44    118 --> ...                                                                          [tcl] #<Session mode="Restart" path=".restartSimSession.tcl" type="Debug">
+16:24:44    119 --> ...                                                                              [tcl] gui_set_loading_session_type Restart
+16:24:44    120 --> ...                                                                                  [tcl] gui_continuetime_set
+16:24:44    121 --> ...                                                                                      [tcl] gui_clear_window -type Wave
+16:24:44    122 --> ...                                                                                          [tcl] gui_clear_window -type List
+16:24:44    123 --> ...                                                                                              [tcl] # Application preferences
+16:24:44    124 --> ...                                                                                                  [tcl] gui_set_pref_value -key app_default_font -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+16:24:44    125 --> ...  [tcl] gui_src_preferences -tabstop 8 -maxbits 24 -windownumber 1
+16:24:44    126 --> ...      [tcl] #<WindowLayout>
+16:24:44    127 --> ...          [tcl] # DVE top-level session
+16:24:44    128 --> ...              [tcl] # Create and position top-level window: TopLevel.1
+16:24:44    129 --> ...                  [tcl] set TopLevel.1 TopLevel.1
+16:24:44    130 --> ...                      [tcl] # Docked window settings
+16:24:44    131 --> ...                          [tcl] set HSPane.1 HSPane.1
+16:24:44    132 --> ...                              [tcl] set Hier.1 Hier.1
+16:24:44    133 --> ...                                  [tcl] set Stack.1 Stack.1
+16:24:44    134 --> ...                                      [tcl] set Class.1 Class.1
+16:24:44    135 --> ...                                          [tcl] set Object.1 Object.1
+16:24:44    136 --> ...                                              [tcl] set DLPane.1 DLPane.1
+16:24:44    137 --> ...                                                  [tcl] set Data.1 Data.1
+16:24:44    138 --> ...                                                      [tcl] set Local.1 Local.1
+16:24:44    139 --> ...                                                          [tcl] set Member.1 Member.1
+16:24:44    140 --> ...                                                              [tcl] set Console.1 Console.1
+16:24:44    141 --> ...                                                                  [tcl] gui_sync_global -id ${TopLevel.1} -option true
+16:24:44    142 --> ...                                                                      [tcl] # MDI window settings
+16:24:44    143 --> ...                                                                          [tcl] set Source.1 Source.1
+16:24:44    144 --> ...                                                                              [tcl] gui_update_layout -id ${Source.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false}}
+16:24:44    145 --> ...                                                                                  [tcl] # End MDI window settings
+16:24:44    146 --> ...                                                                                      [tcl] # Create and position top-level window: TopLevel.2
+16:24:44    147 --> ...                                                                                          [tcl] set TopLevel.2 TopLevel.2
+16:24:44    148 --> ...                                                                                              [tcl] # Docked window settings
+16:24:44    149 --> ...                                                                                                  [tcl] gui_sync_global -id ${TopLevel.2} -option true
+16:24:44    150 --> ...  [tcl] # MDI window settings
+16:24:44    151 --> ...      [tcl] set Wave.1 Wave.1
+16:24:44    152 --> ...          [tcl] gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 377} {child_wave_right 918} {child_wave_colname 186} {child_wave_colvalue 186} {child_wave_col1 0} {child_wave_col2 1}}
+16:24:44    153 --> ...              [tcl] # End MDI window settings
+16:24:44    154 --> ...                  [tcl] #</WindowLayout>
+16:24:44    155 --> ...                      [tcl] #<Database>
+16:24:44    156 --> ...                          [tcl] gui_set_precision 1ns
+16:24:44    157 --> ...                              [tcl] gui_set_time_units 1ns
+16:24:44    158 --> ...                                  [tcl] #</Database>
+16:24:44    159 --> ...                                      [tcl] # DVE Global setting session:
+16:24:44    160 --> ...                                          [tcl] # Global: Breakpoints
+16:24:44    161 --> ...                                              [tcl] # Global: Bus
+16:24:44    162 --> ...                                                  [tcl] # Global: Expressions
+16:24:44    163 --> ...                                                      [tcl] # Global: Signal Time Shift
+16:24:44    164 --> ...                                                          [tcl] # Global: Signal Compare
+16:24:44    165 --> ...                                                              [tcl] # Global: Signal Groups
+16:24:44    166 --> ...                                                                  [tcl] gui_load_child_values {tb_top.u_top}
+16:24:44    167 --> ...                                                                      [tcl] synopsys::dump -add {tb_top.u_top} -scope "." -depth 1 -fid VPD1
+16:24:44    168 --> ...                                                                          [tcl] gui_load_child_values {tb_top.u_top.u_ibex_tracer}
+16:24:44    169 --> ...                                                                              [tcl] synopsys::dump -add {tb_top.u_top.u_ibex_tracer} -scope "." -depth 1 -fid VPD1
+16:24:44    170 --> ...                                                                                  [tcl] set _session_group_1 u_ibex_tracer
+16:24:44    171 --> ...                                                                                      [tcl] gui_sg_create "$_session_group_1"
+16:24:44    172 --> ...                                                                                          [tcl] set u_ibex_tracer "$_session_group_1"
+16:24:44    173 --> ...                                                                                              [tcl] gui_sg_addsignal -group "$_session_group_1" { ibex_tracer_pkg.INSN_SRO ibex_tracer_pkg.INSN_REV8 ibex_tracer_pkg.INSN_SBEXTI ibex_tracer_pkg.INSN_CLW ibex_tracer_pkg.INSN_CLZ ibex_tracer_pkg.INSN_SBCLRI ibex_tracer_pkg.INSN_ORC16 ibex_tracer_pkg.INSN_CADDI4SPN ibex_tracer_pkg.INSN_ORC4_B ibex_tracer_pkg.INSN_UNZIP ibex_tracer_pkg.INSN_BFP ibex_tracer_pkg.INSN_ORC4_H ibex_tracer_pkg.INSN_ZIP2 ibex_tracer_pkg.INSN_CMIX ibex_tracer_pkg.INSN_ZIP4 tb_top.u_top.u_ibex_tracer.unused_rvfi_trap ibex_tracer_pkg.INSN_SRAI ibex_tracer_pkg.INSN_CADDI tb_top.u_top.u_ibex_tracer.rvfi_rs1_addr ibex_tracer_pkg.INSN_ZIP8 ibex_tracer_pkg.INSN_ORC ibex_tracer_pkg.INSN_CLMUL ibex_tracer_pkg.INSN_CMV ibex_tracer_pkg.INSN_EBREAK ibex_tracer_pkg.INSN_BGE ibex_tracer_pkg.INSN_ORI ibex_tracer_pkg.INSN_ORC2_B ibex_tracer_pkg.INSN_GORCI ibex_tracer_pkg.INSN_ORN ibex_tracer_pkg.INSN_ORC2_H ibex_tracer_pkg.INSN_XOR ibex_tracer_pkg.INSN_SLLI tb_top.u_top.u_ibex_tracer.rvfi_order tb_top.u_top.u_ibex_tracer.rvfi_mode ibex_tracer_pkg.INSN_ORC2_N ibex_tracer_pkg.INSN_SHFLI tb_top.u_top.u_ibex_tracer.file_name ibex_tracer_pkg.INSN_AND ibex_tracer_pkg.INSN_SROI ibex_tracer_pkg.INSN_SBEXT ibex_tracer_pkg.INSN_FENCEI ibex_tracer_pkg.INSN_UNSHFL ibex_tracer_pkg.INSN_SUB ibex_tracer_pkg.INSN_CBEQZ tb_top.u_top.u_ibex_tracer.rvfi_mem_wdata ibex_tracer_pkg.INSN_ADDI ibex_tracer_pkg.INSN_REV8_H ibex_tracer_pkg.INSN_SBSETI ibex_tracer_pkg.INSN_COR ibex_tracer_pkg.INSN_DIV tb_top.u_top.u_ibex_tracer.rvfi_rd_wdata ibex_tracer_pkg.INSN_XNOR ibex_tracer_pkg.INSN_PMULHSU ibex_tracer_pkg.INSN_GREVI ibex_tracer_pkg.INSN_SBSET ibex_tracer_pkg.INSN_CSRRC ibex_tracer_pkg.INSN_SBINV ibex_tracer_pkg.INSN_ROL ibex_tracer_pkg.INSN_SBCLR tb_top.u_top.u_ibex_tracer.unused_rvfi_intr ibex_tracer_pkg.INSN_FENCE tb_top.u_top.u_ibex_tracer.rst_ni ibex_tracer_pkg.INSN_ROR tb_top.u_top.u_ibex_tracer.rvfi_halt ibex_tracer_pkg.INSN_CSRRS ibex_tracer_pkg.INSN_FSRI ibex_tracer_pkg.INSN_CSRRW tb_top.u_top.u_ibex_tracer.RS1 ibex_tracer_pkg.INSN_CSRRCI tb_top.u_top.u_ibex_tracer.RS2 tb_top.u_top.u_ibex_tracer.RS3 ibex_tracer_pkg.INSN_UNSHFLI ibex_tracer_pkg.INSN_BGEU ibex_tracer_pkg.INSN_PACKH ibex_tracer_pkg.INSN_PCNT ibex_tracer_pkg.INSN_REV4_B ibex_tracer_pkg.INSN_REV4_H tb_top.u_top.u_ibex_tracer.rvfi_rs3_rdata ibex_tracer_pkg.INSN_REV_B ibex_tracer_pkg.INSN_REMU ibex_tracer_pkg.INSN_PACKU ibex_tracer_pkg.INSN_SLOI ibex_tracer_pkg.INSN_REV_H tb_top.u_top.u_ibex_tracer.unused_rvfi_ixl ibex_tracer_pkg.INSN_REV_N ibex_tracer_pkg.INSN_REV2_B ibex_tracer_pkg.INSN_ADD ibex_tracer_pkg.INSN_PMULHU ibex_tracer_pkg.INSN_REV_P ibex_tracer_pkg.INSN_MINU ibex_tracer_pkg.INSN_JAL ibex_tracer_pkg.INSN_REV2_H tb_top.u_top.u_ibex_tracer.rvfi_mem_wmask tb_top.u_top.u_ibex_tracer.rvfi_trap tb_top.u_top.u_ibex_tracer.clk_i ibex_tracer_pkg.INSN_REV2_N tb_top.u_top.u_ibex_tracer.rvfi_rs1_rdata ibex_tracer_pkg.INSN_GREV tb_top.u_top.u_ibex_tracer.decoded_str ibex_tracer_pkg.INSN_RORI ibex_tracer_pkg.INSN_MAXU ibex_tracer_pkg.INSN_MIN ibex_tracer_pkg.INSN_CRC32C_B ibex_tracer_pkg.INSN_CRC32C_H ibex_tracer_pkg.INSN_UNZIP2 tb_top.u_top.u_ibex_tracer.rvfi_pc_rdata ibex_tracer_pkg.INSN_CBNEZ ibex_tracer_pkg.INSN_UNZIP4 ibex_tracer_pkg.INSN_REM ibex_tracer_pkg.INSN_PACK ibex_tracer_pkg.INSN_UNZIP8 ibex_tracer_pkg.INSN_CRC32_B ibex_tracer_pkg.INSN_CLUI ibex_tracer_pkg.INSN_SEXTB ibex_tracer_pkg.INSN_REV ibex_tracer_pkg.INSN_SLL ibex_tracer_pkg.INSN_CRC32_H ibex_tracer_pkg.INSN_ZIP4_H ibex_tracer_pkg.INSN_CRC32C_W tb_top.u_top.u_ibex_tracer.data_accessed ibex_tracer_pkg.INSN_SLO ibex_tracer_pkg.INSN_SEXTH ibex_tracer_pkg.INSN_CMOV tb_top.u_top.u_ibex_tracer.rvfi_mem_addr ibex_tracer_pkg.INSN_SLT tb_top.u_top.u_ibex_tracer.rvfi_rd_addr ibex_tracer_pkg.INSN_BLT tb_top.u_top.u_ibex_tracer.rvfi_insn ibex_tracer_pkg.INSN_CRC32_W ibex_tracer_pkg.INSN_PMUH ibex_tracer_pkg.INSN_ZIP2_B ibex_tracer_pkg.INSN_LOAD {tb_top.u_top.u_ibex_tracer.$unit} ibex_tracer_pkg.INSN_PMUL ibex_tracer_pkg.INSN_CSW ibex_tracer_pkg.INSN_CJALR ibex_tracer_pkg.INSN_ZIP2_H ibex_tracer_pkg.INSN_ZIP ibex_tracer_pkg.INSN_ZIP_B ibex_tracer_pkg.INSN_CSRRSI }
+16:24:44    174 --> ...                                                                                                  [tcl] dveMisc::vbusExpand tb_top.u_top.u_ibex_tracer
+16:24:44    175 --> ...  [tcl] gui_sg_addsignal -group "$_session_group_1" { tb_top.u_top.u_ibex_tracer.rvfi_ixl tb_top.u_top.u_ibex_tracer.file_handle ibex_tracer_pkg.INSN_ZIP_H ibex_tracer_pkg.INSN_ZIP_N tb_top.u_top.u_ibex_tracer.rvfi_intr ibex_tracer_pkg.INSN_CLWSP tb_top.u_top.u_ibex_tracer.hart_id_i tb_top.u_top.u_ibex_tracer.rvfi_rs3_addr ibex_tracer_pkg.INSN_ECALL ibex_tracer_pkg.INSN_BNE ibex_tracer_pkg.INSN_CTZ ibex_tracer_pkg.INSN_REV16 ibex_tracer_pkg.INSN_DRET ibex_tracer_pkg.INSN_CXOR ibex_tracer_pkg.INSN_OR tb_top.u_top.u_ibex_tracer.RD tb_top.u_top.u_ibex_tracer.cycle ibex_tracer_pkg.INSN_JALR ibex_tracer_pkg.INSN_CJ ibex_tracer_pkg.INSN_ORC_B ibex_tracer_pkg.INSN_UNZIP_B ibex_tracer_pkg.INSN_ORC_H ibex_tracer_pkg.INSN_UNZIP_H ibex_tracer_pkg.INSN_CAND ibex_tracer_pkg.INSN_SLTI tb_top.u_top.u_ibex_tracer.rvfi_mem_rdata ibex_tracer_pkg.INSN_ORC_N ibex_tracer_pkg.INSN_UNZIP_N ibex_tracer_pkg.INSN_ORC_P ibex_tracer_pkg.OPCODE_C0 ibex_tracer_pkg.INSN_SHFL ibex_tracer_pkg.INSN_CANDI ibex_tracer_pkg.OPCODE_C2 ibex_tracer_pkg.INSN_CSUB tb_top.u_top.u_ibex_tracer.unused_rvfi_mode ibex_tracer_pkg.INSN_DIVU ibex_tracer_pkg.INSN_SLTU ibex_tracer_pkg.INSN_SBINVI tb_top.u_top.u_ibex_tracer.trace_log_enable tb_top.u_top.u_ibex_tracer.unused_rvfi_order ibex_tracer_pkg.INSN_CSRLI ibex_tracer_pkg.INSN_CEBREAK ibex_tracer_pkg.INSN_UNZIP4_H ibex_tracer_pkg.INSN_ORC2 ibex_tracer_pkg.INSN_ORC4 ibex_tracer_pkg.INSN_CJR ibex_tracer_pkg.INSN_MAX ibex_tracer_pkg.INSN_ORC8 ibex_tracer_pkg.INSN_AUIPC tb_top.u_top.u_ibex_tracer.rvfi_rs2_addr ibex_tracer_pkg.INSN_BLTU ibex_tracer_pkg.INSN_SWSP ibex_tracer_pkg.INSN_UNZIP2_B ibex_tracer_pkg.INSN_STORE tb_top.u_top.u_ibex_tracer.rvfi_valid ibex_tracer_pkg.INSN_SLTIU tb_top.u_top.u_ibex_tracer.rvfi_rs2_rdata ibex_tracer_pkg.INSN_CLMULH ibex_tracer_pkg.INSN_UNZIP2_H ibex_tracer_pkg.INSN_BEXT ibex_tracer_pkg.INSN_BDEP ibex_tracer_pkg.INSN_CSRRWI ibex_tracer_pkg.INSN_WFI tb_top.u_top.u_ibex_tracer.insn_is_compressed ibex_tracer_pkg.INSN_MRET ibex_tracer_pkg.INSN_CLMULR tb_top.u_top.u_ibex_tracer.MEM ibex_tracer_pkg.INSN_CSRAI ibex_tracer_pkg.INSN_ANDI ibex_tracer_pkg.INSN_LUI tb_top.u_top.u_ibex_tracer.rvfi_pc_wdata ibex_tracer_pkg.INSN_XORI ibex_tracer_pkg.INSN_ANDN ibex_tracer_pkg.INSN_ORC8_H ibex_tracer_pkg.INSN_SRLI ibex_tracer_pkg.INSN_FSL tb_top.u_top.u_ibex_tracer.unused_rvfi_halt ibex_tracer_pkg.INSN_CADD tb_top.u_top.u_ibex_tracer.rvfi_mem_rmask ibex_tracer_pkg.INSN_SRA ibex_tracer_pkg.INSN_BEQ ibex_tracer_pkg.INSN_FSR ibex_tracer_pkg.INSN_CSLLI ibex_tracer_pkg.INSN_CLI ibex_tracer_pkg.INSN_CJAL ibex_tracer_pkg.INSN_REV2 ibex_tracer_pkg.INSN_REV4 ibex_tracer_pkg.INSN_SRL ibex_tracer_pkg.INSN_GORC }
+16:24:45    176 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SRO}
+16:24:45    177 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SRO}
+16:24:45    178 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV8}
+16:24:45    179 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV8}
+16:24:45    180 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBEXTI}
+16:24:45    181 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBEXTI}
+16:24:45    182 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLW}
+16:24:45    183 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLW}
+16:24:45    184 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLZ}
+16:24:45    185 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLZ}
+16:24:45    186 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBCLRI}
+16:24:45    187 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBCLRI}
+16:24:45    188 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC16}
+16:24:45    189 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC16}
+16:24:45    190 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CADDI4SPN}
+16:24:45    191 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CADDI4SPN}
+16:24:45    192 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC4_B}
+16:24:45    193 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC4_B}
+16:24:45    194 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP}
+16:24:45    195 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP}
+16:24:45    196 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BFP}
+16:24:45    197 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BFP}
+16:24:45    198 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC4_H}
+16:24:45    199 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC4_H}
+16:24:45    200 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP2}
+16:24:45    201 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP2}
+16:24:45    202 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CMIX}
+16:24:45    203 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CMIX}
+16:24:45    204 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP4}
+16:24:45    205 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP4}
+16:24:45    206 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SRAI}
+16:24:45    207 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SRAI}
+16:24:45    208 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CADDI}
+16:24:45    209 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CADDI}
+16:24:45    210 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP8}
+16:24:45    211 --> ...                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP8}
+16:24:45    212 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC}
+16:24:45    213 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC}
+16:24:45    214 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLMUL}
+16:24:45    215 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLMUL}
+16:24:45    216 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CMV}
+16:24:45    217 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CMV}
+16:24:45    218 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_EBREAK}
+16:24:45    219 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_EBREAK}
+16:24:45    220 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BGE}
+16:24:45    221 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BGE}
+16:24:45    222 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORI}
+16:24:45    223 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORI}
+16:24:45    224 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC2_B}
+16:24:45    225 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC2_B}
+16:24:45    226 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_GORCI}
+16:24:45    227 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_GORCI}
+16:24:45    228 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORN}
+16:24:45    229 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORN}
+16:24:45    230 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC2_H}
+16:24:45    231 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC2_H}
+16:24:45    232 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_XOR}
+16:24:45    233 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_XOR}
+16:24:45    234 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLLI}
+16:24:45    235 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLLI}
+16:24:45    236 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC2_N}
+16:24:45    237 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC2_N}
+16:24:45    238 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SHFLI}
+16:24:45    239 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SHFLI}
+16:24:45    240 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_AND}
+16:24:45    241 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_AND}
+16:24:45    242 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SROI}
+16:24:45    243 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SROI}
+16:24:45    244 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBEXT}
+16:24:45    245 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBEXT}
+16:24:45    246 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_FENCEI}
+16:24:45    247 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_FENCEI}
+16:24:45    248 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNSHFL}
+16:24:45    249 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNSHFL}
+16:24:45    250 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SUB}
+16:24:45    251 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SUB}
+16:24:45    252 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CBEQZ}
+16:24:45    253 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CBEQZ}
+16:24:45    254 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ADDI}
+16:24:45    255 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ADDI}
+16:24:45    256 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV8_H}
+16:24:45    257 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV8_H}
+16:24:45    258 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBSETI}
+16:24:45    259 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBSETI}
+16:24:45    260 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_COR}
+16:24:45    261 --> ...                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_COR}
+16:24:45    262 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_DIV}
+16:24:45    263 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_DIV}
+16:24:45    264 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_XNOR}
+16:24:45    265 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_XNOR}
+16:24:45    266 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PMULHSU}
+16:24:45    267 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PMULHSU}
+16:24:45    268 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_GREVI}
+16:24:45    269 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_GREVI}
+16:24:45    270 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBSET}
+16:24:45    271 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBSET}
+16:24:45    272 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRRC}
+16:24:45    273 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRRC}
+16:24:45    274 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBINV}
+16:24:45    275 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBINV}
+16:24:45    276 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ROL}
+16:24:45    277 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ROL}
+16:24:45    278 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBCLR}
+16:24:45    279 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBCLR}
+16:24:45    280 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_FENCE}
+16:24:45    281 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_FENCE}
+16:24:45    282 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ROR}
+16:24:45    283 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ROR}
+16:24:45    284 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRRS}
+16:24:45    285 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRRS}
+16:24:45    286 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_FSRI}
+16:24:45    287 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_FSRI}
+16:24:45    288 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRRW}
+16:24:45    289 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRRW}
+16:24:45    290 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.RS1}
+16:24:45    291 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.u_ibex_tracer.RS1}
+16:24:45    292 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRRCI}
+16:24:45    293 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRRCI}
+16:24:45    294 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.RS2}
+16:24:45    295 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.u_ibex_tracer.RS2}
+16:24:45    296 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.RS3}
+16:24:45    297 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.u_ibex_tracer.RS3}
+16:24:45    298 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNSHFLI}
+16:24:45    299 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNSHFLI}
+16:24:45    300 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BGEU}
+16:24:45    301 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BGEU}
+16:24:45    302 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PACKH}
+16:24:45    303 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PACKH}
+16:24:45    304 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PCNT}
+16:24:45    305 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PCNT}
+16:24:45    306 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV4_B}
+16:24:45    307 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV4_B}
+16:24:45    308 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV4_H}
+16:24:45    309 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV4_H}
+16:24:45    310 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV_B}
+16:24:45    311 --> ...                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV_B}
+16:24:45    312 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REMU}
+16:24:45    313 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REMU}
+16:24:45    314 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PACKU}
+16:24:45    315 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PACKU}
+16:24:45    316 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLOI}
+16:24:45    317 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLOI}
+16:24:45    318 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV_H}
+16:24:45    319 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV_H}
+16:24:45    320 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV_N}
+16:24:45    321 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV_N}
+16:24:45    322 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV2_B}
+16:24:45    323 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV2_B}
+16:24:45    324 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ADD}
+16:24:45    325 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ADD}
+16:24:45    326 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PMULHU}
+16:24:45    327 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PMULHU}
+16:24:45    328 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV_P}
+16:24:45    329 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV_P}
+16:24:45    330 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_MINU}
+16:24:45    331 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_MINU}
+16:24:45    332 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_JAL}
+16:24:45    333 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_JAL}
+16:24:45    334 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV2_H}
+16:24:45    335 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV2_H}
+16:24:45    336 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV2_N}
+16:24:45    337 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV2_N}
+16:24:45    338 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_GREV}
+16:24:45    339 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_GREV}
+16:24:45    340 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_RORI}
+16:24:45    341 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_RORI}
+16:24:45    342 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_MAXU}
+16:24:45    343 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_MAXU}
+16:24:45    344 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_MIN}
+16:24:45    345 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_MIN}
+16:24:45    346 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CRC32C_B}
+16:24:45    347 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CRC32C_B}
+16:24:45    348 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CRC32C_H}
+16:24:45    349 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CRC32C_H}
+16:24:45    350 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP2}
+16:24:45    351 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP2}
+16:24:45    352 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CBNEZ}
+16:24:45    353 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CBNEZ}
+16:24:45    354 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP4}
+16:24:45    355 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP4}
+16:24:45    356 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REM}
+16:24:45    357 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REM}
+16:24:45    358 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PACK}
+16:24:45    359 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PACK}
+16:24:45    360 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP8}
+16:24:45    361 --> ...                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP8}
+16:24:45    362 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CRC32_B}
+16:24:45    363 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CRC32_B}
+16:24:45    364 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLUI}
+16:24:45    365 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLUI}
+16:24:45    366 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SEXTB}
+16:24:45    367 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SEXTB}
+16:24:45    368 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV}
+16:24:45    369 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV}
+16:24:45    370 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLL}
+16:24:45    371 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLL}
+16:24:45    372 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CRC32_H}
+16:24:45    373 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CRC32_H}
+16:24:45    374 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP4_H}
+16:24:45    375 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP4_H}
+16:24:45    376 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CRC32C_W}
+16:24:45    377 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CRC32C_W}
+16:24:45    378 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLO}
+16:24:45    379 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLO}
+16:24:45    380 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SEXTH}
+16:24:45    381 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SEXTH}
+16:24:45    382 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CMOV}
+16:24:45    383 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CMOV}
+16:24:45    384 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLT}
+16:24:45    385 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLT}
+16:24:45    386 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BLT}
+16:24:45    387 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BLT}
+16:24:45    388 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CRC32_W}
+16:24:45    389 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CRC32_W}
+16:24:45    390 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PMUH}
+16:24:45    391 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PMUH}
+16:24:45    392 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP2_B}
+16:24:45    393 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP2_B}
+16:24:45    394 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_LOAD}
+16:24:45    395 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_LOAD}
+16:24:45    396 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_PMUL}
+16:24:45    397 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_PMUL}
+16:24:45    398 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSW}
+16:24:45    399 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSW}
+16:24:45    400 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CJALR}
+16:24:45    401 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CJALR}
+16:24:45    402 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP2_H}
+16:24:45    403 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP2_H}
+16:24:45    404 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP}
+16:24:45    405 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP}
+16:24:45    406 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP_B}
+16:24:45    407 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP_B}
+16:24:45    408 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRRSI}
+16:24:45    409 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRRSI}
+16:24:45    410 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.file_handle}
+16:24:45    411 --> ...                                              [tcl] gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.u_ibex_tracer.file_handle}
+16:24:45    412 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP_H}
+16:24:45    413 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP_H}
+16:24:45    414 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ZIP_N}
+16:24:45    415 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ZIP_N}
+16:24:45    416 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLWSP}
+16:24:45    417 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLWSP}
+16:24:45    418 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ECALL}
+16:24:45    419 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ECALL}
+16:24:45    420 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BNE}
+16:24:45    421 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BNE}
+16:24:45    422 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CTZ}
+16:24:45    423 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CTZ}
+16:24:45    424 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV16}
+16:24:45    425 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV16}
+16:24:45    426 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_DRET}
+16:24:45    427 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_DRET}
+16:24:45    428 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CXOR}
+16:24:45    429 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CXOR}
+16:24:45    430 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_OR}
+16:24:45    431 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_OR}
+16:24:45    432 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.RD}
+16:24:45    433 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.u_ibex_tracer.RD}
+16:24:45    434 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.cycle}
+16:24:45    435 --> ...                                          [tcl] gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.u_ibex_tracer.cycle}
+16:24:45    436 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_JALR}
+16:24:45    437 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_JALR}
+16:24:45    438 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CJ}
+16:24:45    439 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CJ}
+16:24:45    440 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC_B}
+16:24:45    441 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC_B}
+16:24:45    442 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP_B}
+16:24:45    443 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP_B}
+16:24:45    444 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC_H}
+16:24:45    445 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC_H}
+16:24:45    446 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP_H}
+16:24:45    447 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP_H}
+16:24:45    448 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CAND}
+16:24:45    449 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CAND}
+16:24:45    450 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLTI}
+16:24:45    451 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLTI}
+16:24:45    452 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC_N}
+16:24:45    453 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC_N}
+16:24:45    454 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP_N}
+16:24:45    455 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP_N}
+16:24:45    456 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC_P}
+16:24:45    457 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC_P}
+16:24:45    458 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.OPCODE_C0}
+16:24:45    459 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.OPCODE_C0}
+16:24:45    460 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SHFL}
+16:24:45    461 --> ...                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SHFL}
+16:24:45    462 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CANDI}
+16:24:45    463 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CANDI}
+16:24:45    464 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.OPCODE_C2}
+16:24:45    465 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.OPCODE_C2}
+16:24:45    466 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSUB}
+16:24:45    467 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSUB}
+16:24:45    468 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_DIVU}
+16:24:45    469 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_DIVU}
+16:24:45    470 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLTU}
+16:24:45    471 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLTU}
+16:24:45    472 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SBINVI}
+16:24:45    473 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SBINVI}
+16:24:45    474 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRLI}
+16:24:45    475 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRLI}
+16:24:45    476 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CEBREAK}
+16:24:45    477 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CEBREAK}
+16:24:45    478 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP4_H}
+16:24:45    479 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP4_H}
+16:24:45    480 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC2}
+16:24:45    481 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC2}
+16:24:45    482 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC4}
+16:24:45    483 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC4}
+16:24:45    484 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CJR}
+16:24:45    485 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CJR}
+16:24:45    486 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_MAX}
+16:24:45    487 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_MAX}
+16:24:45    488 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC8}
+16:24:45    489 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC8}
+16:24:45    490 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_AUIPC}
+16:24:45    491 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_AUIPC}
+16:24:45    492 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BLTU}
+16:24:45    493 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BLTU}
+16:24:45    494 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SWSP}
+16:24:45    495 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SWSP}
+16:24:45    496 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP2_B}
+16:24:45    497 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP2_B}
+16:24:45    498 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_STORE}
+16:24:45    499 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_STORE}
+16:24:45    500 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SLTIU}
+16:24:45    501 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SLTIU}
+16:24:45    502 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLMULH}
+16:24:45    503 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLMULH}
+16:24:45    504 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP2_H}
+16:24:45    505 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_UNZIP2_H}
+16:24:45    506 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BEXT}
+16:24:45    507 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BEXT}
+16:24:45    508 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BDEP}
+16:24:45    509 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BDEP}
+16:24:45    510 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRRWI}
+16:24:45    511 --> ...                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRRWI}
+16:24:45    512 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_WFI}
+16:24:45    513 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_WFI}
+16:24:45    514 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_MRET}
+16:24:45    515 --> ...                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_MRET}
+16:24:45    516 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLMULR}
+16:24:45    517 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLMULR}
+16:24:45    518 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.u_ibex_tracer.MEM}
+16:24:45    519 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.u_ibex_tracer.MEM}
+16:24:45    520 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSRAI}
+16:24:45    521 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSRAI}
+16:24:45    522 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ANDI}
+16:24:45    523 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ANDI}
+16:24:45    524 --> ...                                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_LUI}
+16:24:45    525 --> ...  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_LUI}
+16:24:45    526 --> ...      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_XORI}
+16:24:45    527 --> ...          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_XORI}
+16:24:45    528 --> ...              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ANDN}
+16:24:45    529 --> ...                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ANDN}
+16:24:45    530 --> ...                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_ORC8_H}
+16:24:45    531 --> ...                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_ORC8_H}
+16:24:45    532 --> ...                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SRLI}
+16:24:45    533 --> ...                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SRLI}
+16:24:45    534 --> ...                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_FSL}
+16:24:45    535 --> ...                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_FSL}
+16:24:45    536 --> ...                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CADD}
+16:24:45    537 --> ...                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CADD}
+16:24:45    538 --> ...                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SRA}
+16:24:45    539 --> ...                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SRA}
+16:24:45    540 --> ...                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_BEQ}
+16:24:45    541 --> ...                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_BEQ}
+16:24:45    542 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_FSR}
+16:24:45    543 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_FSR}
+16:24:45    544 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CSLLI}
+16:24:45    545 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CSLLI}
+16:24:45    546 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CLI}
+16:24:45    547 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CLI}
+16:24:45    548 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_CJAL}
+16:24:45    549 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_CJAL}
+16:24:45    550 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV2}
+16:24:45    551 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV2}
+16:24:45    552 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_REV4}
+16:24:45    553 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_REV4}
+16:24:45    554 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_SRL}
+16:24:45    555 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_SRL}
+16:24:45    556 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:ibex_tracer_pkg.INSN_GORC}
+16:24:45    557 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:ibex_tracer_pkg.INSN_GORC}
+16:24:45    558 --> ...                                  [tcl] set _session_group_2 u_top
+16:24:45    559 --> ...                                      [tcl] gui_sg_create "$_session_group_2"
+16:24:45    560 --> ...                                          [tcl] set u_top "$_session_group_2"
+16:24:45    561 --> ...                                              [tcl] gui_sg_addsignal -group "$_session_group_2" { tb_top.u_top.rvfi_halt tb_top.u_top.data_wdata_o tb_top.u_top.irq_software_i tb_top.u_top.ICacheECC tb_top.u_top.test_en_i tb_top.u_top.irq_timer_i tb_top.u_top.rvfi_valid tb_top.u_top.data_gnt_i tb_top.u_top.scan_rst_ni tb_top.u_top.RegFile tb_top.u_top.rvfi_rs2_rdata tb_top.u_top.rvfi_mode tb_top.u_top.irq_fast_i tb_top.u_top.rvfi_order tb_top.u_top.rvfi_trap tb_top.u_top.instr_addr_o tb_top.u_top.rvfi_insn tb_top.u_top.instr_gnt_i tb_top.u_top.hart_id_i tb_top.u_top.SecureIbex tb_top.u_top.debug_req_i tb_top.u_top.PMPEnable tb_top.u_top.fetch_enable_i tb_top.u_top.PMPNumRegions tb_top.u_top.irq_nm_i tb_top.u_top.irq_external_i tb_top.u_top.rvfi_rs2_addr tb_top.u_top.rvfi_intr tb_top.u_top.data_err_i tb_top.u_top.DbgHwBreakNum tb_top.u_top.rvfi_pc_rdata tb_top.u_top.data_we_o tb_top.u_top.BranchPredictor tb_top.u_top.rvfi_mem_rdata tb_top.u_top.rvfi_rs1_rdata tb_top.u_top.DmExceptionAddr tb_top.u_top.rvfi_ixl tb_top.u_top.instr_err_i tb_top.u_top.crash_dump_o tb_top.u_top.MHPMCounterWidth tb_top.u_top.rvfi_mem_rmask tb_top.u_top.BranchTargetALU tb_top.u_top.data_rvalid_i tb_top.u_top.rst_ni tb_top.u_top.data_rdata_i tb_top.u_top.data_addr_o tb_top.u_top.alert_minor_o tb_top.u_top.WritebackStage tb_top.u_top.alert_major_o tb_top.u_top.rvfi_rs3_rdata tb_top.u_top.rvfi_rs1_addr tb_top.u_top.rvfi_mem_addr tb_top.u_top.instr_rvalid_i tb_top.u_top.clk_i tb_top.u_top.core_sleep_o tb_top.u_top.rvfi_pc_wdata tb_top.u_top.rvfi_rd_addr tb_top.u_top.rvfi_mem_wdata tb_top.u_top.PMPGranularity tb_top.u_top.RV32B tb_top.u_top.data_req_o tb_top.u_top.RV32E tb_top.u_top.instr_rdata_i tb_top.u_top.data_be_o {tb_top.u_top.$unit} tb_top.u_top.RV32M tb_top.u_top.ICache tb_top.u_top.rvfi_rs3_addr tb_top.u_top.rvfi_rd_wdata tb_top.u_top.ram_cfg_i tb_top.u_top.DbgTriggerEn tb_top.u_top.boot_addr_i tb_top.u_top.MHPMCounterNum tb_top.u_top.rvfi_mem_wmask tb_top.u_top.instr_req_o tb_top.u_top.DmHaltAddr }
+16:24:45    562 --> ...                                                  [tcl] dveMisc::vbusExpand tb_top.u_top
+16:24:45    563 --> ...                                                      [tcl] gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.ICacheECC}
+16:24:45    564 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RegFile}
+16:24:45    565 --> ...                                                              [tcl] gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RegFile}
+16:24:45    566 --> ...                                                                  [tcl] gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.SecureIbex}
+16:24:45    567 --> ...                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPEnable}
+16:24:45    568 --> ...                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPEnable}
+16:24:45    569 --> ...                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPNumRegions}
+16:24:45    570 --> ...                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPNumRegions}
+16:24:45    571 --> ...                                                                                      [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
+16:24:45    572 --> ...                                                                                          [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
+16:24:45    573 --> ...                                                                                              [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.BranchPredictor}
+16:24:45    574 --> ...                                                                                                  [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.BranchPredictor}
+16:24:45    575 --> ...  [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmExceptionAddr}
+16:24:45    576 --> ...      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmExceptionAddr}
+16:24:45    577 --> ...          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
+16:24:45    578 --> ...              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
+16:24:45    579 --> ...                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.BranchTargetALU}
+16:24:45    580 --> ...                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.BranchTargetALU}
+16:24:45    581 --> ...                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.WritebackStage}
+16:24:45    582 --> ...                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.WritebackStage}
+16:24:45    583 --> ...                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPGranularity}
+16:24:45    584 --> ...                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPGranularity}
+16:24:45    585 --> ...                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32B}
+16:24:45    586 --> ...                                              [tcl] gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32B}
+16:24:45    587 --> ...                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32E}
+16:24:45    588 --> ...                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.RV32E}
+16:24:45    589 --> ...                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32M}
+16:24:45    590 --> ...                                                              [tcl] gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32M}
+16:24:45    591 --> ...                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.ICache}
+16:24:45    592 --> ...                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.ICache}
+16:24:45    593 --> ...                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DbgTriggerEn}
+16:24:45    594 --> ...                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DbgTriggerEn}
+16:24:45    595 --> ...                                                                                  [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterNum}
+16:24:45    596 --> ...                                                                                      [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterNum}
+16:24:45    597 --> ...                                                                                          [tcl] gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmHaltAddr}
+16:24:45    598 --> ...                                                                                              [tcl] gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmHaltAddr}
+16:24:45    599 --> ...                                                                                                  [tcl] # Global: Highlighting
+16:24:45    600 --> ...  [tcl] # Global: Stack
+16:24:45    601 --> ...      [tcl] gui_change_stack_mode -mode list
+16:24:45    602 --> ...          [tcl] # Post database loading setting...
+16:24:45    603 --> ...              [tcl] # Save global setting...
+16:24:45    604 --> ...                  [tcl] # Wave/List view global setting
+16:24:45    605 --> ...                      [tcl] gui_cov_show_value -switch false
+16:24:45    606 --> ...                          [tcl] # Close all empty TopLevel windows
+16:24:45    607 --> ...                              [tcl] foreach __top [gui_ekki_get_window_ids -type TopLevel] {     if { [llength [gui_ekki_get_window_ids -parent $__top]] == 0} {         gui_close_window -window $__top     } }
+16:24:45    608 --> ...                                  [tcl] gui_set_loading_session_type noSession
+16:24:45    609 --> ...                                      [tcl] # DVE View/pane content session:
+16:24:45    610 --> ...                                          [tcl] # Hier 'Hier.1'
+16:24:45    611 --> ...                                              [tcl] gui_show_window -window ${Hier.1}
+16:24:45    612 --> ...                                                  [tcl] gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtPowSwitch 0} {UnnamedProcess 1} {UDP 0} {Function 1} {Block 1} {SrsnAndSpaCell 0} {OVA Unit 1} {LeafScCell 1} {LeafVlgCell 1} {Interface 1} {LeafVhdCell 1} {$unit 1} {NamedBlock 1} {Task 1} {VlgPackage 1} {ClassDef 1} {VirtIsoCell 0} }
+16:24:45    613 --> ...                                                      [tcl] gui_list_set_filter -id ${Hier.1} -text {*}
+16:24:45    614 --> ...                                                          [tcl] gui_change_design -id ${Hier.1} -design Sim
+16:24:45    615 --> ...                                                              [tcl] catch {gui_list_expand -id ${Hier.1} tb_top}
+16:24:45    616 --> ...                                                                  [tcl] catch {gui_list_select -id ${Hier.1} {tb_top.u_top}}
+16:24:45    617 --> ...                                                                      [tcl] gui_view_scroll -id ${Hier.1} -vertical -set 192
+16:24:45    618 --> ...                                                                          [tcl] gui_view_scroll -id ${Hier.1} -horizontal -set 0
+16:24:45    619 --> ...                                                                              [tcl] # Class 'Class.1'
+16:24:45    620 --> ...                                                                                  [tcl] gui_list_set_filter -id ${Class.1} -list { {OVM 1} {VMM 1} {All 1} {Object 1} {UVM 1} {RVM 1} }
+16:24:45    621 --> ...                                                                                      [tcl] gui_list_set_filter -id ${Class.1} -text {*}
+16:24:45    622 --> ...                                                                                          [tcl] gui_change_design -id ${Class.1} -design Sim
+16:24:45    623 --> ...                                                                                              [tcl] # Member 'Member.1'
+16:24:45    624 --> ...                                                                                                  [tcl] gui_list_set_filter -id ${Member.1} -list { {InternalMember 0} {RandMember 1} {All 0} {BaseMember 0} {PrivateMember 1} {LibBaseMember 0} {AutomaticMember 1} {VirtualMember 1} {PublicMember 1} {ProtectedMember 1} {OverRiddenMember 0} {InterfaceClassMember 1} {StaticMember 1} }
+16:24:45    625 --> ...  [tcl] gui_list_set_filter -id ${Member.1} -text {*}
+16:24:45    626 --> ...      [tcl] # Data 'Data.1'
+16:24:45    627 --> ...          [tcl] gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
+16:24:45    628 --> ...              [tcl] gui_list_set_filter -id ${Data.1} -text {*}
+16:24:45    629 --> ...                  [tcl] gui_list_show_data -id ${Data.1} {tb_top.u_top}
+16:24:45    630 --> ...                      [tcl] gui_view_scroll -id ${Data.1} -vertical -set 0
+16:24:45    631 --> ...                          [tcl] gui_view_scroll -id ${Data.1} -horizontal -set 0
+16:24:45    632 --> ...                              [tcl] gui_view_scroll -id ${Hier.1} -vertical -set 192
+16:24:45    633 --> ...                                  [tcl] gui_view_scroll -id ${Hier.1} -horizontal -set 0
+16:24:45    634 --> ...                                      [tcl] # Source 'Source.1'
+16:24:45    635 --> ...                                          [tcl] gui_src_value_annotate -id ${Source.1} -switch false
+16:24:45    636 --> ...                                              [tcl] gui_set_env TOGGLE::VALUEANNOTATE 0
+16:24:45    637 --> ...                                                  [tcl] gui_open_source -id ${Source.1}  -replace -active {uvm_pkg.\uvm_root::run_test } /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh
+16:24:45    638 --> ...                                                      [tcl] dveMisc::vbusExpand uvm_pkg
+16:24:45    639 --> ...                                                          [tcl] dveMisc::vbusExpand {uvm_pkg.\uvm_root::run_test }
+16:24:45    640 --> ...                                                              [tcl] gui_view_scroll -id ${Source.1} -vertical -set 3888
+16:24:45    641 --> ...                                                                  [tcl] gui_src_set_reusable -id ${Source.1}
+16:24:45    642 --> ...                                                                      [tcl] # Warning: Class view not found.
+16:24:45    643 --> ...                                                                          [tcl] # View 'Wave.1'
+16:24:45    644 --> ...                                                                              [tcl] gui_wv_sync -id ${Wave.1} -switch false
+16:24:45    645 --> ...                                                                                  [tcl] set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+16:24:45    646 --> ...                                                                                      [tcl] gui_set_pref_value -category Wave -key exclusiveSG -value {false}
+16:24:45    647 --> ...                                                                                          [tcl] set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+16:24:45    648 --> ...                                                                                              [tcl] gui_list_set_height -id Wave -height 25
+16:24:45    649 --> ...                                                                                                  [tcl] set origGroupCreationState [gui_list_create_group_when_add -wave]
+16:24:45    650 --> ...  [tcl] gui_list_create_group_when_add -wave -disable
+16:24:45    651 --> ...      [tcl] gui_wv_zoom_timerange -id ${Wave.1} 0 299
+16:24:45    652 --> ...          [tcl] gui_list_add_group -id ${Wave.1} -after {New Group} {u_top}
+16:24:46    653 --> ...              [tcl] synopsys::dump -add {_vcs_unit__514606211 } -aggregates  -fid VPD1
+16:24:46    654 --> ...                  [tcl] gui_seek_criteria -id ${Wave.1} {Any Edge}
+16:24:46    655 --> ...                      [tcl] gui_set_env TOGGLE::DEFAULT_WAVE_WINDOW ${Wave.1}
+16:24:46    656 --> ...                          [tcl] gui_set_pref_value -category Wave -key exclusiveSG -value $groupExD
+16:24:46    657 --> ...                              [tcl] gui_list_set_height -id Wave -height $origWaveHeight
+16:24:46    658 --> ...                                  [tcl] if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+16:24:46    659 --> ...                                      [tcl] if { $groupExD } {  gui_msg_report -code DVWW028 }
+16:24:46    660 --> ...                                          [tcl] gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
+16:24:46    661 --> ...                                              [tcl] gui_list_set_filter -id ${Wave.1} -text {*}
+16:24:46    662 --> ...                                                  [tcl] gui_list_set_insertion_bar  -id ${Wave.1} -group u_top  -position in
+16:24:46    663 --> ...                                                      [tcl] gui_view_scroll -id ${Wave.1} -vertical -set 0
+16:24:46    664 --> ...                                                          [tcl] gui_show_grid -id ${Wave.1} -enable false
+16:24:46    665 --> ...                                                              [tcl] # Restore toplevel window zorder
+16:24:46    666 --> ...                                                                  [tcl] # The toplevel window could be closed if it has no view/pane
+16:24:46    667 --> ...                                                                      [tcl] if {[gui_exist_window -window ${TopLevel.1}]} { 	gui_set_active_window -window ${TopLevel.1} 	gui_set_active_window -window ${Source.1} 	gui_set_active_window -window ${HSPane.1} }
+16:24:46    668 --> ...                                                                          [tcl] if {[gui_exist_window -window ${TopLevel.2}]} { 	gui_set_active_window -window ${TopLevel.2} 	gui_set_active_window -window ${Wave.1} }
+16:24:46    669 --> ...                                                                              [tcl] #</Session>
+16:24:50    670 --> ...                                                                                  [tcl] synopsys::run
+16:24:50    671 --> ...                                                                                      [tcl] set ucliGUI::state
+16:24:50    672 --> ...                                                                                          [tcl] set ucliGUI::state
+16:24:50    673 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+16:24:50    674 --> ...                                                                                                  [tcl] set ucliGUI::state
+16:24:50    675 --> ...  [tcl] set ucliGUI::state
+16:24:50    676 --> ...      [tcl] catch {senv activeDomain} dveMisc::result 
+16:24:50    677 --> ...          [tcl] set dveMisc::result
+16:24:50    678 --> ...              [tcl] gui_update_simulator_buttons
+16:24:50    679 --> ...                  [tcl] synopsys::xml get_stop_data
+16:24:50    680 --> ...                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
+16:24:50    681 --> ...                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
+16:24:50    682 --> ...                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(40:203:3081)" viewId="Local.1" />}
+16:24:51    683 --> ...                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(40:203:3081)" viewId="Local.1" />}
+16:24:51    684 --> ...                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="149521408" frame_id="frame(40:203:3081)" viewId="Hidden 2" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}

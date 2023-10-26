@@ -1,0 +1,142 @@
+{
+    "ibex_tracer_pkg": [
+        "ibex_tracer_pkg",
+        "tCfm8",
+        "module"
+    ],
+    "dut_intf": [
+        "dut_intf",
+        "HQcyN",
+        "module"
+    ],
+    "vcs_paramclassrepository": [
+        "vcs_paramclassrepository",
+        "hEeZs",
+        "module"
+    ],
+    "_vcs_DPI_package": [
+        "_vcs_DPI_package",
+        "uM9F1",
+        "module"
+    ],
+    "clk_rst_if": [
+        "clk_rst_if",
+        "Z8haI",
+        "module"
+    ],
+    "ibex_csr_0000_0000": [
+        "ibex_csr_0000_0000",
+        "anrUZ",
+        "module"
+    ],
+    "_vcs_unit__4220291412": [
+        "_vcs_unit__4220291412",
+        "PATku",
+        "module"
+    ],
+    "ibex_multdiv_fast_0000": [
+        "ibex_multdiv_fast_0000",
+        "s4Vfp",
+        "module"
+    ],
+    "ibex_if_stage_0000": [
+        "ibex_if_stage_0000",
+        "L7dFI",
+        "module"
+    ],
+    "ibex_csr_0000": [
+        "ibex_csr_0000",
+        "AtUGh",
+        "module"
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "ibex_pkg": [
+        "ibex_pkg",
+        "A0dZk",
+        "module"
+    ],
+    "ibex_id_stage_0000": [
+        "ibex_id_stage_0000",
+        "z1VhH",
+        "module"
+    ],
+    "uvm_pkg": [
+        "uvm_pkg",
+        "zr7M1",
+        "module"
+    ],
+    "mem_model_pkg": [
+        "mem_model_pkg",
+        "tVTU0",
+        "module"
+    ],
+    "bus_params_pkg": [
+        "bus_params_pkg",
+        "ZjDfj",
+        "module"
+    ],
+    "ins_mem_intf": [
+        "ins_mem_intf",
+        "d2N2j",
+        "module"
+    ],
+    "ibex_core_0000": [
+        "ibex_core_0000",
+        "NKVwf",
+        "module"
+    ],
+    "ibex_decoder_0000": [
+        "ibex_decoder_0000",
+        "yn82E",
+        "module"
+    ],
+    "ibex_alu_0000": [
+        "ibex_alu_0000",
+        "dgwCQ",
+        "module"
+    ],
+    "ibex_cs_registers_0000": [
+        "ibex_cs_registers_0000",
+        "ZYcQd",
+        "module"
+    ],
+    "prim_pkg": [
+        "prim_pkg",
+        "vbVTH",
+        "module"
+    ],
+    "ibex_counter_0000": [
+        "ibex_counter_0000",
+        "a8P8Z",
+        "module"
+    ],
+    "ibex_ex_block_0000": [
+        "ibex_ex_block_0000",
+        "Yw9K4",
+        "module"
+    ],
+    "prim_ram_1p_pkg": [
+        "prim_ram_1p_pkg",
+        "JYtvx",
+        "module"
+    ],
+    "ibex_top_tracing": [
+        "ibex_top_tracing",
+        "QQirF",
+        "module"
+    ],
+    "tb_top": [
+        "tb_top",
+        "jdPWL",
+        "module"
+    ]
+}
