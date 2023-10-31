@@ -12,8 +12,10 @@ class base_test extends uvm_test;
 
     virtual ins_mem_intf ins_if;
 
+    virtual data_mem_intf data_if;
+
     //inst instance for test
-    p_seq seq_inst;
+    multi_seq seq_inst;
      
     //environment instance for test
     env  env_instance;
@@ -34,14 +36,17 @@ class base_test extends uvm_test;
          `uvm_fatal("base_test", "base_test::Failed to get ins_if")
         end
 
-        if(!uvm_config_db #(virtual clk_rst_if )::get(null, "*", "clk_if", clk_if))
-          begin
+        if(!uvm_config_db #(virtual data_mem_intf)::get(this, "", "data_if", data_if)) begin
+            `uvm_fatal("base_test", "base_test::Failed to get data_if")
+        end
+
+        if(!uvm_config_db #(virtual clk_rst_if )::get(null, "*", "clk_if", clk_if)) begin
           `uvm_fatal("base_test", "base_test::Failed to get clk_if")
-         end
+        end
 
          memory_instance = mem_model_pkg::mem_model#()::type_id::create("memory_instance", this);
 
-         seq_inst = p_seq::type_id::create("seq_inst",this);
+         seq_inst = multi_seq::type_id::create("seq_inst",this);
         
          env_instance = env::type_id::create("env_instance",this);
 
@@ -51,7 +56,7 @@ class base_test extends uvm_test;
         phase.raise_objection(this);
         `uvm_info(get_name(), "<run_phase> started, objection raised.", UVM_NONE)
 
-        load_bin_to_mem("test.bin");
+        load_bin_to_mem("factorial.bin");
 
         $display("back from load_bin_to_mem to run_phase");
 
@@ -69,9 +74,8 @@ class base_test extends uvm_test;
 
         $display("fetch_enable_i = %d",  dut_intf.fetch_enable_i);
 
-        // core simulation ending using ecall_detect
         fork 
-            seq_inst.start(env_instance.sequencer_p);
+            seq_inst.start(env_instance.sequencer);
             ecall(); 
         join_any
             ins_if.clk_pos(5); 
@@ -98,7 +102,7 @@ class base_test extends uvm_test;
         end
 
         while ($fread(read_byte, fd)) begin
-            `uvm_info(get_full_name(), $sformatf("Readed %h from addr = %h using fread()", read_byte, addr), UVM_NONE)
+            //`uvm_info(get_full_name(), $sformatf("Readed %h from addr = %h using fread()", read_byte, addr), UVM_NONE)
             memory_instance.write_byte(addr, read_byte);
             addr++;
         end

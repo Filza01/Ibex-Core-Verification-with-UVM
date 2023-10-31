@@ -1,2 +1,2 @@
-vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/UVM_assignments/assignment2_sba/sv +incdir+/home/user100/VM/UVM_assignments/channel/sv/ +incdir+/home/user100/VM/UVM_capstone/part-i/rtl/ tb_top.sv 
+vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
 ./simv -gui &

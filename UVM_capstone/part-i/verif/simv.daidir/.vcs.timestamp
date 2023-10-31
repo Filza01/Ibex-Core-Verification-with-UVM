@@ -286,152 +286,152 @@
 0 ibex_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_pkg.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_pkg.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_pkg.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_pkg.sv
 0 ibex_alu.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_alu.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_alu.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_alu.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_alu.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_alu.sv
 0 ibex_compressed_decoder.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_compressed_decoder.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_compressed_decoder.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_compressed_decoder.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_compressed_decoder.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_compressed_decoder.sv
 0 prim_assert.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/prim_assert.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/prim_assert.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/prim_assert.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/prim_assert.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/prim_assert.sv
 0 prim_assert_standard_macros.svh
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/prim_assert_standard_macros.svh
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/prim_assert_standard_macros.svh
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/prim_assert_standard_macros.svh
 0 /home/user100/VM/UVM_assignments/channel/sv/prim_assert_standard_macros.svh
+0 /home/UVM/Capstone_Project/part-i_test/tests/prim_assert_standard_macros.svh
 0 ibex_controller.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_controller.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_controller.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_controller.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_controller.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_controller.sv
 0 dv_fcov_macros.svh
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/dv_fcov_macros.svh
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dv_fcov_macros.svh
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/dv_fcov_macros.svh
 0 /home/user100/VM/UVM_assignments/channel/sv/dv_fcov_macros.svh
+0 /home/UVM/Capstone_Project/part-i_test/tests/dv_fcov_macros.svh
 0 ibex_counter.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_counter.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_counter.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_counter.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_counter.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_counter.sv
 0 ibex_cs_registers.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_cs_registers.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_cs_registers.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_cs_registers.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_cs_registers.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_cs_registers.sv
 0 ibex_csr.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_csr.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_csr.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_csr.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_csr.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_csr.sv
 0 ibex_decoder.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_decoder.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_decoder.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_decoder.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_decoder.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_decoder.sv
 0 ibex_ex_block.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_ex_block.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_ex_block.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_ex_block.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_ex_block.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_ex_block.sv
 0 ibex_id_stage.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_id_stage.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_id_stage.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_id_stage.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_id_stage.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_id_stage.sv
 0 ibex_if_stage.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_if_stage.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_if_stage.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_if_stage.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_if_stage.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_if_stage.sv
 0 ibex_load_store_unit.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_load_store_unit.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_load_store_unit.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_load_store_unit.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_load_store_unit.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_load_store_unit.sv
 0 ibex_multdiv_slow.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_multdiv_slow.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_multdiv_slow.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_multdiv_slow.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_multdiv_slow.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_multdiv_slow.sv
 0 ibex_multdiv_fast.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_multdiv_fast.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_multdiv_fast.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_multdiv_fast.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_multdiv_fast.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_multdiv_fast.sv
 0 ibex_prefetch_buffer.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_prefetch_buffer.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_prefetch_buffer.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_prefetch_buffer.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_prefetch_buffer.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_prefetch_buffer.sv
 0 ibex_fetch_fifo.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_fetch_fifo.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_fetch_fifo.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_fetch_fifo.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_fetch_fifo.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_fetch_fifo.sv
 0 ibex_register_file_ff.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_register_file_ff.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_register_file_ff.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_register_file_ff.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_register_file_ff.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_register_file_ff.sv
 0 ibex_wb_stage.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_wb_stage.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_wb_stage.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_wb_stage.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_wb_stage.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_wb_stage.sv
 0 ibex_core.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_core.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_core.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_core.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_core.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_core.sv
 0 prim_ram_1p_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/prim_ram_1p_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/prim_ram_1p_pkg.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/prim_ram_1p_pkg.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/prim_ram_1p_pkg.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/prim_ram_1p_pkg.sv
 0 ibex_top.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_top.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_top.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_top.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_top.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_top.sv
 0 prim_clock_gating.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/prim_clock_gating.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/prim_clock_gating.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/prim_clock_gating.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/prim_clock_gating.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/prim_clock_gating.sv
 0 prim_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/prim_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/prim_pkg.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/prim_pkg.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/prim_pkg.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/prim_pkg.sv
 0 prim_generic_clock_gating.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/prim_generic_clock_gating.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/prim_generic_clock_gating.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/prim_generic_clock_gating.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/prim_generic_clock_gating.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/prim_generic_clock_gating.sv
 0 ibex_tracer.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_tracer.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_tracer.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_tracer.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_tracer.sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_tracer.sv
 0 ibex_tracer_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_tracer_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_tracer_pkg.sv
-0 /home/user100/VM/UVM_assignments/assignment2_sba/sv/ibex_tracer_pkg.sv
 0 /home/user100/VM/UVM_assignments/channel/sv/ibex_tracer_pkg.sv
-32
-+incdir+/home/user100/VM/UVM_assignments/assignment2_sba/sv
+0 /home/UVM/Capstone_Project/part-i_test/tests/ibex_tracer_pkg.sv
+33
++incdir+/home/UVM/Capstone_Project/part-i_test/tests
++incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/
 +incdir+/home/user100/VM/UVM_assignments/channel/sv/
-+incdir+/home/user100/VM/UVM_capstone/part-i/rtl/
 +incdir+/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2
 +incdir+/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/
 -Mamsrun=
@@ -451,6 +451,7 @@
 -Mvcsaceobjs=
 -Mxcflags= -pipe -DVCSMX -fPIC -I/usr/synopsys/vcs-L-2016.06/include
 -P
+-full64
 -gen_obj
 -ntb_opts
 -picarchive
@@ -461,13 +462,14 @@
 /usr/synopsys/vcs-L-2016.06/linux64/lib/vcsdstub.tab
 tb_top.sv
 uvm-1.2
-23
-sysc_uni_pwd=/home/user100/VM/UVM_capstone/part-i/verif
-VMR_MODE_FLAG=32
+30
+sysc_uni_pwd=/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif
+VMR_MODE_FLAG=64
 VERDI_HOME=/usr/synopsys/verdi-L-2016.06-1
 VCS_UVM_HOME=/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2
 VCS_TARGET_ARCH=amd64
 VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
 VCS_HOME=/usr/synopsys/vcs-L-2016.06/
 VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
@@ -481,57 +483,70 @@ SPYGLASS_HOME=/usr/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME
 SPYGLASS_DC_PATH=/usr/synopsys/dc-L-2016.03-SP1/
 SCRNAME=vcs
 SCRIPT_NAME=vcs
+RISCV=/home/user100/VM/riscv32-unknown-elf-toolchain/riscv
 OVA_UUM=0
+MFLAGS=
+MAKE_TERMOUT=/dev/pts/0
+MAKE_TERMERR=/dev/pts/0
+MAKELEVEL=1
+MAKEFLAGS=
 LESSOPEN=| /usr/bin/lesspipe %s
 LESSCLOSE=/usr/bin/lesspipe %s %s
 LC_ALL=C
 0
-192
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_tracer_pkg.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_tracer.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/prim_generic_clock_gating.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/prim_pkg.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/prim_clock_gating.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_top.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/prim_ram_1p_pkg.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_core.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_wb_stage.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_register_file_ff.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_fetch_fifo.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_prefetch_buffer.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_multdiv_fast.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_multdiv_slow.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_load_store_unit.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_if_stage.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_id_stage.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_ex_block.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_decoder.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_csr.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_cs_registers.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_counter.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/dv_fcov_macros.svh
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_controller.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/prim_assert_standard_macros.svh
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/prim_assert.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_compressed_decoder.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_alu.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_pkg.sv
-1625683394 /home/user100/VM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv
-1698307018 base_test.sv
-1698231065 env.sv
-1698230128 p_seq.sv
-1698132465 p_sequencer.sv
-1698230728 agent.sv
-1698305872 monitor.sv
-1698309382 driver.sv
+199
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer_pkg.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_generic_clock_gating.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_pkg.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_clock_gating.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_ram_1p_pkg.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_core.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_wb_stage.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_register_file_ff.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_fetch_fifo.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_prefetch_buffer.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_multdiv_fast.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_multdiv_slow.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_load_store_unit.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_if_stage.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_id_stage.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_ex_block.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_decoder.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_csr.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_cs_registers.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_counter.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/dv_fcov_macros.svh
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert_standard_macros.svh
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_compressed_decoder.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_alu.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_pkg.sv
+1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv
+1698671367 base_test.sv
+1698671039 env.sv
+1698670831 multi_seq.sv
+1698670602 multi_sequencer.sv
+1698669141 data_agent.sv
+1698674531 data_monitor.sv
+1698674523 data_driver.sv
+1698669149 ins_agent.sv
+1698674548 ins_monitor.sv
+1698674539 ins_driver.sv
 1698044022 dut_intf.sv
-1698307781 ins_mem_intf.sv
+1698315929 data_mem_intf.sv
+1698313440 ins_mem_intf.sv
 1698147700 clk_rst_if.sv
-1698307817 ins_mem_seq.sv
+1698670165 data_mem_seq.sv
+1698318170 data_mem_sequencer.sv
+1698318050 data_mem_seq_item.sv
+1698672564 ins_mem_seq.sv
 1698134710 ins_mem_sequencer.sv
 1698307784 ins_mem_seq_item.sv
 1625683394 dv_macros.svh
-1698150962 mem_model.sv
+1698671744 mem_model.sv
 1698125118 mem_model_pkg.sv
 1625683394 bus_params_pkg.sv
 1464145497 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/snps_uvm_reg_bank.svh
@@ -676,7 +691,7 @@ LC_ALL=C
 1464145497 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_global_defines.svh
 1464145497 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_version_defines.svh
 1464148931 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh
-1698305434 tb_top.sv
+1698670649 tb_top.sv
 1464148931 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv
 1464145466 /usr/synopsys/vcs-L-2016.06/linux64/lib/vcsdstub.tab
 5
@@ -685,4 +700,4 @@ LC_ALL=C
 1464147802 /usr/synopsys/vcs-L-2016.06/linux64/lib/libvirsim.so
 1464147272 /usr/synopsys/vcs-L-2016.06/linux64/lib/liberrorinf.so
 1464147248 /usr/synopsys/vcs-L-2016.06/linux64/lib/libsnpsmalloc.so
-1698309390 simv.daidir
+1698674570 simv.daidir

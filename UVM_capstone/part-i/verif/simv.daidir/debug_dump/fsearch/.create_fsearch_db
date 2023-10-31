@@ -5,5 +5,5 @@ PYTHONPATH=/usr/synopsys/vcs-L-2016.06/linux64/lib/pylib27
 export PYTHONPATH
 LD_LIBRARY_PATH=/usr/synopsys/vcs-L-2016.06/linux64/lib:/usr/synopsys/vcs-L-2016.06/linux64/lib/pylib27
 export LD_LIBRARY_PATH
-/usr/synopsys/vcs-L-2016.06/linux64/bin/vcsfind_create_index.exe  -z  "/home/user100/VM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/./idents_ro8AFw.xml.gz" "/home/user100/VM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/home/user100/VM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
-\mv "/home/user100/VM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/user100/VM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/fsearch.db"
+/usr/synopsys/vcs-L-2016.06/linux64/bin/vcsfind_create_index.exe  -z  "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/./idents_6KoQKm.xml.gz" "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir/debug_dump/fsearch/fsearch.db"

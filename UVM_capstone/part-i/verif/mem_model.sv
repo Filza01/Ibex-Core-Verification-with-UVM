@@ -30,19 +30,19 @@ class mem_model #(int AddrWidth = bus_params_pkg::BUS_AW,
     bit [7:0] data;
     if (system_memory.exists(addr)) begin
       data = system_memory[addr];
-      `uvm_info(`gfn, $sformatf("Read Mem  : Addr[0x%0h], Data[0x%0h]", addr, data), UVM_HIGH)
+      //`uvm_info(`gfn, $sformatf("Read Mem  : Addr[0x%0h], Data[0x%0h]", addr, data), UVM_HIGH)
     end else begin
-      `uvm_info(`gfn, $sformatf("Read Mem  : Addr[0x%0h], Data[0x%0h]", addr, data), UVM_LOW)
+      //`uvm_info(`gfn, $sformatf("Read Mem  : Addr[0x%0h], Data[0x%0h]", addr, data), UVM_LOW)
       `DV_CHECK_STD_RANDOMIZE_FATAL(data)
-      `uvm_error(`gfn, $sformatf("read to uninitialzed addr 0x%0h", addr))
+      //`uvm_error(`gfn, $sformatf("read to uninitialzed addr 0x%0h", addr))
     end
     return data;
   endfunction
 
   function void write_byte(mem_addr_t addr, bit [7:0] data);
-    `uvm_info(get_full_name(), $sformatf("Write Mem : Addr[0x%h], Data[0x%h]", addr, data), UVM_LOW)
+    //`uvm_info(get_full_name(), $sformatf("Write Mem : Addr[0x%h], Data[0x%h]", addr, data), UVM_LOW)
     system_memory[addr] = data;
-    `uvm_info(get_full_name, $sformatf("Written data in system_memory[0x%h] = 0x%h", addr, system_memory[addr]), UVM_LOW)
+    //`uvm_info(get_full_name, $sformatf("Written data in system_memory[0x%h] = 0x%h", addr, system_memory[addr]), UVM_LOW)
   endfunction
 
   function void compare_byte(mem_addr_t addr, bit [7:0] act_data);

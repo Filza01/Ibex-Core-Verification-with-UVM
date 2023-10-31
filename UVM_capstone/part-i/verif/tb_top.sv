@@ -8,23 +8,29 @@ import uvm_pkg::*;
 `include "ins_mem_seq_item.sv"
 `include "ins_mem_sequencer.sv"
 `include "ins_mem_seq.sv"
-
+`include "data_mem_seq_item.sv"
+`include "data_mem_sequencer.sv"
+`include "data_mem_seq.sv"
 
 `include "clk_rst_if.sv"
 `include "ins_mem_intf.sv"
+`include "data_mem_intf.sv"
 `include "dut_intf.sv"
 
-`include "driver.sv"
-`include "monitor.sv"
-`include "agent.sv" 
+`include "ins_driver.sv"
+`include "ins_monitor.sv"
+`include "ins_agent.sv" 
+`include "data_driver.sv"
+`include "data_monitor.sv"
+`include "data_agent.sv" 
 
-`include "p_sequencer.sv" 
-`include "p_seq.sv"
+`include "multi_sequencer.sv" 
+`include "multi_seq.sv"
 
 `include "env.sv"
 `include "base_test.sv"
 
-`include "/home/user100/VM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv"
+`include "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv"
 
 module tb_top();
 
@@ -36,6 +42,8 @@ module tb_top();
     );
 
     ins_mem_intf ins_if (.clk(clk));
+
+    data_mem_intf data_if (.clk(clk));
 
     dut_intf dut_if (.clk(clk));
 
@@ -50,7 +58,7 @@ module tb_top();
         $display("\t\tClock is activated");
         uvm_config_db#(virtual clk_rst_if  ) :: set(null,"*","clk_if",clk_if);
         uvm_config_db#(virtual ins_mem_intf ) :: set(null,"*","ins_if",ins_if); 
-        // uvm_config_db#(virtual logic  ) :: set(null,"*data_agent*","ins_mem_if",data_if);
+        uvm_config_db#(virtual data_mem_intf  ) :: set(null,"*","data_if",data_if);
         uvm_config_db#(virtual dut_intf ) :: set(null,"*","dut_if",dut_if);
         $display("\t\tAll interfaces have been set");
         run_test("base_test");
@@ -99,17 +107,17 @@ module tb_top();
     .instr_err_i            (ins_if.instr_err_i),
 
     // Data memory interface
-    .data_req_o             (),
-    .data_gnt_i             (),
-    .data_rvalid_i          (),
-    .data_we_o              (),
-    .data_be_o              (),
-    .data_addr_o            (),
-    .data_wdata_o           (),
+    .data_req_o             (data_if.data_req_o),
+    .data_gnt_i             (data_if.data_gnt_i),
+    .data_rvalid_i          (data_if.data_rvalid_i),
+    .data_we_o              (data_if.data_we_o),
+    .data_be_o              (data_if.data_be_o),
+    .data_addr_o            (data_if.data_addr_o),
+    .data_wdata_o           (data_if.data_wdata_o),
     //.data_wdata_intg_o      (mem_if.data_wdata_intg_o),
-    .data_rdata_i           (),
+    .data_rdata_i           (data_if.data_rdata_i),
     //.data_rdata_intg_i      (mem_if.data_rdata_intg_i),
-    .data_err_i             (),
+    .data_err_i             (data_if.data_err_i),
 
     // Interrupt inputs
     .irq_software_i         (),
