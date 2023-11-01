@@ -56,7 +56,7 @@ class base_test extends uvm_test;
         phase.raise_objection(this);
         `uvm_info(get_name(), "<run_phase> started, objection raised.", UVM_NONE)
 
-        load_bin_to_mem("factorial.bin");
+        load_bin_to_mem("test_cases/mix_test.bin");
 
         $display("back from load_bin_to_mem to run_phase");
 
@@ -111,11 +111,14 @@ class base_test extends uvm_test;
     task ecall();
      while (1) begin	
         if 	(ins_if.instr_rdata_i == 32'h00000073) begin
+            // `uvm_info(get_full_name(), "\n\t\t\t UVM TEST PASSED", UVM_NONE)
             dut_if.fetch_enable_i <= 1'b0;
             break; 
         end
         else begin
-            @(ins_if.cb_driver); // waiting for change in driver inputs req_o and addr_o
+            // ins_if.clk_pos(1); // waiting for change in driver inputs req_o and addr_o
+            // clk_if.wait_clks(1);
+            @(ins_if.cb_driver);
         end
     end
     endtask

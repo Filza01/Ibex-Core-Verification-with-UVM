@@ -1,6 +1,6 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Mon Oct 30 21:07:21 2023
+# Saved on Tue Oct 31 19:15:41 2023
 # Designs open: 1
 #   Sim: /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv
 # Toplevel windows open: 4
@@ -9,11 +9,11 @@
 # 	TopLevel.3
 # 	TopLevel.4
 #   Source.1: uvm_pkg.\uvm_root::run_test 
-#   Wave.1: 33 signals
+#   Wave.1: 18 signals
 #   Wave.2: 8 signals
 #   Wave.3: 11 signals
 #   Group count = 3
-#   Group u_top signal count = 76
+#   Group u_top signal count = 62
 #   Group ins_if signal count = 8
 #   Group data_if signal count = 11
 # End_DVE_Session_Save_Info
@@ -70,7 +70,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 195} {child_wave_colvalue 196} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 194} {child_wave_colvalue 197} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -84,7 +84,7 @@ gui_sync_global -id ${TopLevel.3} -option true
 
 # MDI window settings
 set Wave.2 Wave.2
-gui_update_layout -id ${Wave.2} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 196} {child_wave_colvalue 195} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.2} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 194} {child_wave_colvalue 197} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -98,7 +98,7 @@ gui_sync_global -id ${TopLevel.4} -option true
 
 # MDI window settings
 set Wave.3 Wave.3
-gui_update_layout -id ${Wave.3} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 201} {child_wave_colvalue 190} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.3} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 194} {child_wave_colvalue 197} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -126,58 +126,68 @@ gui_set_time_units 1ns
 
 # Global: Signal Groups
 gui_load_child_values {tb_top.data_if}
-gui_load_child_values {tb_top.u_top}
 gui_load_child_values {tb_top.ins_if}
 
 
-set _session_group_18 u_top
-gui_sg_create "$_session_group_18"
-set u_top "$_session_group_18"
+set _session_group_28 u_top
+gui_sg_create "$_session_group_28"
+set u_top "$_session_group_28"
 
-gui_sg_addsignal -group "$_session_group_18" { tb_top.u_top.clk_i tb_top.u_top.rvfi_halt tb_top.u_top.data_wdata_o tb_top.u_top.data_gnt_i tb_top.u_top.data_err_i tb_top.u_top.data_we_o tb_top.u_top.data_req_o tb_top.u_top.instr_addr_o tb_top.u_top.data_rvalid_i tb_top.u_top.data_rdata_i tb_top.u_top.data_addr_o tb_top.u_top.data_be_o tb_top.u_top.instr_gnt_i tb_top.u_top.instr_rvalid_i tb_top.u_top.instr_rdata_i tb_top.u_top.instr_req_o tb_top.u_top.fetch_enable_i tb_top.u_top.irq_software_i tb_top.u_top.ICacheECC tb_top.u_top.test_en_i tb_top.u_top.irq_timer_i tb_top.u_top.rvfi_valid tb_top.u_top.scan_rst_ni tb_top.u_top.RegFile tb_top.u_top.rvfi_rs2_rdata tb_top.u_top.rvfi_mode tb_top.u_top.irq_fast_i tb_top.u_top.rvfi_order tb_top.u_top.rvfi_trap tb_top.u_top.rvfi_insn tb_top.u_top.hart_id_i tb_top.u_top.SecureIbex tb_top.u_top.debug_req_i tb_top.u_top.PMPEnable tb_top.u_top.PMPNumRegions tb_top.u_top.irq_nm_i tb_top.u_top.irq_external_i tb_top.u_top.rvfi_rs2_addr tb_top.u_top.rvfi_intr tb_top.u_top.DbgHwBreakNum tb_top.u_top.rvfi_pc_rdata tb_top.u_top.BranchPredictor tb_top.u_top.rvfi_mem_rdata tb_top.u_top.rvfi_rs1_rdata tb_top.u_top.DmExceptionAddr tb_top.u_top.rvfi_ixl tb_top.u_top.instr_err_i tb_top.u_top.crash_dump_o tb_top.u_top.MHPMCounterWidth tb_top.u_top.rvfi_mem_rmask tb_top.u_top.BranchTargetALU tb_top.u_top.rst_ni tb_top.u_top.alert_minor_o tb_top.u_top.WritebackStage tb_top.u_top.alert_major_o tb_top.u_top.rvfi_rs3_rdata tb_top.u_top.rvfi_rs1_addr tb_top.u_top.rvfi_mem_addr tb_top.u_top.core_sleep_o tb_top.u_top.rvfi_pc_wdata tb_top.u_top.rvfi_rd_addr tb_top.u_top.rvfi_mem_wdata tb_top.u_top.PMPGranularity tb_top.u_top.RV32B tb_top.u_top.RV32E {tb_top.u_top.$unit} tb_top.u_top.RV32M tb_top.u_top.ICache tb_top.u_top.rvfi_rs3_addr tb_top.u_top.rvfi_rd_wdata tb_top.u_top.ram_cfg_i tb_top.u_top.DbgTriggerEn tb_top.u_top.boot_addr_i tb_top.u_top.MHPMCounterNum tb_top.u_top.rvfi_mem_wmask tb_top.u_top.DmHaltAddr }
+gui_sg_addsignal -group "$_session_group_28" { tb_top.u_top.clk_i tb_top.u_top.rst_ni tb_top.u_top.fetch_enable_i tb_top.u_top.instr_req_o tb_top.u_top.instr_gnt_i tb_top.u_top.instr_rvalid_i tb_top.u_top.instr_err_i tb_top.u_top.instr_addr_o tb_top.u_top.instr_rdata_i tb_top.u_top.data_req_o tb_top.u_top.data_gnt_i tb_top.u_top.data_rvalid_i tb_top.u_top.data_err_i tb_top.u_top.data_we_o tb_top.u_top.rvfi_halt tb_top.u_top.data_wdata_o tb_top.u_top.ICacheECC tb_top.u_top.rvfi_valid tb_top.u_top.RegFile tb_top.u_top.rvfi_rs2_rdata tb_top.u_top.rvfi_mode tb_top.u_top.rvfi_order tb_top.u_top.rvfi_trap tb_top.u_top.rvfi_insn tb_top.u_top.SecureIbex tb_top.u_top.PMPEnable tb_top.u_top.PMPNumRegions tb_top.u_top.rvfi_rs2_addr tb_top.u_top.rvfi_intr tb_top.u_top.DbgHwBreakNum tb_top.u_top.rvfi_pc_rdata tb_top.u_top.BranchPredictor tb_top.u_top.rvfi_mem_rdata tb_top.u_top.rvfi_rs1_rdata tb_top.u_top.DmExceptionAddr tb_top.u_top.rvfi_ixl tb_top.u_top.crash_dump_o tb_top.u_top.MHPMCounterWidth tb_top.u_top.rvfi_mem_rmask tb_top.u_top.BranchTargetALU tb_top.u_top.data_rdata_i tb_top.u_top.data_addr_o tb_top.u_top.WritebackStage tb_top.u_top.rvfi_rs3_rdata tb_top.u_top.rvfi_rs1_addr tb_top.u_top.rvfi_mem_addr tb_top.u_top.rvfi_pc_wdata tb_top.u_top.rvfi_rd_addr tb_top.u_top.rvfi_mem_wdata tb_top.u_top.PMPGranularity tb_top.u_top.RV32B tb_top.u_top.RV32E tb_top.u_top.data_be_o {tb_top.u_top.$unit} tb_top.u_top.RV32M tb_top.u_top.ICache tb_top.u_top.rvfi_rs3_addr tb_top.u_top.rvfi_rd_wdata tb_top.u_top.DbgTriggerEn tb_top.u_top.MHPMCounterNum tb_top.u_top.rvfi_mem_wmask tb_top.u_top.DmHaltAddr }
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.data_wdata_o}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.data_wdata_o}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.ICacheECC}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.ICacheECC}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.ICacheECC}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RegFile}
 gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RegFile}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.SecureIbex}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.PMPEnable}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.SecureIbex}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.SecureIbex}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPEnable}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPEnable}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPNumRegions}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPNumRegions}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.BranchPredictor}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.BranchPredictor}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.BranchPredictor}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmExceptionAddr}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmExceptionAddr}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.BranchTargetALU}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.WritebackStage}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.BranchTargetALU}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.BranchTargetALU}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.WritebackStage}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.WritebackStage}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPGranularity}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPGranularity}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32B}
 gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32B}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.RV32E}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32E}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.RV32E}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32M}
 gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32M}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.ICache}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.DbgTriggerEn}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.ICache}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.ICache}
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DbgTriggerEn}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DbgTriggerEn}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterNum}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterNum}
 gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmHaltAddr}
 gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmHaltAddr}
 
-set _session_group_19 ins_if
-gui_sg_create "$_session_group_19"
-set ins_if "$_session_group_19"
+set _session_group_29 ins_if
+gui_sg_create "$_session_group_29"
+set ins_if "$_session_group_29"
 
-gui_sg_addsignal -group "$_session_group_19" { tb_top.ins_if.instr_gnt_i tb_top.ins_if.instr_req_o tb_top.ins_if.instr_addr_o tb_top.ins_if.instr_rdata_i tb_top.ins_if.instr_err_i tb_top.ins_if.instr_rvalid_i tb_top.ins_if.clk {tb_top.ins_if.$unit} }
+gui_sg_addsignal -group "$_session_group_29" { tb_top.ins_if.instr_gnt_i tb_top.ins_if.instr_req_o tb_top.ins_if.instr_addr_o tb_top.ins_if.instr_rdata_i tb_top.ins_if.instr_err_i tb_top.ins_if.instr_rvalid_i tb_top.ins_if.clk {tb_top.ins_if.$unit} }
 
-set _session_group_20 data_if
-gui_sg_create "$_session_group_20"
-set data_if "$_session_group_20"
+set _session_group_30 data_if
+gui_sg_create "$_session_group_30"
+set data_if "$_session_group_30"
 
-gui_sg_addsignal -group "$_session_group_20" { tb_top.data_if.clk tb_top.data_if.data_err_i tb_top.data_if.data_rdata_i tb_top.data_if.data_wdata_o tb_top.data_if.data_rvalid_i tb_top.data_if.data_addr_o tb_top.data_if.data_gnt_i tb_top.data_if.data_we_o tb_top.data_if.data_be_o tb_top.data_if.data_req_o {tb_top.data_if.$unit} }
+gui_sg_addsignal -group "$_session_group_30" { tb_top.data_if.data_err_i tb_top.data_if.data_rdata_i tb_top.data_if.data_wdata_o tb_top.data_if.data_rvalid_i tb_top.data_if.clk tb_top.data_if.data_addr_o tb_top.data_if.data_gnt_i tb_top.data_if.data_we_o tb_top.data_if.data_be_o tb_top.data_if.data_req_o {tb_top.data_if.$unit} }
+gui_set_radix -radix {decimal} -signals {Sim:tb_top.data_if.data_wdata_o}
+gui_set_radix -radix {unsigned} -signals {Sim:tb_top.data_if.data_wdata_o}
 
 # Global: Highlighting
 
@@ -207,8 +217,7 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} tb_top}
-catch {gui_list_expand -id ${Hier.1} tb_top.u_top}
-catch {gui_list_select -id ${Hier.1} {tb_top.u_top.u_ibex_top}}
+catch {gui_list_select -id ${Hier.1} {tb_top.data_if}}
 gui_view_scroll -id ${Hier.1} -vertical -set 170
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
@@ -224,10 +233,8 @@ gui_list_set_filter -id ${Member.1} -text {*}
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {tb_top.u_top.u_ibex_top}
-gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tb_top.u_top.u_ibex_top.rvfi_mem_wmask }}
-gui_view_scroll -id ${Data.1} -vertical -set 1020
+gui_list_show_data -id ${Data.1} {tb_top.data_if}
+gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 170
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
@@ -248,7 +255,7 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 3720 4446
+gui_wv_zoom_timerange -id ${Wave.1} 1078 1686
 gui_list_add_group -id ${Wave.1} -after {New Group} {u_top}
 gui_list_select -id ${Wave.1} {tb_top.u_top.data_wdata_o }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
@@ -264,9 +271,9 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 0} {Input 1} {Others 0} {Linkage 0} {Output 1} {Parameter 0} {All 0} {Aggregate 0} {LibBaseMember 0} {Event 0} {Assertion 0} {Constant 0} {Interface 0} {BaseMembers 0} {Signal 0} {$unit 0} {Inout 0} {Variable 0} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group u_top  -item {tb_top.u_top.data_be_o[3:0]} -position below
+gui_list_set_insertion_bar  -id ${Wave.1} -group u_top  -item tb_top.u_top.data_we_o -position below
 
-gui_view_scroll -id ${Wave.1} -vertical -set 0
+gui_view_scroll -id ${Wave.1} -vertical -set 15
 gui_show_grid -id ${Wave.1} -enable false
 
 # View 'Wave.2'
@@ -277,7 +284,7 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.2} 3873 4455
+gui_wv_zoom_timerange -id ${Wave.2} 1490 1799
 gui_list_add_group -id ${Wave.2} -after {New Group} {ins_if}
 gui_seek_criteria -id ${Wave.2} {Any Edge}
 
@@ -305,9 +312,9 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.3} 3874 4454
+gui_wv_zoom_timerange -id ${Wave.3} 1490 1799
 gui_list_add_group -id ${Wave.3} -after {New Group} {data_if}
-gui_list_select -id ${Wave.3} {tb_top.data_if.data_rdata_i }
+gui_list_select -id ${Wave.3} {tb_top.data_if.data_wdata_o }
 gui_seek_criteria -id ${Wave.3} {Any Edge}
 
 
@@ -323,19 +330,19 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.3} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.3} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.3} -group data_if  -item tb_top.data_if.clk -position below
+gui_list_set_insertion_bar  -id ${Wave.3} -group data_if  -position in
 
 gui_view_scroll -id ${Wave.3} -vertical -set 0
 gui_show_grid -id ${Wave.3} -enable false
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane
-if {[gui_exist_window -window ${TopLevel.4}]} {
-	gui_set_active_window -window ${TopLevel.4}
-	gui_set_active_window -window ${Wave.3}
-}
 if {[gui_exist_window -window ${TopLevel.3}]} {
 	gui_set_active_window -window ${TopLevel.3}
 	gui_set_active_window -window ${Wave.2}
+}
+if {[gui_exist_window -window ${TopLevel.4}]} {
+	gui_set_active_window -window ${TopLevel.4}
+	gui_set_active_window -window ${Wave.3}
 }
 if {[gui_exist_window -window ${TopLevel.2}]} {
 	gui_set_active_window -window ${TopLevel.2}
@@ -344,7 +351,7 @@ if {[gui_exist_window -window ${TopLevel.2}]} {
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${DLPane.1}
+	gui_set_active_window -window ${HSPane.1}
 }
 #</Session>
 

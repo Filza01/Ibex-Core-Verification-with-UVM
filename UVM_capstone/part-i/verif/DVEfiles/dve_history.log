@@ -59,12 +59,13 @@ gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -va
 gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
 gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
 gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
-gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|BuildTab|m_rebuildBtnGroup|m_customCmdCombo} -value_type string -value {{vcs -lca -debug_access+all -v FIFO.v FIFOtb.v} {vcs -lca -debug_access+all -sverilog gates.sv tb_SignalDetector.sv SignalDetector.sv} {vcs -lca -debug_access+all -sverilog gates.sv tb_SIgnalDetector.sv SIgnalDetector.sv} {vcs -lca -debug_access+all -sverilog gates.sv testbench3.sv} {vcs -lca -debug_access+all -sverilog testbench.sv design_files/*.sv}}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|BuildTab|m_rebuildBtnGroup|m_customCmdCombo} -value_type string -value {{vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
+} {vcs -lca -debug_access+all -v FIFO.v FIFOtb.v} {vcs -lca -debug_access+all -sverilog gates.sv tb_SignalDetector.sv SignalDetector.sv} {vcs -lca -debug_access+all -sverilog gates.sv tb_SIgnalDetector.sv SIgnalDetector.sv} {vcs -lca -debug_access+all -sverilog gates.sv testbench3.sv}}
 gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|BuildTab|m_rebuildBtnGroup|m_customDirCombo} -value_type string -value {/home/user100/VM/ /home/user100/VM/AHB3_Lite_Interface_Verification/ /home/user100/VM/code_files/ /home/user100/VM/tb3/}
 gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_VPDCombo} -value_type string -value inter.vpd
 gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_argsCombo} -value_type string -value {{-ucligui }}
-gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value {/home/user100/VM /home/user100/VM/AHB3_Lite_Interface_Verification /home/user100/VM/code_files /home/user100/VM/tb_mem /home/user100/VM/tb3}
-gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value {/home/user100/VM/simv ./simv /home/user100/VM/AHB3_Lite_Interface_Verification/simv /home/user100/VM/code_files/simv /home/user100/VM/tb_mem/simv}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value {/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif /home/user100/VM /home/user100/VM/AHB3_Lite_Interface_Verification /home/user100/VM/code_files /home/user100/VM/tb_mem}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value {/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv /home/user100/VM/simv ./simv /home/user100/VM/AHB3_Lite_Interface_Verification/simv /home/user100/VM/code_files/simv}
 gui_state_default_create -off
 
 # Begin command logging
@@ -78,208 +79,163 @@ gui_list_add -id Wave.1 -from Hier.1 { tb_top.u_top } -insertionbar
 gui_list_set_filter -id Wave.1 -type All -value 0
 gui_list_set_filter -id Wave.1 -type Input -value 1
 gui_list_set_filter -id Wave.1 -type Output -value 1
-gui_sim_continue  
-gui_wv_zoom_timerange -id  Wave.1 413 728
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_zoom -window Wave.1 -full
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.data_wdata_o[31:0]} {{tb_top.u_top.data_gnt_i}} 
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_addr_o[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_gnt_i {{tb_top.u_top.instr_addr_o[31:0]}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_addr_o[31:0]} {{tb_top.u_top.instr_gnt_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_gnt_i {{tb_top.u_top.fetch_enable_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_err_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_gnt_i {{tb_top.u_top.data_err_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_we_o   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_err_i {{tb_top.u_top.data_we_o}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_rvalid_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_addr_o[31:0]} {{tb_top.u_top.data_rvalid_i}} 
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_rdata_i[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_rvalid_i {{tb_top.u_top.data_rdata_i[31:0]}} 
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_addr_o[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.data_rdata_i[31:0]} {{tb_top.u_top.data_addr_o[31:0]}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_rvalid_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_gnt_i {{tb_top.u_top.instr_rvalid_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_req_o   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_we_o {{tb_top.u_top.data_req_o}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.clk_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after u_top {{tb_top.u_top.clk_i}}
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_rdata_i[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_rvalid_i {{tb_top.u_top.instr_rdata_i[31:0]}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_req_o   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_rdata_i[31:0]} {{tb_top.u_top.instr_req_o}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.test_en_i   }
-gui_marker_move -id  Wave.1 C1 464
-gui_marker_move -id  Wave.1 C1 44
-gui_marker_move -id  Wave.1 C1 384
-gui_marker_move -id  Wave.1 C1 251
-gui_marker_move -id  Wave.1 C1 404
-gui_marker_move -id  Wave.1 C1 384
 gui_list_select -id Hier.1 -current_item_name tb_top.ins_if -current_item_type Scope  -selected  { tb_top.ins_if   }
 gui_open_window Wave
 gui_list_add -id Wave.2 -from Hier.1 { tb_top.ins_if } -insertionbar
-gui_sim_restart
-gui_wv_zoom_timerange -id  Wave.2 0 314
+gui_list_select -id Hier.1 -current_item_name tb_top.dut_if -current_item_type Scope  -selected  { tb_top.dut_if   }
 gui_list_select -id Hier.1 -current_item_name tb_top.data_if -current_item_type Scope  -selected  { tb_top.data_if   }
 gui_open_window Wave
 gui_list_add -id Wave.3 -from Hier.1 { tb_top.data_if } -insertionbar
-gui_wv_zoom_timerange -id  Wave.3 0 315
 gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.2 1587
 gui_wv_scroll_hslidermove -id  Wave.2 0
-gui_zoom -window Wave.2 -full
-gui_zoom -window Wave.3 -full
-gui_marker_move -id  Wave.3 C1 245
-gui_marker_move -id  Wave.3 C1 464
-gui_marker_move -id  Wave.3 C1 534
-gui_marker_move -id  Wave.3 C1 18
-gui_list_select -id Wave.3 -selected  { tb_top.data_if.clk   }
-gui_list_move  -id  Wave.3    -sid  Wave.3   -after data_if {{tb_top.data_if.clk}}
-gui_marker_move -id  Wave.3 C1 26
-gui_marker_move -id  Wave.3 C1 384
-gui_marker_move -id  Wave.3 C1 404
-gui_marker_move -id  Wave.3 C1 427
 gui_set_env SIMSETUP::SIMCURRENTDIR /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif
 gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
 }
 gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.3 0
-gui_wv_scroll_hslidermove -id  Wave.2 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 83
-gui_marker_move -id  Wave.1 C1 444
-gui_marker_move -id  Wave.1 C1 420
-gui_marker_move -id  Wave.1 C1 444
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 471
-gui_wv_scroll_hslidermove -id  Wave.1 789
-gui_wv_scroll_hslidermove -id  Wave.1 5
-gui_wv_scroll_hslidermove -id  Wave.3 524
-gui_marker_move -id  Wave.3 C1 651
-gui_wv_scroll_hslidermove -id  Wave.3 687
-gui_list_select -id Wave.3 -selected  { {tb_top.data_if.data_rdata_i[31:0]}   }
-gui_wv_scrollleft -id  Wave.3  page
-gui_wv_scroll_hslidermove -id  Wave.3 0
 gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
 }
 gui_sim_continue  
 gui_wv_scrollleft -id  Wave.1  page
 gui_wv_scrollleft -id  Wave.1  page
-gui_wv_zoom_timerange -id  Wave.1 1464 1511
-gui_zoom -window Wave.1 -full
-gui_marker_move -id  Wave.1 C1 444
-gui_marker_move -id  Wave.1 C1 364
-gui_marker_move -id  Wave.1 C1 444
-gui_marker_move -id  Wave.1 C1 524
-gui_marker_move -id  Wave.1 C1 604
-gui_marker_move -id  Wave.1 C1 764
-gui_marker_move -id  Wave.1 C1 445
-gui_wv_zoom_timerange -id  Wave.1 467 497
-gui_zoom -window Wave.1 -full
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_zoom -window Wave.1 -factor 2
-gui_wv_scroll_hslidermove -id  Wave.1 114
-gui_zoom -window Wave.1 -factor 2
-gui_wv_scroll_hslidermove -id  Wave.1 314
-gui_wv_scrollleft -id  Wave.2  page
-gui_wv_scrollleft -id  Wave.2  page
-gui_wv_scrollleft -id  Wave.2  page
-gui_wv_scrollleft -id  Wave.2  page
-gui_wv_scrollleft -id  Wave.2  page
-gui_wv_scroll_hslidermove -id  Wave.2 0
+gui_wv_scroll_hslidermove -id  Wave.1 8486
+gui_wv_scroll_hslidermove -id  Wave.2 351
 gui_wv_scrollleft -id  Wave.3  page
 gui_wv_scrollleft -id  Wave.3  page
+gui_wv_scrollleft -id  Wave.3  page
+gui_wv_scroll_hslidermove -id  Wave.3 5007
+gui_list_select -id Wave.3 -selected  { {tb_top.data_if.data_wdata_o[31:0]}   }
+gui_list_set_selected_property -id Wave.3 -radix decimal
+gui_wv_scroll_hslidermove -id  Wave.3 5007
 gui_wv_scrollleft -id  Wave.3  page
 gui_wv_scrollleft -id  Wave.3  page
 gui_wv_scroll_hslidermove -id  Wave.3 0
-gui_marker_move -id  Wave.1 C1 414
-gui_marker_select -id  Wave.1 { C1 }
-gui_marker_move -id  Wave.1 C1 445
-gui_marker_move -id  Wave.1 C1 365
-gui_marker_move -id  Wave.1 C1 409
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_be_o[3:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_req_o {{tb_top.u_top.data_be_o[3:0]}} 
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.data_addr_o[31:0]} {{tb_top.u_top.data_be_o[3:0]}} 
-gui_wv_scroll_hslidermove -id  Wave.1 0
 gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
 }
 gui_sim_continue  
 gui_wv_scrollleft -id  Wave.1  page
 gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 140
-gui_wv_scroll_hslidermove -id  Wave.1 64
-gui_marker_move -id  Wave.1 C1 604
-gui_wv_scroll_hslidermove -id  Wave.1 2500
-gui_marker_move -id  Wave.1 C1 2025
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_marker_move -id  Wave.1 C1 544
-gui_marker_move -id  Wave.1 C1 604
-gui_wv_scroll_hslidermove -id  Wave.1 444
-gui_marker_move -id  Wave.1 C1 625
-gui_wv_scroll_hslidermove -id  Wave.1 2441
-gui_wv_scroll_hslidermove -id  Wave.1 4241
-gui_marker_move -id  Wave.1 C1 3744
-gui_marker_move -id  Wave.1 C1 3785
-gui_marker_move -id  Wave.1 C1 3805
-gui_marker_move -id  Wave.1 C1 3770
-gui_marker_move -id  Wave.1 C1 3796
-gui_marker_move -id  Wave.1 C1 3885
-gui_wv_scroll_hslidermove -id  Wave.1 4438
-gui_marker_move -id  Wave.1 C1 3844
-gui_wv_scroll_hslidermove -id  Wave.1 4317
-gui_marker_move -id  Wave.1 C1 3782
-gui_list_expand -id  Hier.1   _vcs_unit__1607314177
-gui_list_collapse -id  Hier.1   _vcs_unit__1607314177
-gui_list_expand -id  Hier.1   mem_model_pkg
-gui_list_select -id Hier.1 -current_item_name {mem_model_pkg.\mem_model#(32,32,4) } -current_item_type Scope  -selected  { {mem_model_pkg.\mem_model#(32,32,4) }   }
-gui_list_select -id Hier.1 -current_item_name mem_model_pkg -current_item_type Scope  -selected  { mem_model_pkg   }
-gui_list_collapse -id  Hier.1   mem_model_pkg
-gui_list_expand -id  Hier.1   mem_model_pkg
-gui_list_select -id Hier.1 -current_item_name {mem_model_pkg.\mem_model#(32,32,4) } -current_item_type Scope  -selected  { {mem_model_pkg.\mem_model#(32,32,4) }   }
-gui_list_expand -id  Hier.1   {mem_model_pkg.\mem_model#(32,32,4) }
-gui_list_collapse -id  Hier.1   {mem_model_pkg.\mem_model#(32,32,4) }
-gui_list_collapse -id  Hier.1   mem_model_pkg
-gui_list_select -id Hier.1 -current_item_name ibex_tracer_pkg -current_item_type Scope  -selected  { ibex_tracer_pkg   }
-gui_list_select -id Hier.1 -current_item_name bus_params_pkg -current_item_type Scope  -selected  { bus_params_pkg   }
-gui_list_select -id Hier.1 -current_item_name _vcs_msglog -current_item_type Scope  -selected  { _vcs_msglog   }
-gui_list_select -id Hier.1 -current_item_name ibex_pkg -current_item_type Scope  -selected  { ibex_pkg   }
-gui_list_select -id Hier.1 -current_item_name uvm_custom_install_verdi_recording -current_item_type Scope  -selected  { uvm_custom_install_verdi_recording   }
-gui_list_select -id Hier.1 -current_item_name uvm_custom_install_recording -current_item_type Scope  -selected  { uvm_custom_install_recording   }
-gui_list_select -id Hier.1 -current_item_name tb_top -current_item_type Scope  -selected  { tb_top   }
-gui_list_expand -id  Hier.1   tb_top.u_top
-gui_list_select -id Hier.1 -current_item_name tb_top.u_top.u_ibex_top -current_item_type Scope  -selected  { tb_top.u_top.u_ibex_top   }
-gui_list_select -id Hier.1 -current_item_name tb_top.u_top.u_ibex_tracer -current_item_type Scope  -selected  { tb_top.u_top.u_ibex_tracer   }
-gui_list_select -id Hier.1 -current_item_name tb_top.u_top.u_ibex_top -current_item_type Scope  -selected  { tb_top.u_top.u_ibex_top   }
-gui_list_select -id Data.1 -selected  { {tb_top.u_top.u_ibex_top.rvfi_mem_wmask[3:0]}   }
-gui_list_set_filter -id Wave.1 -type Buffer -value 1
-gui_list_set_filter -id Wave.1 -type Buffer -value 0
-gui_list_set_filter -id Wave.1 -type Buffer -value 1
-gui_list_set_filter -id Wave.1 -type Buffer -value 0
-gui_list_set_filter -id Wave.1 -type Buffer -value 1
-gui_list_set_filter -id Wave.1 -type Buffer -value 0
-gui_list_set_filter -id Wave.1 -type Signal -value 1
-gui_list_set_filter -id Wave.1 -type Signal -value 0
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_software_i   }
+gui_delete_selected -id  Wave.1
 gui_list_select -id Wave.1 -selected  { tb_top.u_top.test_en_i   }
-gui_wv_scroll_hslidermove -id  Wave.1 4070
-gui_wv_scroll_hslidermove -id  Wave.1 4590
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_timer_i   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.scan_rst_ni   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.irq_fast_i[14:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.hart_id_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.debug_req_i   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.hart_id_i[31:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_nm_i   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_external_i   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.rst_ni   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.alert_minor_o   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.alert_major_o   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.core_sleep_o   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.clk_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after u_top {{tb_top.u_top.clk_i}}
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.ram_cfg_i   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.boot_addr_i[31:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_be_o[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_addr_o[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.instr_addr_o[31:0]}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_req_o   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.instr_req_o}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_req_o {{tb_top.u_top.instr_gnt_i}} 
+gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_rdata_i[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_addr_o[31:0]} {{tb_top.u_top.instr_rdata_i[31:0]}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_rvalid_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_addr_o[31:0]} {{tb_top.u_top.instr_rvalid_i}} 
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_rdata_i[31:0]} {{tb_top.u_top.instr_rvalid_i}} 
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_gnt_i {{tb_top.u_top.instr_rvalid_i}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.fetch_enable_i}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.rst_ni   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.rst_ni}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_err_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_rvalid_i {{tb_top.u_top.instr_err_i}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_req_o   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_rdata_i[31:0]} {{tb_top.u_top.data_req_o}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_req_o {{tb_top.u_top.data_gnt_i}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_rvalid_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_gnt_i {{tb_top.u_top.data_rvalid_i}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_err_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_rvalid_i {{tb_top.u_top.data_err_i}} 
+gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_we_o   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_err_i {{tb_top.u_top.data_we_o}} 
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 230
+gui_marker_move -id  Wave.1 C1 224
+gui_marker_select -id  Wave.1 { C1 }
+gui_marker_move -id  Wave.1 C1 244
+gui_marker_move -id  Wave.1 C1 264
+gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
+}
+gui_sim_continue  
+gui_sim_stop 
+gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
+}
+gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
+}
+gui_sim_continue  
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
 gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_wdata_o[31:0]}   }
 gui_list_set_selected_property -id Wave.1 -radix decimal
-gui_wv_scroll_hslidermove -id  Wave.1 1008
-gui_wv_scroll_hslidermove -id  Wave.1 4248
-gui_wv_scroll_hslidermove -id  Wave.1 4850
+gui_wv_scroll_hslidermove -id  Wave.1 221
+gui_wv_scroll_hslidermove -id  Wave.1 2565
+gui_marker_move -id  Wave.1 C1 1804
 gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
 }
 gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 5436
+gui_wv_scroll_hslidermove -id  Wave.1 6782
+gui_marker_move -id  Wave.1 C1 4664
+gui_marker_move -id  Wave.1 C1 4684
+gui_marker_move -id  Wave.1 C1 4842
+gui_wv_scroll_hslidermove -id  Wave.1 7244
+gui_marker_move -id  Wave.1 C1 4966
+gui_wv_scroll_hslidermove -id  Wave.1 3502
+gui_wv_scroll_hslidermove -id  Wave.1 883
+gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
+}
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 1676
+gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
+}
+gui_sim_continue  
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 4447

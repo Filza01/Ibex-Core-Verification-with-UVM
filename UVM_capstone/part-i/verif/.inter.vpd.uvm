@@ -563,52 +563,52 @@
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
 @ 0: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_shutdown' (id=329) No objections raised, skipping phase
 #0 in \base_test::run_phase  at base_test.sv:83
-@ 4164: [OBJTN_TRC] common.run Object uvm_test_top dropped 1 objection(s): count=0  total=0
+@ 3244: [OBJTN_TRC] common.run Object uvm_test_top dropped 1 objection(s): count=0  total=0
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:431
-@ 4164: [OBJTN_TRC] common.run Object uvm_test_top all_dropped 1 objection(s): count=0  total=0
+@ 3244: [OBJTN_TRC] common.run Object uvm_test_top all_dropped 1 objection(s): count=0  total=0
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'common.run' (id=205) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'common.run' (id=205) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=329) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=329) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'common.extract' (id=214) Scheduled from phase common.run
+@ 3244: [PH/TRC/SCHEDULED] Phase 'common.extract' (id=214) Scheduled from phase common.run
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=228) Scheduled from phase uvm.uvm_sched.post_shutdown
+@ 3244: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=228) Scheduled from phase uvm.uvm_sched.post_shutdown
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=228) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=228) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=228) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=228) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=226) Scheduled from phase uvm.uvm_sched_end
+@ 3244: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=226) Scheduled from phase uvm.uvm_sched_end
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=226) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=226) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=226) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=226) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'common.extract' (id=214) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'common.extract' (id=214) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'common.extract' (id=214) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'common.extract' (id=214) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'common.check' (id=217) Scheduled from phase common.extract
+@ 3244: [PH/TRC/SCHEDULED] Phase 'common.check' (id=217) Scheduled from phase common.extract
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'common.check' (id=217) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'common.check' (id=217) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'common.check' (id=217) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'common.check' (id=217) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'common.report' (id=220) Scheduled from phase common.check
+@ 3244: [PH/TRC/SCHEDULED] Phase 'common.report' (id=220) Scheduled from phase common.check
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'common.report' (id=220) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'common.report' (id=220) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'common.report' (id=220) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'common.report' (id=220) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'common.final' (id=223) Scheduled from phase common.report
+@ 3244: [PH/TRC/SCHEDULED] Phase 'common.final' (id=223) Scheduled from phase common.report
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'common.final' (id=223) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'common.final' (id=223) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'common.final' (id=223) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'common.final' (id=223) Completed phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=191) Scheduled from phase common.final
+@ 3244: [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=191) Scheduled from phase common.final
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/STRT] Phase 'common.common_end' (id=191) Starting phase
+@ 3244: [PH/TRC/STRT] Phase 'common.common_end' (id=191) Starting phase
 #0 in \uvm_root::run_test  at /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh:513
-@ 4164: [PH/TRC/DONE] Phase 'common.common_end' (id=191) Completed phase
+@ 3244: [PH/TRC/DONE] Phase 'common.common_end' (id=191) Completed phase

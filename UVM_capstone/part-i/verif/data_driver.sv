@@ -31,7 +31,7 @@ class data_driver extends uvm_driver #(data_mem_seq_item);
                 `DRIV_IF.data_gnt_i <= 1'b0;       
                 `DRIV_IF.data_rvalid_i <= 1'b1;
                 `DRIV_IF.data_rdata_i <= data_inst.data_rdata_i;
-                `DRIV_IF.data_err_i <= data_inst.data_err_i;
+                `DRIV_IF.data_err_i <= 0; // data_inst.data_err_i;
                 
                  data_if.clk_pos(1);
                 `DRIV_IF.data_rvalid_i <= 1'b0;

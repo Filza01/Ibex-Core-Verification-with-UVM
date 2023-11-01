@@ -1,346 +1,306 @@
 {
+    "LVLData": [
+        "SIM"
+    ],
     "MlibObjs": {},
     "PrevCompiledModules": {
-        "ibex_alu_0000": {
-            "dgwCQ_d": {
-                "mode": 4,
-                "bytes": 47099,
-                "mod": "ibex_alu_0000",
+        "_vcs_unit__3941368342": {
+            "zNTTW_d": {
                 "checksum": 0,
-                "out": "dgwCQ_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "dut_intf": {
-            "HQcyN_d": {
+                "bytes": 246743,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "_vcs_unit__3941368342",
                 "mode": 4,
-                "bytes": 10331,
-                "mod": "dut_intf",
-                "checksum": 0,
-                "out": "HQcyN_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "ibex_decoder_0000": {
-            "yn82E_d": {
-                "mode": 4,
-                "bytes": 47991,
-                "mod": "ibex_decoder_0000",
-                "checksum": 0,
-                "out": "yn82E_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "ibex_core_0000": {
-            "NKVwf_d": {
-                "mode": 4,
-                "bytes": 182314,
-                "mod": "ibex_core_0000",
-                "checksum": 0,
-                "out": "NKVwf_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "out": "zNTTW_d.o"
             }
         },
         "ibex_tracer_pkg": {
             "tCfm8_d": {
-                "mode": 4,
+                "checksum": 0,
                 "bytes": 6291,
+                "archive": "archive.194/_prev_archive_1.a",
                 "mod": "ibex_tracer_pkg",
-                "checksum": 0,
                 "out": "tCfm8_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "mode": 4
             }
         },
-        "ibex_id_stage_0000": {
-            "z1VhH_d": {
-                "mode": 4,
-                "bytes": 287931,
-                "mod": "ibex_id_stage_0000",
+        "ibex_alu_0000": {
+            "dgwCQ_d": {
                 "checksum": 0,
-                "out": "z1VhH_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "uvm_pkg": {
-            "zr7M1_d": {
-                "mode": 4,
-                "bytes": 4004470,
-                "mod": "uvm_pkg",
-                "archive": "archive.155/_prev_archive_1.a",
-                "out": "zr7M1_d.o",
-                "checksum": 0
-            }
-        },
-        "ibex_cs_registers_0000": {
-            "ZYcQd_d": {
-                "mode": 4,
-                "bytes": 105257,
-                "mod": "ibex_cs_registers_0000",
-                "checksum": 0,
-                "out": "ZYcQd_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "prim_ram_1p_pkg": {
-            "JYtvx_d": {
-                "mode": 4,
-                "bytes": 8399,
-                "mod": "prim_ram_1p_pkg",
-                "checksum": 0,
-                "out": "JYtvx_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "vcs_paramclassrepository": {
-            "hEeZs_d": {
-                "mode": 4,
-                "bytes": 5133280,
-                "mod": "vcs_paramclassrepository",
-                "archive": "archive.155/_13534_archive_1.a",
-                "out": "hEeZs_d.o",
-                "checksum": 0
-            }
-        },
-        "_vcs_unit__3941368342": {
-            "zNTTW_d": {
-                "mode": 4,
-                "bytes": 256370,
-                "mod": "_vcs_unit__3941368342",
-                "archive": "archive.155/_13534_archive_1.a",
-                "out": "zNTTW_d.o",
-                "checksum": 0
+                "bytes": 47099,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_alu_0000",
+                "out": "dgwCQ_d.o",
+                "mode": 4
             }
         },
         "ibex_pkg": {
             "A0dZk_d": {
-                "mode": 4,
+                "checksum": 0,
                 "bytes": 32128,
+                "archive": "archive.194/_prev_archive_1.a",
                 "mod": "ibex_pkg",
-                "checksum": 0,
                 "out": "A0dZk_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "mode": 4
             }
         },
-        "data_mem_intf": {
-            "r6SFb_d": {
-                "mode": 4,
-                "bytes": 48441,
-                "mod": "data_mem_intf",
+        "ibex_cs_registers_0000": {
+            "ZYcQd_d": {
                 "checksum": 0,
-                "out": "r6SFb_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "mode": 4,
-                "bytes": 34293,
-                "mod": "std",
-                "checksum": 0,
-                "out": "reYIK_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "bytes": 105257,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_cs_registers_0000",
+                "out": "ZYcQd_d.o",
+                "mode": 4
             }
         },
         "ins_mem_intf": {
             "d2N2j_d": {
-                "mode": 4,
-                "bytes": 40885,
-                "mod": "ins_mem_intf",
                 "checksum": 0,
+                "bytes": 40885,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ins_mem_intf",
                 "out": "d2N2j_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "mode": 4
             }
         },
         "bus_params_pkg": {
             "ZjDfj_d": {
-                "mode": 4,
+                "checksum": 0,
                 "bytes": 6218,
+                "archive": "archive.194/_prev_archive_1.a",
                 "mod": "bus_params_pkg",
-                "checksum": 0,
                 "out": "ZjDfj_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "mode": 4
             }
         },
-        "ibex_ex_block_0000": {
-            "Yw9K4_d": {
-                "mode": 4,
-                "bytes": 20587,
-                "mod": "ibex_ex_block_0000",
+        "ibex_decoder_0000": {
+            "yn82E_d": {
                 "checksum": 0,
-                "out": "Yw9K4_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "bytes": 47991,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_decoder_0000",
+                "out": "yn82E_d.o",
+                "mode": 4
             }
         },
-        "_vcs_DPI_package": {
-            "uM9F1_d": {
-                "mode": 4,
-                "bytes": 9355,
-                "mod": "_vcs_DPI_package",
+        "dut_intf": {
+            "HQcyN_d": {
                 "checksum": 0,
-                "out": "uM9F1_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "bytes": 10331,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "dut_intf",
+                "out": "HQcyN_d.o",
+                "mode": 4
             }
         },
-        "prim_pkg": {
-            "vbVTH_d": {
-                "mode": 4,
-                "bytes": 6689,
-                "mod": "prim_pkg",
+        "uvm_pkg": {
+            "zr7M1_d": {
                 "checksum": 0,
-                "out": "vbVTH_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "mem_model_pkg": {
-            "tVTU0_d": {
-                "mode": 4,
-                "bytes": 7033,
-                "mod": "mem_model_pkg",
-                "checksum": 0,
-                "out": "tVTU0_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "ibex_multdiv_fast_0000": {
-            "s4Vfp_d": {
-                "mode": 4,
-                "bytes": 70815,
-                "mod": "ibex_multdiv_fast_0000",
-                "checksum": 0,
-                "out": "s4Vfp_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "ibex_top_tracing": {
-            "QQirF_d": {
-                "mode": 4,
-                "bytes": 366444,
-                "mod": "ibex_top_tracing",
-                "checksum": 0,
-                "out": "QQirF_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
-            }
-        },
-        "tb_top": {
-            "jdPWL_d": {
-                "mode": 4,
-                "bytes": 20422,
-                "mod": "tb_top",
-                "archive": "archive.155/_prev_archive_1.a",
-                "out": "jdPWL_d.o",
-                "checksum": 0
-            }
-        },
-        "ibex_if_stage_0000": {
-            "L7dFI_d": {
-                "mode": 4,
-                "bytes": 162456,
-                "mod": "ibex_if_stage_0000",
-                "checksum": 0,
-                "out": "L7dFI_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "bytes": 4004470,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "uvm_pkg",
+                "out": "zr7M1_d.o",
+                "mode": 4
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "mode": 4,
+                "checksum": 0,
                 "bytes": 9183,
                 "mod": "...MASTER...",
+                "out": "objs/amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "ibex_core_0000": {
+            "NKVwf_d": {
                 "checksum": 0,
-                "out": "objs/amcQw_d.o"
+                "bytes": 182314,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_core_0000",
+                "out": "NKVwf_d.o",
+                "mode": 4
+            }
+        },
+        "tb_top": {
+            "jdPWL_d": {
+                "checksum": 0,
+                "bytes": 20552,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "tb_top",
+                "out": "jdPWL_d.o",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "checksum": 0,
+                "bytes": 34293,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "std",
+                "out": "reYIK_d.o",
+                "mode": 4
+            }
+        },
+        "vcs_paramclassrepository": {
+            "hEeZs_d": {
+                "checksum": 0,
+                "bytes": 5139906,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "vcs_paramclassrepository",
+                "out": "hEeZs_d.o",
+                "mode": 4
             }
         },
         "ibex_csr_0000": {
             "AtUGh_d": {
-                "mode": 4,
+                "checksum": 0,
                 "bytes": 16923,
+                "archive": "archive.194/_prev_archive_1.a",
                 "mod": "ibex_csr_0000",
-                "checksum": 0,
                 "out": "AtUGh_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "mode": 4
             }
         },
-        "ibex_csr_0000_0000": {
-            "anrUZ_d": {
-                "mode": 4,
-                "bytes": 16881,
-                "mod": "ibex_csr_0000_0000",
+        "ibex_ex_block_0000": {
+            "Yw9K4_d": {
                 "checksum": 0,
-                "out": "anrUZ_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "bytes": 20587,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_ex_block_0000",
+                "out": "Yw9K4_d.o",
+                "mode": 4
             }
         },
-        "clk_rst_if": {
-            "Z8haI_d": {
-                "mode": 4,
-                "bytes": 59824,
-                "mod": "clk_rst_if",
+        "ibex_multdiv_fast_0000": {
+            "s4Vfp_d": {
                 "checksum": 0,
-                "out": "Z8haI_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "bytes": 70815,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_multdiv_fast_0000",
+                "out": "s4Vfp_d.o",
+                "mode": 4
+            }
+        },
+        "prim_pkg": {
+            "vbVTH_d": {
+                "checksum": 0,
+                "bytes": 6689,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "prim_pkg",
+                "out": "vbVTH_d.o",
+                "mode": 4
+            }
+        },
+        "mem_model_pkg": {
+            "tVTU0_d": {
+                "checksum": 0,
+                "bytes": 7033,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "mem_model_pkg",
+                "out": "tVTU0_d.o",
+                "mode": 4
+            }
+        },
+        "ibex_top_tracing": {
+            "QQirF_d": {
+                "checksum": 0,
+                "bytes": 366444,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_top_tracing",
+                "out": "QQirF_d.o",
+                "mode": 4
+            }
+        },
+        "ibex_if_stage_0000": {
+            "L7dFI_d": {
+                "checksum": 0,
+                "bytes": 162456,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_if_stage_0000",
+                "out": "L7dFI_d.o",
+                "mode": 4
+            }
+        },
+        "ibex_id_stage_0000": {
+            "z1VhH_d": {
+                "checksum": 0,
+                "bytes": 287931,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_id_stage_0000",
+                "out": "z1VhH_d.o",
+                "mode": 4
+            }
+        },
+        "data_mem_intf": {
+            "r6SFb_d": {
+                "checksum": 0,
+                "bytes": 48441,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "data_mem_intf",
+                "out": "r6SFb_d.o",
+                "mode": 4
+            }
+        },
+        "prim_ram_1p_pkg": {
+            "JYtvx_d": {
+                "checksum": 0,
+                "bytes": 8399,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "prim_ram_1p_pkg",
+                "out": "JYtvx_d.o",
+                "mode": 4
+            }
+        },
+        "_vcs_DPI_package": {
+            "uM9F1_d": {
+                "checksum": 0,
+                "bytes": 9355,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "_vcs_DPI_package",
+                "out": "uM9F1_d.o",
+                "mode": 4
             }
         },
         "ibex_counter_0000": {
             "a8P8Z_d": {
-                "mode": 4,
-                "bytes": 12561,
-                "mod": "ibex_counter_0000",
                 "checksum": 0,
+                "bytes": 12561,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_counter_0000",
                 "out": "a8P8Z_d.o",
-                "archive": "archive.155/_prev_archive_1.a"
+                "mode": 4
+            }
+        },
+        "ibex_csr_0000_0000": {
+            "anrUZ_d": {
+                "checksum": 0,
+                "bytes": 16881,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "ibex_csr_0000_0000",
+                "out": "anrUZ_d.o",
+                "mode": 4
+            }
+        },
+        "clk_rst_if": {
+            "Z8haI_d": {
+                "checksum": 0,
+                "bytes": 59824,
+                "archive": "archive.194/_prev_archive_1.a",
+                "mod": "clk_rst_if",
+                "out": "Z8haI_d.o",
+                "mode": 4
             }
         }
     },
-    "CurCompileUdps": {},
+    "CompileProcesses": [
+        "cgproc.23629.json"
+    ],
     "NameTable": {
-        "clk_rst_if": [
-            "clk_rst_if",
-            "Z8haI",
-            "module"
-        ],
-        "prim_pkg": [
-            "prim_pkg",
-            "vbVTH",
-            "module"
-        ],
-        "mem_model_pkg": [
-            "mem_model_pkg",
-            "tVTU0",
-            "module"
-        ],
-        "_vcs_DPI_package": [
-            "_vcs_DPI_package",
-            "uM9F1",
-            "module"
-        ],
-        "prim_ram_1p_pkg": [
-            "prim_ram_1p_pkg",
-            "JYtvx",
-            "module"
-        ],
         "_vcs_unit__3941368342": [
             "_vcs_unit__3941368342",
             "zNTTW",
-            "module"
-        ],
-        "vcs_paramclassrepository": [
-            "vcs_paramclassrepository",
-            "hEeZs",
-            "module"
-        ],
-        "ibex_pkg": [
-            "ibex_pkg",
-            "A0dZk",
-            "module"
-        ],
-        "std": [
-            "std",
-            "reYIK",
-            "module"
-        ],
-        "data_mem_intf": [
-            "data_mem_intf",
-            "r6SFb",
             "module"
         ],
         "ibex_tracer_pkg": [
@@ -348,49 +308,9 @@
             "tCfm8",
             "module"
         ],
-        "ibex_id_stage_0000": [
-            "ibex_id_stage_0000",
-            "z1VhH",
-            "module"
-        ],
-        "uvm_pkg": [
-            "uvm_pkg",
-            "zr7M1",
-            "module"
-        ],
-        "ibex_cs_registers_0000": [
-            "ibex_cs_registers_0000",
-            "ZYcQd",
-            "module"
-        ],
-        "ibex_ex_block_0000": [
-            "ibex_ex_block_0000",
-            "Yw9K4",
-            "module"
-        ],
-        "bus_params_pkg": [
-            "bus_params_pkg",
-            "ZjDfj",
-            "module"
-        ],
-        "ins_mem_intf": [
-            "ins_mem_intf",
-            "d2N2j",
-            "module"
-        ],
-        "ibex_decoder_0000": [
-            "ibex_decoder_0000",
-            "yn82E",
-            "module"
-        ],
-        "dut_intf": [
-            "dut_intf",
-            "HQcyN",
-            "module"
-        ],
-        "ibex_csr_0000": [
-            "ibex_csr_0000",
-            "AtUGh",
+        "ibex_pkg": [
+            "ibex_pkg",
+            "A0dZk",
             "module"
         ],
         "ibex_alu_0000": [
@@ -398,34 +318,19 @@
             "dgwCQ",
             "module"
         ],
-        "ibex_counter_0000": [
-            "ibex_counter_0000",
-            "a8P8Z",
+        "_vcs_DPI_package": [
+            "_vcs_DPI_package",
+            "uM9F1",
             "module"
         ],
-        "ibex_csr_0000_0000": [
-            "ibex_csr_0000_0000",
-            "anrUZ",
+        "mem_model_pkg": [
+            "mem_model_pkg",
+            "tVTU0",
             "module"
         ],
-        "ibex_if_stage_0000": [
-            "ibex_if_stage_0000",
-            "L7dFI",
-            "module"
-        ],
-        "ibex_multdiv_fast_0000": [
-            "ibex_multdiv_fast_0000",
-            "s4Vfp",
-            "module"
-        ],
-        "ibex_core_0000": [
-            "ibex_core_0000",
-            "NKVwf",
-            "module"
-        ],
-        "ibex_top_tracing": [
-            "ibex_top_tracing",
-            "QQirF",
+        "vcs_paramclassrepository": [
+            "vcs_paramclassrepository",
+            "hEeZs",
             "module"
         ],
         "tb_top": [
@@ -433,18 +338,169 @@
             "jdPWL",
             "module"
         ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "uvm_pkg": [
+            "uvm_pkg",
+            "zr7M1",
+            "module"
+        ],
+        "ins_mem_intf": [
+            "ins_mem_intf",
+            "d2N2j",
+            "module"
+        ],
+        "ibex_cs_registers_0000": [
+            "ibex_cs_registers_0000",
+            "ZYcQd",
+            "module"
+        ],
+        "ibex_decoder_0000": [
+            "ibex_decoder_0000",
+            "yn82E",
+            "module"
+        ],
+        "bus_params_pkg": [
+            "bus_params_pkg",
+            "ZjDfj",
+            "module"
+        ],
+        "clk_rst_if": [
+            "clk_rst_if",
+            "Z8haI",
+            "module"
+        ],
+        "data_mem_intf": [
+            "data_mem_intf",
+            "r6SFb",
+            "module"
+        ],
+        "dut_intf": [
+            "dut_intf",
+            "HQcyN",
+            "module"
+        ],
+        "ibex_csr_0000_0000": [
+            "ibex_csr_0000_0000",
+            "anrUZ",
+            "module"
+        ],
+        "ibex_counter_0000": [
+            "ibex_counter_0000",
+            "a8P8Z",
+            "module"
+        ],
+        "ibex_multdiv_fast_0000": [
+            "ibex_multdiv_fast_0000",
+            "s4Vfp",
+            "module"
+        ],
+        "ibex_ex_block_0000": [
+            "ibex_ex_block_0000",
+            "Yw9K4",
+            "module"
+        ],
+        "ibex_csr_0000": [
+            "ibex_csr_0000",
+            "AtUGh",
+            "module"
+        ],
+        "ibex_id_stage_0000": [
+            "ibex_id_stage_0000",
+            "z1VhH",
+            "module"
+        ],
+        "ibex_if_stage_0000": [
+            "ibex_if_stage_0000",
+            "L7dFI",
+            "module"
+        ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
+        ],
+        "ibex_core_0000": [
+            "ibex_core_0000",
+            "NKVwf",
+            "module"
+        ],
+        "prim_ram_1p_pkg": [
+            "prim_ram_1p_pkg",
+            "JYtvx",
+            "module"
+        ],
+        "prim_pkg": [
+            "prim_pkg",
+            "vbVTH",
+            "module"
+        ],
+        "ibex_top_tracing": [
+            "ibex_top_tracing",
+            "QQirF",
+            "module"
         ]
     },
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 362597
+    },
+    "stat": {
+        "CodeGen(%)": 16.014011997071737,
+        "ru_self_cgstart": {
+            "ru_utime_sec": 4.1048369999999998,
+            "ru_nvcsw": 23,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.10412200000000001,
+            "ru_maxrss_kb": 162564,
+            "ru_nivcsw": 63,
+            "ru_minflt": 23062
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_nvcsw": 0,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_nivcsw": 0,
+            "ru_minflt": 0
+        },
+        "nMops": 331220,
+        "quadSpeed": 164822.80957059565,
+        "nQuads": 129005,
+        "totalObjSize": 362597,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_nvcsw": 1,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.0038089999999999999,
+            "ru_maxrss_kb": 82268,
+            "ru_nivcsw": 0,
+            "ru_minflt": 234
+        },
+        "ru_self_end": {
+            "ru_utime_sec": 4.8875260000000003,
+            "ru_nvcsw": 25,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.11608300000000001,
+            "ru_maxrss_kb": 164344,
+            "ru_nivcsw": 67,
+            "ru_minflt": 35826
+        },
+        "mopSpeed": 423182.1323667508,
+        "mop/quad": 2.5674973838223325,
+        "outputSizePerQuad": 2.0,
+        "Frontend(%)": 83.985988002928266
+    },
+    "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
         "vcs_paramclassrepository",
-        "vcs_paramclassrepository",
         "_vcs_DPI_package",
-        "_vcs_unit__3941368342",
         "_vcs_unit__3941368342",
         "std",
         "uvm_pkg",
@@ -472,73 +528,15 @@
         "ibex_top_tracing",
         "tb_top"
     ],
-    "CompileStrategy": "fullobj",
+    "PEModules": [],
     "Misc": {
-        "csrc": "csrc",
+        "archive_dir": "archive.194",
         "cwd": "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif",
-        "csrc_abs": "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/csrc",
+        "csrc": "csrc",
         "default_output_dir": "csrc",
         "daidir": "simv.daidir",
-        "daidir_abs": "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir",
-        "archive_dir": "archive.155"
+        "csrc_abs": "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/csrc",
+        "daidir_abs": "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv.daidir"
     },
-    "stat": {
-        "ru_self_cgstart": {
-            "ru_utime_sec": 4.7574259999999997,
-            "ru_stime_sec": 0.096109,
-            "ru_nvcsw": 23,
-            "ru_maxrss_kb": 162604,
-            "ru_nivcsw": 269,
-            "ru_minflt": 23082,
-            "ru_majflt": 0
-        },
-        "ru_childs_cgstart": {
-            "ru_utime_sec": 0.0,
-            "ru_stime_sec": 0.0,
-            "ru_nvcsw": 0,
-            "ru_maxrss_kb": 0,
-            "ru_nivcsw": 0,
-            "ru_minflt": 0,
-            "ru_majflt": 0
-        },
-        "nQuads": 128923,
-        "totalObjSize": 5777619,
-        "nMops": 331048,
-        "ru_self_end": {
-            "ru_utime_sec": 6.6207260000000003,
-            "ru_stime_sec": 0.18012800000000001,
-            "ru_nvcsw": 24,
-            "ru_maxrss_kb": 165552,
-            "ru_nivcsw": 306,
-            "ru_minflt": 37261,
-            "ru_majflt": 0
-        },
-        "ru_childs_end": {
-            "ru_utime_sec": 0.0,
-            "ru_stime_sec": 0.0043309999999999998,
-            "ru_nvcsw": 1,
-            "ru_maxrss_kb": 82344,
-            "ru_nivcsw": 0,
-            "ru_minflt": 242,
-            "ru_majflt": 0
-        },
-        "mop/quad": 2.5677962815013613,
-        "mopSpeed": 177667.57902645838,
-        "quadSpeed": 69190.683196479338,
-        "outputSizePerQuad": 44.0,
-        "Frontend(%)": 71.856560745755061,
-        "CodeGen(%)": 28.143439254244935
-    },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 394010
-    },
-    "LVLData": [
-        "SIM"
-    ],
-    "PEModules": [],
-    "CompileProcesses": [
-        "cgproc.13534.json"
-    ],
     "CompileStatus": "Successful"
 }

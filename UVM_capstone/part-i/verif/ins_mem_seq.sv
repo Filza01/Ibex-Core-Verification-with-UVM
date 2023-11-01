@@ -47,9 +47,9 @@ class ins_mem_seq extends uvm_sequence #(ins_mem_seq_item);
             read_value = memory_instance.read(addr);
             
             ins_inst.instr_rdata_i = read_value;
-            ins_inst.instr_gnt_i = 1'b1;
-            ins_inst.instr_rvalid_i = 1'b1;
-            ins_inst.instr_err_i = 1'b0;
+            // ins_inst.instr_gnt_i = 1'b1;
+            // ins_inst.instr_rvalid_i = 1'b1;
+            // ins_inst.instr_err_i = 1'b0;
 
             `uvm_info(get_full_name(), "Instruction sequence ended", UVM_NONE)
 

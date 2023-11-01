@@ -44,9 +44,9 @@ class data_mem_seq extends uvm_sequence #(data_mem_seq_item);
                 data_inst.data_rdata_i = read_value;
             end
 
-            data_inst.data_gnt_i = 1'b1;
-            data_inst.data_rvalid_i = 1'b1;
-            data_inst.data_err_i = 1'b0;
+            // data_inst.data_gnt_i = 1'b1;
+            // data_inst.data_rvalid_i = 1'b1;
+            // data_inst.data_err_i = 1'b0;
 
             `uvm_info(get_full_name(), "Data sequence ended", UVM_NONE)
 

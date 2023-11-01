@@ -21,7 +21,7 @@ TB_TOP		:= verif/			#add your testbench filename here
 IRUN		:= $(shell command -v irun)
 
 BINARY		:= $(OUT_SEED_TEST)/$(ASM_TEST).bin
-ASM_TEST	:= factorial
+ASM_TEST	:= ld_st
 
 ISA		:= rv32imcb
 MABI		:= ilp32

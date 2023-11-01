@@ -1,0 +1,1824 @@
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct 31 17:48 2023
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+The design has assertions or cover properties.
+The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
+The file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/inter.vpd' was opened successfully.
+		Starting the initial begin
+		Clock is activated
+		All interfaces have been set
+UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+------------------------- Topology Report -------------------------
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+------------------------------------------------------------------
+Name                       Type                        Size  Value
+------------------------------------------------------------------
+uvm_test_top               base_test                   -     @356 
+  env_instance             env                         -     @392 
+    da_agent               data_agent                  -     @410 
+      data_seqr            data_mem_sequencer          -     @557 
+        fifo_export        uvm_tlm_analysis_fifo #(T)  -     @694 
+          analysis_export  uvm_analysis_imp            -     @743 
+          get_ap           uvm_analysis_port           -     @733 
+          get_peek_export  uvm_get_peek_imp            -     @713 
+          put_ap           uvm_analysis_port           -     @723 
+          put_export       uvm_put_imp                 -     @703 
+        rsp_export         uvm_analysis_export         -     @566 
+        seq_item_export    uvm_seq_item_pull_imp       -     @684 
+        arbitration_queue  array                       0     -    
+        lock_queue         array                       0     -    
+        num_last_reqs      integral                    32    'd1  
+        num_last_rsps      integral                    32    'd1  
+      drv                  data_driver                 -     @753 
+        rsp_port           uvm_analysis_port           -     @772 
+        seq_item_port      uvm_seq_item_pull_port      -     @762 
+      mon                  data_monitor                -     @782 
+        data_port_item     uvm_analysis_port           -     @798 
+    inst_agent             ins_agent                   -     @401 
+      drv                  ins_driver                  -     @1005
+        rsp_port           uvm_analysis_port           -     @1024
+        seq_item_port      uvm_seq_item_pull_port      -     @1014
+      ins_seqr             ins_mem_sequencer           -     @809 
+        fifo_export        uvm_tlm_analysis_fifo #(T)  -     @946 
+          analysis_export  uvm_analysis_imp            -     @995 
+          get_ap           uvm_analysis_port           -     @985 
+          get_peek_export  uvm_get_peek_imp            -     @965 
+          put_ap           uvm_analysis_port           -     @975 
+          put_export       uvm_put_imp                 -     @955 
+        rsp_export         uvm_analysis_export         -     @818 
+        seq_item_export    uvm_seq_item_pull_imp       -     @936 
+        arbitration_queue  array                       0     -    
+        lock_queue         array                       0     -    
+        num_last_reqs      integral                    32    'd1  
+        num_last_rsps      integral                    32    'd1  
+      mon                  ins_monitor                 -     @1034
+        ins_port_item      uvm_analysis_port           -     @1050
+    sequencer              multi_sequencer             -     @419 
+      rsp_export           uvm_analysis_export         -     @428 
+      seq_item_export      uvm_seq_item_pull_imp       -     @546 
+      arbitration_queue    array                       0     -    
+      lock_queue           array                       0     -    
+      num_last_reqs        integral                    32    'd1  
+      num_last_rsps        integral                    32    'd1  
+------------------------------------------------------------------
+
+UVM_INFO base_test.sv(57) @ 0: uvm_test_top [uvm_test_top] <run_phase> started, objection raised.
+back from load_bin_to_mem to run_phase
+apply_reset() started
+apply_reset() ended
+back from clk_if.apply_reset to run_phase
+UVM_INFO ins_driver.sv(23) @ 224: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO data_driver.sv(23) @ 224: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO ins_monitor.sv(27) @ 224: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(27) @ 224: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+fetch_enable_i has been set
+fetch_enable_i = 1
+UVM_INFO ins_mem_seq.sv(23) @ 234: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] System memory size = 256
+UVM_INFO ins_mem_seq.sv(35) @ 234: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+UVM_INFO data_mem_seq.sv(23) @ 234: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 284ns failed at 284ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 284 ns
+284: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 304: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 80000080
+UVM_INFO ins_monitor.sv(34) @ 304: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 304: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 304: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 304: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 304: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 304: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 304: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 304: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 304: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 304: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = b8cb3b54, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 304: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 304: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 304: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 304ns failed at 304ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 304 ns
+304: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 324ns failed at 324ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 324 ns
+324: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 344ns failed at 344ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 344 ns
+344: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 364: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 00000013, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 364: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 364: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 364: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 364ns failed at 364ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 364 ns
+364: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+tb_top.u_top.u_ibex_tracer.printbuffer_dumpline: Writing execution trace to trace_core_00000000.log
+UVM_INFO ins_monitor.sv(33) @ 384: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 80000084
+UVM_INFO ins_monitor.sv(34) @ 384: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 384: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 384: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 384: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 384: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 384: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 384: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 384: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 384: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 384: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 66466dfa, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 384: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 384: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 384: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 384ns failed at 384ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 384 ns
+384: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 404ns failed at 404ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 404 ns
+404: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 424ns failed at 424ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 424 ns
+424: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 444: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 41014081, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 444: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 444: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 444: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 444ns failed at 444ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 444 ns
+444: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 464: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 80000088
+UVM_INFO ins_monitor.sv(34) @ 464: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 464: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 464: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 464: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 464: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 464: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 464: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 464: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 464: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 464: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 27c798f6, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 464: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 464: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 464: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 464ns failed at 464ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 464 ns
+464: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 484ns failed at 484ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 484 ns
+484: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 504ns failed at 504ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 504 ns
+504: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 524: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 42014181, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 524: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 524: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 524: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 524ns failed at 524ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 524 ns
+524: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 544: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 8000008c
+UVM_INFO ins_monitor.sv(34) @ 544: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 544: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 544: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 544: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 544: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 544: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 544: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 544: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 544: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 544: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 9d1d2626, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 544: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 544: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 544: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 544ns failed at 544ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 544 ns
+544: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 564ns failed at 564ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 564 ns
+564: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 584ns failed at 584ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 584 ns
+584: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 604: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 43014281, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 604: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 604: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 604: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 604ns failed at 604ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 604 ns
+604: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 624: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 80000090
+UVM_INFO ins_monitor.sv(34) @ 624: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 624: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 624: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 624: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 624: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 624: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 624: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 624: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 624: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 624: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 9e17c835, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 624: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 624: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 624: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 624ns failed at 624ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 624 ns
+624: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 644ns failed at 644ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 644 ns
+644: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 664ns failed at 664ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 664 ns
+664: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 684: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 44814401, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 684: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 684: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 684: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 684ns failed at 684ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 684 ns
+684: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 704: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 80000094
+UVM_INFO ins_monitor.sv(34) @ 704: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 704: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 704: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 704: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 704: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 704: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 704: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 704: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 704: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 704: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = f2f0c4fb, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 704: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 704: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 704: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 704ns failed at 704ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 704 ns
+704: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 724ns failed at 724ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 724 ns
+724: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 744ns failed at 744ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 744 ns
+744: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 764: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 45814501, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 764: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 764: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 764: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 764ns failed at 764ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 764 ns
+764: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 784: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 80000098
+UVM_INFO ins_monitor.sv(34) @ 784: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 784: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 784: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 784: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 784: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 784: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 784: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 784: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 784: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 784: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 0caaeaae, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 784: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 784: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 784: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 784ns failed at 784ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 784 ns
+784: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 804ns failed at 804ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 804 ns
+804: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 824ns failed at 824ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 824 ns
+824: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 844: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 46814601, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 844: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 844: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 844: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 844ns failed at 844ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 844 ns
+844: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 864: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 8000009c
+UVM_INFO ins_monitor.sv(34) @ 864: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 864: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 864: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 864: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 864: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 864: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 864: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 864: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 864: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 864: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = e7714dea, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 864: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 864: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 864: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 864ns failed at 864ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 864 ns
+864: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 884ns failed at 884ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 884 ns
+884: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 904ns failed at 904ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 904 ns
+904: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 924: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 47814701, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 924: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 924: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 924: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 924ns failed at 924ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 924 ns
+924: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 944: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000a0
+UVM_INFO ins_monitor.sv(34) @ 944: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 944: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 944: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 944: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 944: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 944: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 944: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 944: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 944: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 944: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 6c97dde6, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 944: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 944: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 944: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 944ns failed at 944ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 944 ns
+944: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 964ns failed at 964ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 964 ns
+964: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 984ns failed at 984ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 984 ns
+984: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1004: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 48814801, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1004: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1004: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1004: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1004ns failed at 1004ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1004 ns
+1004: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1024: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000a4
+UVM_INFO ins_monitor.sv(34) @ 1024: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1024: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1024: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1024: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1024: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1024: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1024: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1024: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1024: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1024: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 0c6c2e5e, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1024: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1024: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1024: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1024ns failed at 1024ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1024 ns
+1024: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1044ns failed at 1044ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1044 ns
+1044: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1064ns failed at 1064ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1064 ns
+1064: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1084: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 49814901, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1084: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1084: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1084: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1084ns failed at 1084ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1084 ns
+1084: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1104: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000a8
+UVM_INFO ins_monitor.sv(34) @ 1104: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1104: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1104: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1104: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1104: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1104: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1104: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1104: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1104: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1104: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 6985b22a, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1104: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1104: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1104: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1104ns failed at 1104ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1104 ns
+1104: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1124ns failed at 1124ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1124 ns
+1124: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1144ns failed at 1144ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1144 ns
+1144: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1164: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 4a814a01, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1164: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1164: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1164: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1164ns failed at 1164ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1164 ns
+1164: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1184: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000ac
+UVM_INFO ins_monitor.sv(34) @ 1184: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1184: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1184: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1184: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1184: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1184: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1184: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1184: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1184: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1184: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 0fa1156f, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1184: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1184: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1184: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1184ns failed at 1184ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1184 ns
+1184: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1204ns failed at 1204ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1204 ns
+1204: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1224ns failed at 1224ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1224 ns
+1224: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1244: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 4c014b81, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1244: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1244: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1244: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1244ns failed at 1244ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1244 ns
+1244: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1264: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000b0
+UVM_INFO ins_monitor.sv(34) @ 1264: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1264: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1264: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1264: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1264: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1264: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1264: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1264: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1264: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1264: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 769eac8c, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1264: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1264: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1264: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1264ns failed at 1264ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1264 ns
+1264: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1284ns failed at 1284ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1284 ns
+1284: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1304ns failed at 1304ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1304 ns
+1304: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1324: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 4d014c81, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1324: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1324: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1324: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1324ns failed at 1324ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1324 ns
+1324: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1344: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000b4
+UVM_INFO ins_monitor.sv(34) @ 1344: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1344: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1344: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1344: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1344: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1344: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1344: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1344: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1344: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1344: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 45fd764e, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1344: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1344: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1344: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1344ns failed at 1344ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1344 ns
+1344: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1364ns failed at 1364ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1364 ns
+1364: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1384ns failed at 1384ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1384 ns
+1384: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1404: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 4e014d81, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1404: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1404: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1404: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1404ns failed at 1404ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1404 ns
+1404: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1424: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000b8
+UVM_INFO ins_monitor.sv(34) @ 1424: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1424: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1424: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1424: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1424: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1424: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1424: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1424: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1424: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1424: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = 2faf8383, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1424: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1424: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1424: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1424ns failed at 1424ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1424 ns
+1424: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1444ns failed at 1444ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1444 ns
+1444: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1464ns failed at 1464ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1464 ns
+1464: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1484: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 4f014e81, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1484: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1484: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1484: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1484ns failed at 1484ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1484 ns
+1484: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1504: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000bc
+UVM_INFO ins_monitor.sv(34) @ 1504: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1504: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1504: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1504: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1504: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1504: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1504: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1504: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1504: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1504: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = d6f1836a, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1504: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1504: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1504: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1504ns failed at 1504ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1504 ns
+1504: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1524ns failed at 1524ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1524 ns
+1524: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1544ns failed at 1544ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1544 ns
+1544: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1564: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 00734f81, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1564: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1564: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO ins_mem_seq.sv(35) @ 1564: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1564ns failed at 1564ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1564 ns
+1564: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_monitor.sv(33) @ 1584: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] In INSTRUCTION monitor, 
+		 instr_req_o = 1, 
+		 instr_addr_o = 800000c0
+UVM_INFO ins_monitor.sv(34) @ 1584: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Data written to port item
+UVM_INFO ins_monitor.sv(35) @ 1584: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class ended
+UVM_INFO ins_monitor.sv(27) @ 1584: uvm_test_top.env_instance.inst_agent.mon [uvm_test_top.env_instance.inst_agent.mon] Instruction monitor class started
+UVM_INFO data_monitor.sv(36) @ 1584: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] In DATA monitor, 
+		 data_req_o = 0, 
+		 data_we_o = 0, 
+		 data_be_o = f, 
+		 data_addr_o = 00000000, 
+		 data_wdata_o = 00000000
+UVM_INFO data_monitor.sv(37) @ 1584: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data written to port
+UVM_INFO data_monitor.sv(38) @ 1584: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class ended
+UVM_INFO data_monitor.sv(27) @ 1584: uvm_test_top.env_instance.da_agent.mon [uvm_test_top.env_instance.da_agent.mon] Data monitor class started
+UVM_INFO data_mem_seq.sv(51) @ 1584: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence ended
+UVM_INFO ins_mem_seq.sv(54) @ 1584: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence ended
+UVM_INFO data_driver.sv(46) @ 1584: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] In DATA driver, 
+		 data_gnt_i = 1, 
+		 data_rvalid_i = 1, 
+		 data_rdata_i = dcce70a1, 
+		 data_err_i = 0
+UVM_INFO data_driver.sv(47) @ 1584: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver done
+UVM_INFO data_driver.sv(23) @ 1584: uvm_test_top.env_instance.da_agent.drv [uvm_test_top.env_instance.da_agent.drv] Data Driver Started
+UVM_INFO data_mem_seq.sv(23) @ 1584: uvm_test_top.env_instance.da_agent.data_seqr@@data_mem [uvm_test_top.env_instance.da_agent.data_seqr.data_mem] Data sequence started
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1584ns failed at 1584ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1584 ns
+1584: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1604ns failed at 1604ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1604 ns
+1604: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+"/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: started at 1624ns failed at 1624ns
+	Offending '((!exception_req_pending) || exception_req_done)'
+Error: "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv", 924: tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq: at time 1624 ns
+1624: (/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv:924) [tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq] [ASSERT FAILED] IbexDontSkipExceptionReq
+UVM_INFO ins_driver.sv(46) @ 1644: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] In INSTRUCTION driver, 
+		 instr_gnt_i = 1, 
+		 instr_rvalid_i = 1, 
+		 instr_rdata_i = 00000000, 
+		 instr_err_i = 0
+UVM_INFO ins_driver.sv(47) @ 1644: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver done
+UVM_INFO ins_driver.sv(23) @ 1644: uvm_test_top.env_instance.inst_agent.drv [uvm_test_top.env_instance.inst_agent.drv] Instruction Driver Started
+UVM_INFO base_test.sv(84) @ 1644: uvm_test_top [uvm_test_top] <run_phase> finished, objection dropped.
+UVM_INFO ins_mem_seq.sv(35) @ 1644: uvm_test_top.env_instance.inst_agent.ins_seqr@@inst_mem [uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem] Instruction sequence started
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh(1270) @ 1644: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1644: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh(894) @ 1644: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  320
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[uvm_test_top]     2
+[uvm_test_top.env_instance.da_agent.data_seqr.data_mem]    35
+[uvm_test_top.env_instance.da_agent.drv]    52
+[uvm_test_top.env_instance.da_agent.mon]    69
+[uvm_test_top.env_instance.inst_agent.drv]    52
+[uvm_test_top.env_instance.inst_agent.ins_seqr.inst_mem]    36
+[uvm_test_top.env_instance.inst_agent.mon]    69
+
+$finish called from file "/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                 1644
+Simulation complete, time is 1644 ns.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1644 ns
+CPU Time:      0.760 seconds;       Data structure size:   8.6Mb
+Tue Oct 31 18:20:41 2023
+                         Chronologic VCS (TM)
+         Version L-2016.06_Full64 -- Tue Oct 31 18:20:41 2023
+               Copyright (c) 1991-2016 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS/VCS-MX Release Notes
+
+Parsing design file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_version_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_global_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_message_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_phase_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_object_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_printer_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_tlm_defines.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm_imps.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_tlm_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_sequence_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_callback_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_reg_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_deprecated_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_hdl.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_svcmd_dpi.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_regex.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_dpi.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_coreservice.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_version.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_object_globals.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_misc.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_object.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_pool.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_queue.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_factory.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_registry.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_spell_chkr.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_resource.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_resource_specializations.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_resource_db.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_config_db.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_printer.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_comparer.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_packer.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_links.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_tr_database.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_tr_stream.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_recorder.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_event_callback.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_event.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_barrier.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_callback.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_callback.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_message.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_handler.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_object.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_transaction.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_phase.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_domain.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_bottomup_phase.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_topdown_phase.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_task_phase.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_common_phases.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_runtime_phases.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_component.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_component.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_heartbeat.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_globals.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_cmdline_processor.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_traversal.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_set_get_dap_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_simple_lock_dap.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_get_to_lock_dap.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_dap.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_set_before_get_dap.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dap/uvm_dap.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm_ifs.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_sqr_ifs.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_port_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm_imps.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_imps.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_ports.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_exports.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_analysis_port.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm_fifo_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm_fifos.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm_req_rsp.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_sqr_connections.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm1/uvm_tlm.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_pair.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_policies.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_in_order_comparator.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_algorithmic_comparator.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_random_stimulus.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_subscriber.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_monitor.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_driver.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_push_driver.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_scoreboard.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_agent.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_env.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_test.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/comps/uvm_comps.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequence_item.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequencer_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequencer_analysis_fifo.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequencer_param_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequencer.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_push_sequencer.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequence_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequence.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequence_library.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_sequence_builtin.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/seq/uvm_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_time.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_generic_payload.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_ifs.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_imps.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_ports.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_exports.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_sockets_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2_sockets.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/tlm2/uvm_tlm2.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_item.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_adapter.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_predictor.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_sequence.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_cbs.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_backdoor.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_field.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_vreg_field.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_indirect.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_fifo.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_file.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_mem_mam.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_vreg.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_mem.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_map.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_block.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_reg_hw_reset_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_reg_bit_bash_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_mem_walk_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_mem_access_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_reg_access_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_reg_mem_shared_access_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_reg_mem_built_in_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/snps_uvm_reg_bank.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/reg/uvm_reg_model.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv'.
+Parsing design file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv'
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/msglog.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_msglog_report_server.sv'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_recorder.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_tr_database.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_tr_stream.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_tr_database.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_recorder.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_record_interface.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_global_defines.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_vcs_record_interface.sv'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing design file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_recorder.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_pli_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_recorder.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_tr_database.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_tr_stream.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_tr_database.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_recorder.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_message_catcher.svh'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_pli_base.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_message_catcher.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_factory.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/./dpi/uvm_verdi_dpi.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_verdi_pli.svh'.
+Back to file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing design file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv'
+Parsing design file 'tb_top.sv'
+
+Note-[SV-LCM-PPWI] Package previously wildcard imported
+tb_top.sv, 4
+$unit
+  Package 'uvm_pkg' already wildcard imported. 
+  Ignoring uvm_pkg::*
+  See the System Verilog LRM(1800-2005), section 18.1.
+
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Back to file 'tb_top.sv'.
+Parsing included file 'bus_params_pkg.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'mem_model_pkg.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Back to file 'mem_model_pkg.sv'.
+Parsing included file 'mem_model.sv'.
+Parsing included file 'dv_macros.svh'.
+Back to file 'mem_model.sv'.
+Back to file 'mem_model_pkg.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_mem_seq_item.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_mem_sequencer.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_mem_seq.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'data_mem_seq_item.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'data_mem_sequencer.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'data_mem_seq.sv'.
+
+Note-[SV-LCM-PPWI] Package previously wildcard imported
+data_mem_seq.sv, 1
+$unit
+  Package 'mem_model_pkg' already wildcard imported. 
+  Ignoring mem_model_pkg::*
+  See the System Verilog LRM(1800-2005), section 18.1.
+
+Back to file 'tb_top.sv'.
+Parsing included file 'clk_rst_if.sv'.
+Parsing included file 'dv_macros.svh'.
+Back to file 'clk_rst_if.sv'.
+Parsing included file '/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh'.
+Back to file 'clk_rst_if.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_mem_intf.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'data_mem_intf.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'dut_intf.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_driver.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_monitor.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'ins_agent.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'data_driver.sv'.
+
+Warning-[TMR] Text macro redefined
+data_driver.sv, 1
+  Text macro (DRIV_IF) is redefined. The last definition will override 
+  previous ones.
+  In ins_driver.sv, 1, it was defined as ins_if.cb_driver
+
+Back to file 'tb_top.sv'.
+Parsing included file 'data_monitor.sv'.
+
+Warning-[TMR] Text macro redefined
+data_monitor.sv, 1
+  Text macro (MON_IF) is redefined. The last definition will override previous
+  ones.
+  In ins_monitor.sv, 1, it was defined as ins_if.cb_monitor
+
+Back to file 'tb_top.sv'.
+Parsing included file 'data_agent.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'multi_sequencer.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'multi_seq.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'env.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file 'base_test.sv'.
+Back to file 'tb_top.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_pkg.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_alu.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_compressed_decoder.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert_standard_macros.svh'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_compressed_decoder.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/dv_fcov_macros.svh'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_controller.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_counter.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_cs_registers.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_cs_registers.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_csr.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_csr.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_decoder.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_decoder.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_ex_block.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_id_stage.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_id_stage.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/dv_fcov_macros.svh'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_id_stage.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_if_stage.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_if_stage.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_load_store_unit.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_load_store_unit.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/dv_fcov_macros.svh'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_load_store_unit.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_multdiv_slow.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_multdiv_slow.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_multdiv_fast.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_multdiv_fast.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_prefetch_buffer.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_fetch_fifo.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_fetch_fifo.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_register_file_ff.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_wb_stage.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_wb_stage.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/dv_fcov_macros.svh'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_wb_stage.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_core.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_core.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_ram_1p_pkg.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_assert.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_clock_gating.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_pkg.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_clock_gating.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_generic_clock_gating.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_clock_gating.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv'.
+Parsing included file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer_pkg.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv'.
+Back to file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv'.
+Back to file 'tb_top.sv'.
+Top Level Modules:
+       uvm_custom_install_recording
+       uvm_custom_install_verdi_recording
+       tb_top
+
+Warning-[AOUP] Attempt to override undefined parameter
+tb_top.sv, 88
+  Attempting to override undefined parameter "ICacheScramble", will ignore it.
+
+TimeScale is 1 ns / 1 ns
+
+Warning-[PCWM-W] Port connection width mismatch
+tb_top.sv, 88
+"ibex_top_tracing #(0, 0, 4, 0, 40, 0, RV32MFast, RV32BNone, RegFileFF, 1'b0, 1'b0, 0, 0, 0, 0, 1, 0, 32'h1a110800, 32'h1a110808) u_top( .clk_i (clk),  .rst_ni (reset),  .test_en_i (1'b0),  .scan_rst_ni (1'b1),  .ram_cfg_i (0),  .hart_id_i (32'b0),  .boot_addr_i (32'h80000000),  .instr_req_o (tb_top.ins_if.instr_req_o),  .instr_gnt_i (tb_top.ins_if.instr_gnt_i),  .instr_rvalid_i (tb_top.ins_if.instr_rvalid_i),  .instr_addr_o (tb_top.ins_if.instr_addr_o),  .instr_rdata_i (tb_top.ins_if.instr_rdata_i),  .instr_err_i (tb_top.ins_if.instr_err_i),  .data_req_o (tb_top.data_if.data_req_o),  .data_gnt_i (tb_top.data_if.data_gnt_i),  .data_rvalid_i (tb_top.data_if.data_rvalid_i),  .data_we_o (tb_top.data_if.data_we_o),  .data_be_o (tb_top.data_if.data_be_o),  .d ... "
+  The following 32-bit expression is connected to 10-bit port "ram_cfg_i" of 
+  module "ibex_top_tracing", instance "u_top".
+  Expression: 0
+  	use +lint=PCWM for more details
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 418
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 518
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 569
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 619
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 633
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 541
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 611
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 534
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 548
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 555
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 577
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 584
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 606
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 562
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 475
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 480
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 468
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 486
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 445
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 451
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 422
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 500
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 502
+"csr_name"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 647
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 690
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 716
+"desc"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 733
+"predecessor"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 734
+"successor"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 428
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 433
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 439
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+
+Warning-[IDTS] Ignoring dynamic type sensitivity
+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv, 459
+"mnemonic"
+  Dynamic types used in always_comb, always_latch, always (@*) will be ignored
+  for the inferred sensitivity list. 
+
+Starting vcs inline pass...
+30 unique modules to generate
+30 modules and 0 UDP read. 
+recompiling package _vcs_DPI_package
+recompiling package vcs_paramclassrepository
+recompiling package _vcs_unit__1607314177
+recompiling package std
+recompiling package uvm_pkg
+recompiling package _vcs_msglog
+recompiling module uvm_custom_install_recording
+recompiling module uvm_custom_install_verdi_recording
+recompiling package bus_params_pkg
+recompiling package mem_model_pkg
+recompiling module clk_rst_if
+recompiling module ins_mem_intf
+recompiling module data_mem_intf
+recompiling module dut_intf
+recompiling package ibex_pkg
+recompiling module ibex_alu
+recompiling module ibex_controller
+recompiling module ibex_cs_registers
+recompiling module ibex_decoder
+recompiling module ibex_ex_block
+recompiling module ibex_id_stage
+recompiling module ibex_if_stage
+recompiling module ibex_multdiv_fast
+recompiling module ibex_wb_stage
+recompiling module ibex_core
+recompiling package prim_ram_1p_pkg
+recompiling package prim_pkg
+recompiling package ibex_tracer_pkg
+recompiling module ibex_top_tracing
+recompiling module tb_top
+All of 30 modules done
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  uvm_dpi.o uvm_verdi_dpi.o   amcQwB.o objs/amcQw_d.o   _8460_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          /usr/synopsys/vcs-L-2016.06/linux64/lib/libzerosoft_rt_stubs.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libvirsim.so /usr/synopsys/vcs-L-2016.06/linux64/lib/liberrorinf.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libsnpsmalloc.so    /usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsnew.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libsimprofile.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libuclinative.so   -Wl,-whole-archive /usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsucli.so -Wl,-no-whole-archive       ./../simv.daidir/vc_hdrs.o  _vcs_pli_stub_.o   /usr/synopsys/vcs-L-2016.06/linux64/lib/vcs_save_restore_new.o /usr/synopsys/verdi-L-2016.06-1/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: 11.100 seconds to compile + .452 seconds to elab + .780 seconds to link
+Finished rebuilding the design.
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct 31 18:20 2023
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+The file '/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/inter.vpd' was opened successfully.
+---------------------------------------------
+
+Simulation has just terminated due to a severe internal error:
+
+
+Release = 'L-2016.06_Full64'  Architecture = 'amd64'  Program = 'DVE'
+
+'33398273 33435466 31858597 31859951 31863311 31864114 42240975 42246642 42396793 42415830 42563840 42246642 42250299 42250654 42565367 42246642 42396793 42415830 42250740 42276747 42246642 42396793 42415830 42563840 42246642 42250299 42496601 42246642 42396793 42415830 42563840 42246642 42250299 42250654 42565367 42246642 42396793 42415830 42250740 42276747 42246642 42396793 42415830 42563840 42246642 42250299 42496601 42246642 42396793 42415830 42250740 42445912 42455433 42614796 42526424 42527220 31828740 31891769 31892575 31894331 42240975 42246642 42396793 42415830 42563840 42246642 42250299 42250654 42565367 42246642 42396793 42415830 42250740 42276747 42246642 42396793 42415830 42563840 42246642 42250299 42496601 42246642 42396793 42415830 42563840 42246642 42250299 42250654 42565367 42246642 42396793 42415830 42250740 42276747 42246642 42396793 42415830 42563840 42246642 42250299'
+
+---------------------------------------------
+===============================DVE Context================================
+Tcl="synopsys::run " 
+Tcl="gui_sim_continue " 
+Tcl="gui_eval_and_log_cmd gui_sim_continue  " 
+Tcl="gui_simulator_start_continue_command " 
+Command line: /usr/synopsys/vcs-L-2016.06//gui/dve/linux64/bin/dve.exe -full64 -ucliplatform=amd64 -toolargs "-ucligui -toolexe ./simv  -pid 4632" -toolin /tmp/vcs_20231031094823_4631_.stdin -toolout /tmp/vcs_20231031094823_4631_.stdout
+==========================================================================

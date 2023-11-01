@@ -31,7 +31,7 @@ class ins_driver extends uvm_driver #(ins_mem_seq_item);
                 `DRIV_IF.instr_gnt_i <= 1'b0;       
                 `DRIV_IF.instr_rvalid_i <= 1'b1;
                 `DRIV_IF.instr_rdata_i <= ins_inst.instr_rdata_i;
-                `DRIV_IF.instr_err_i <= ins_inst.instr_err_i;
+                `DRIV_IF.instr_err_i <= 0; // ins_inst.instr_err_i;
                 
                  ins_if.clk_pos(1);
                 `DRIV_IF.instr_rvalid_i <= 1'b0;
