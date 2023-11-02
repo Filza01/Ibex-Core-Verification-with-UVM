@@ -1,0 +1,41 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE BRANCH ASSERT 
+ 54.60  48.38  52.58  59.02  46.37  66.67 
+
+
+Total modules in report: 30
+-------------------------------------------------------------------------------
+SCORE  LINE   COND   TOGGLE BRANCH ASSERT NAME                      
+  0.00 --     --     --     --       0.00 uvm_pkg                   
+ 17.00  30.63  23.08  17.87  13.40   0.00 ibex_cs_registers         
+ 29.75  45.45  18.33  24.75  26.88  33.33 ibex_controller           
+ 36.39  41.51  20.83  40.94  35.80  42.86 ibex_load_store_unit      
+ 40.62  60.29  41.18  30.77  44.19  26.67 core_ibex_fcov_if         
+ 46.76  22.19  83.33  54.98  26.53 --     ibex_tracer               
+ 52.25 --     --      52.25 --     --     ibex_top_tracing          
+ 55.39  34.71  40.74  79.01  22.48 100.00 ibex_decoder              
+ 57.98  61.97  59.09  60.05  50.82 --     ibex_alu                  
+ 61.46  80.00 --      32.94  71.43 --     ibex_counter              
+ 62.50 --     --      62.50 --     --     prim_clock_gating         
+ 62.74 --     --      62.74 --     --     data_mem_intf             
+ 63.35  69.32  34.09  63.38  61.97  88.00 ibex_id_stage             
+ 63.61  67.86 --      42.82  43.75 100.00 ibex_if_stage             
+ 66.10  79.58  64.29  58.37  78.26  50.00 ibex_core                 
+ 66.67 --     --      66.67 --     --     dut_intf                  
+ 71.01 --     --      71.01 --     --     ins_mem_intf              
+ 74.03  71.11 100.00  50.00  75.00 --     clk_rst_if                
+ 82.17 100.00 --      28.69 100.00 100.00 ibex_csr                  
+ 84.44 100.00  92.86  50.47  94.44 --     ibex_prefetch_buffer      
+ 85.68 --     100.00  42.72 100.00 100.00 ibex_wb_stage             
+ 86.67 100.00 --      60.00 100.00 --     prim_generic_clock_gating 
+ 87.50 100.00 --      75.00 --     --     tb_top                    
+ 87.76 100.00 --      51.03 100.00 100.00 ibex_top                  
+ 89.89  82.76 --      99.29  77.50 100.00 ibex_compressed_decoder   
+ 91.74 --     100.00  75.23 100.00 --     ibex_ex_block             
+ 95.39 100.00 100.00  76.94 100.00 100.00 ibex_fetch_fifo           
+ 96.69  99.21 --      91.94  98.92 --     ibex_register_file_ff     
+ 98.30 100.00  92.86  98.64 100.00 100.00 ibex_multdiv_fast         
+100.00 --     --     --     --     100.00 vcs_paramclassrepository  
+

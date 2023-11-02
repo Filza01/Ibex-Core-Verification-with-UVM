@@ -1,0 +1,97 @@
+Design Hierarchy
+
+
+----------------
+SCORE  LINE   COND   TOGGLE BRANCH ASSERT        
+ 55.57  49.14  52.58  56.68  47.16  72.28 tb_top 
+  
+  ----------------
+  SCORE  LINE   COND   TOGGLE BRANCH ASSERT         
+   74.03  71.11 100.00  50.00  75.00 --     clk_if  
+   62.74 --     --      62.74 --     --     data_if 
+   66.67 --     --      66.67 --     --     dut_if  
+   71.01 --     --      71.01 --     --     ins_if  
+   55.26  48.53  52.00  56.59  46.90  72.28 u_top   
+    
+    ----------------
+    SCORE  LINE   COND   TOGGLE BRANCH ASSERT            
+     57.60  56.86  51.41  56.85  50.60  72.28 u_ibex_top 
+      
+      ----------------
+      SCORE  LINE   COND   TOGGLE BRANCH ASSERT                   
+       87.04 100.00 --      61.11 100.00 --     core_clock_gate_i 
+        
+        ----------------
+        SCORE  LINE   COND   TOGGLE BRANCH ASSERT                            
+         86.67 100.00 --      60.00 100.00 --     gen_generic.u_impl_generic 
+      
+      ----------------
+      SCORE  LINE   COND   TOGGLE BRANCH ASSERT                                
+       96.69  99.21 --      91.94  98.92 --     gen_regfile_ff.register_file_i 
+       54.85  53.69  51.41  51.77  45.66  71.72 u_ibex_core                    
+        
+        ----------------
+        SCORE  LINE   COND   TOGGLE BRANCH ASSERT                
+         43.80  44.23  23.08  23.33  34.62  93.75 cs_registers_i 
+          
+          ----------------
+          SCORE  LINE   COND   TOGGLE BRANCH ASSERT                    
+           61.38  80.00 --      32.70  71.43 --     mcycle_counter_i   
+           60.67  80.00 --      30.57  71.43 --     minstret_counter_i 
+           62.12  75.00 --       6.82  66.67 100.00 u_cpuctrl_csr      
+           60.79  75.00 --       1.50  66.67 100.00 u_dcsr_csr         
+           68.54  75.00 --      32.50  66.67 100.00 u_depc_csr         
+           68.79  75.00 --      33.50  66.67 100.00 u_dscratch0_csr    
+           68.79  75.00 --      33.50  66.67 100.00 u_dscratch1_csr    
+           68.94  75.00 --      34.09  66.67 100.00 u_mcause_csr       
+           68.54  75.00 --      32.50  66.67 100.00 u_mepc_csr         
+           68.82  75.00 --      33.62  66.67 100.00 u_mie_csr          
+           68.79  75.00 --      33.50  66.67 100.00 u_mscratch_csr     
+           62.12  75.00 --       6.82  66.67 100.00 u_mstack_cause_csr 
+           63.30  75.00 --      11.54  66.67 100.00 u_mstack_csr       
+           60.79  75.00 --       1.50  66.67 100.00 u_mstack_epc_csr   
+           62.12  75.00 --       6.82  66.67 100.00 u_mstatus_csr      
+           68.79  75.00 --      33.50  66.67 100.00 u_mtval_csr        
+           81.88 100.00 --      27.50 100.00 100.00 u_mtvec_csr        
+        
+        ----------------
+        SCORE  LINE   COND   TOGGLE BRANCH ASSERT            
+         83.30  86.08  81.67  75.55  73.21 100.00 ex_block_i 
+          
+          ----------------
+          SCORE  LINE   COND   TOGGLE BRANCH ASSERT                            
+           57.98  61.97  59.09  60.05  50.82 --     alu_i                      
+           98.30 100.00  92.86  98.64 100.00 100.00 gen_multdiv_fast.multdiv_i 
+        
+        ----------------
+        SCORE  LINE   COND   TOGGLE BRANCH ASSERT            
+         47.10  41.90  28.24  60.96  30.09  74.29 id_stage_i 
+          
+          ----------------
+          SCORE  LINE   COND   TOGGLE BRANCH ASSERT              
+           29.75  45.45  18.33  24.75  26.88  33.33 controller_i 
+           55.39  34.71  40.74  79.01  22.48 100.00 decoder_i    
+        
+        ----------------
+        SCORE  LINE   COND   TOGGLE BRANCH ASSERT            
+         84.43  84.92  97.73  55.75  83.76 100.00 if_stage_i 
+          
+          ----------------
+          SCORE  LINE   COND   TOGGLE BRANCH ASSERT                                       
+           89.89  82.76 --      99.29  77.50 100.00 compressed_decoder_i                  
+           92.00 100.00  97.73  63.92  98.36 100.00 gen_prefetch_buffer.prefetch_buffer_i 
+            
+            ----------------
+            SCORE  LINE   COND   TOGGLE BRANCH ASSERT        
+             95.39 100.00 100.00  76.94 100.00 100.00 fifo_i 
+        
+        ----------------
+        SCORE  LINE   COND   TOGGLE BRANCH ASSERT                   
+         36.39  41.51  20.83  40.94  35.80  42.86 load_store_unit_i 
+         40.62  60.29  41.18  30.77  44.19  26.67 u_fcov_bind       
+         85.68 --     100.00  42.72 100.00 100.00 wb_stage_i        
+    
+    ----------------
+    SCORE  LINE   COND   TOGGLE BRANCH ASSERT               
+     46.76  22.19  83.33  54.98  26.53 --     u_ibex_tracer 
+

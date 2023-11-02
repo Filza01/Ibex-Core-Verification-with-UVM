@@ -1,0 +1,536 @@
+global coverage_group 0 core_ibex_fcov_if::uarch_cg __coverage_uarch_cg unused_uarch_cg_loop_label core_ibex_fcov_if 0 1 0 0 ( )
+ 1 1
+ 95 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/core_ibex_fcov_if.sv
+ 232 0 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+22
+0
+8
+ 20 cp_instr_category_id 233 0 0 0 39 uarch_cg::core_ibex_fcov_if_uarch_cg_fn 39 uarch_cg::core_ibex_fcov_if_uarch_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 7 32 1 35 core_ibex_fcov_if::instr_category_e 1 1 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 16 cp_stall_type_id 234 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 7 32 1 34 core_ibex_fcov_if::id_stall_type_e 1 1 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 12 cp_wb_reg_hz 236 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 13 cp_wb_load_hz 238 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_2 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_2 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 21 cp_ls_error_exception 240 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_3 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_3 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 19 cp_ls_pmp_exception 241 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_4 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 15 cp_branch_taken 243 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_5 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_5 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 19 cp_branch_not_taken 244 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_6 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_6 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 15 cp_priv_mode_id 246 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_7 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_7 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 7 2 1 20 ibex_pkg::priv_lvl_e 0 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 3 0 0 1 1 7 illegal 247 0 3 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 2 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_8 0 0 0 0 0 0 0
+ 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_9 0 0 0 0 0 0 0
+
+ 15 cp_priv_mode_if 249 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_a 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_a 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 7 2 1 20 ibex_pkg::priv_lvl_e 0 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 3 0 0 1 1 7 illegal 250 0 3 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 2 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_8 0 0 0 0 0 0 0
+ 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_9 0 0 0 0 0 0 0
+
+ 16 cp_priv_mode_lsu 252 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_b 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_b 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 7 2 1 20 ibex_pkg::priv_lvl_e 0 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 3 0 0 1 1 7 illegal 253 0 3 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 2 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_8 0 0 0 0 0 0 0
+ 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_9 0 0 0 0 0 0 0
+
+ 14 cp_irq_pending 256 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_c 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_c 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 12 cp_debug_req 257 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_d 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_d 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 18 cp_interrupt_taken 259 0 0 0 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_e 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_e 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 1 0 0 1 1 4 seen 259 0 1 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_f 0 0 0 0 0 0 0
+
+ 17 cp_debug_entry_if 260 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_10 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_10 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 1 0 0 1 1 4 seen 260 0 1 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_f 0 0 0 0 0 0 0
+
+ 17 cp_debug_entry_id 261 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_11 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_11 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 1 0 0 1 1 4 seen 261 0 1 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_f 0 0 0 0 0 0 0
+
+ 13 cp_pipe_flush 262 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_12 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_12 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 1 0 0 1 1 4 seen 262 0 1 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 41 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_f 0 0 0 0 0 0 0
+
+ 25 if_stage_i.if_instr_valid 283 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_13 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_13 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 24 wb_stage_i.fcov_wb_valid 284 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_14 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_14 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 20 instr_unstalled_last 286 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_15 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_15 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 22 id_instr_category_last 286 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_16 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_16 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 7 32 1 35 core_ibex_fcov_if::instr_category_e 1 1 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 15 instr_unstalled 292 0 0 0 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_17 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_17 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 2 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 21 priv_mode_instr_cross 0 264 0 0 0 0 2 8 0 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 11 stall_cross 0 266 0 0 0 0 2 0 1 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 3 0 0 -1 0 0 1 1 7 illegal 278 0 3 0 1 7 1 1 0 0 4 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_18 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_19 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1a 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1b 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 1 0 1 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1c 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 1 1 0 0 8 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1d 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_19 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_18 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1a 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1b 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1e 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1f 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_20 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 1 0 1 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_21 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0
+
+ 21 wb_reg_hz_instr_cross 0 281 0 0 0 0 2 0 2 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 10 pipe_cross 0 284 0 0 0 0 3 0 17 18 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 27 interrupt_taken_instr_cross 0 286 0 0 0 0 3 13 19 20 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 3 0 0 -1 0 0 1 1 7 illegal 288 0 3 0 1 3 1 0 19 0 1 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_22 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 20 0 1 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_18 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0
+
+ 26 debug_entry_if_instr_cross 0 291 0 0 0 0 3 14 19 20 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 22 pipe_flush_instr_cross 0 292 0 0 0 0 3 16 21 0 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 27 exception_stall_instr_cross 0 295 0 0 0 0 7 5 4 0 1 21 11 12 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1 1 3 0 0 -1 0 0 1 1 7 illegal 307 0 3 0 1 7 1 1 0 0 4 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_18 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_19 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1a 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1b 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 1 0 1 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1c 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 1 1 0 0 8 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1d 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_19 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_18 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1a 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1b 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1e 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_1f 0 0 0 0 0 0 0
+ 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_20 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 1 0 1 1 1 42 uarch_cg::core_ibex_fcov_if_uarch_cg_fn_21 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0
+
+end_coverage_group

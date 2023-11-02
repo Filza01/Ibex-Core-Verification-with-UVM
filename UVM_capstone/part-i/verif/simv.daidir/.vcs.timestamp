@@ -370,7 +370,7 @@
 0 ibex_tracer_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/systemverilog/ibex_tracer_pkg.sv
 0 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/ibex_tracer_pkg.sv
-31
+33
 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/
 +incdir+/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2
 +incdir+/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/
@@ -391,6 +391,7 @@
 -Mvcsaceobjs=
 -Mxcflags= -pipe -DVCSMX -fPIC -I/usr/synopsys/vcs-L-2016.06/include
 -P
+-cm
 -full64
 -gen_obj
 -ntb_opts
@@ -400,6 +401,7 @@
 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv
 /usr/synopsys/vcs-L-2016.06/linux64/bin/vcs1
 /usr/synopsys/vcs-L-2016.06/linux64/lib/vcsdstub.tab
+line+cond+tgl+branch+assert
 tb_top.sv
 uvm-1.2
 30
@@ -434,7 +436,9 @@ LESSOPEN=| /usr/bin/lesspipe %s
 LESSCLOSE=/usr/bin/lesspipe %s %s
 LC_ALL=C
 0
-199
+202
+1625683394 core_ibex_fcov_bind.sv
+1625683394 core_ibex_fcov_if.sv
 1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer_pkg.sv
 1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_tracer.sv
 1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/prim_generic_clock_gating.sv
@@ -465,7 +469,7 @@ LC_ALL=C
 1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_alu.sv
 1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_pkg.sv
 1625683394 /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv
-1698826867 base_test.sv
+1698923160 base_test.sv
 1698671039 env.sv
 1698670831 multi_seq.sv
 1698670602 multi_sequencer.sv
@@ -631,8 +635,9 @@ LC_ALL=C
 1464145497 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_global_defines.svh
 1464145497 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/macros/uvm_version_defines.svh
 1464148931 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_macros.svh
-1698906789 tb_top.sv
+1698923529 tb_top.sv
 1464148931 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/uvm_pkg.sv
+1464145457 /usr/synopsys/vcs-L-2016.06//include/cm_vcsd.tab
 1464145466 /usr/synopsys/vcs-L-2016.06/linux64/lib/vcsdstub.tab
 5
 1464145497 /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/dpi/uvm_dpi.cc
@@ -640,4 +645,4 @@ LC_ALL=C
 1464147802 /usr/synopsys/vcs-L-2016.06/linux64/lib/libvirsim.so
 1464147272 /usr/synopsys/vcs-L-2016.06/linux64/lib/liberrorinf.so
 1464147248 /usr/synopsys/vcs-L-2016.06/linux64/lib/libsnpsmalloc.so
-1698906872 simv.daidir
+1698923540 simv.daidir

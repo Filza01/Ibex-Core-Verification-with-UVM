@@ -1,21 +1,17 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Fri Oct 27 13:42:13 2023
+# Saved on Thu Nov 2 19:17:28 2023
 # Designs open: 1
-#   Sim: /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv
 # Toplevel windows open: 1
-# 	TopLevel.1
-#   Source.1: uvm_pkg.\uvm_root::run_test 
-#   Group count = 2
-#   Group u_top signal count = 70
-#   Group u_top_1 signal count = 76
+# 	CovTopLevel.1
+#   Group count = 0
 # End_DVE_Session_Save_Info
 
 # DVE version: L-2016.06_Full64
 # DVE build date: May 24 2016 21:01:02
 
 
-#<Session mode="Full" path="/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/DVEfiles/session.tcl" type="Debug">
+#<Session mode="Full" path="/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/DVEfiles/session.tcl" type="Coverage">
 
 gui_set_loading_session_type Post
 gui_continuetime_set
@@ -59,83 +55,64 @@ gui_src_preferences -tabstop 8 -maxbits 24 -windownumber 1
 # DVE top-level session
 
 
-# Create and position top-level window: TopLevel.1
+# Create and position top-level window: CovTopLevel.1
 
-if {![gui_exist_window -window TopLevel.1]} {
-    set TopLevel.1 [ gui_create_window -type TopLevel \
+if {![gui_exist_window -window CovTopLevel.1]} {
+    set CovTopLevel.1 [ gui_create_window -type CovTopLevel \
        -icon $::env(DVE)/auxx/gui/images/toolbars/dvewin.xpm] 
 } else { 
-    set TopLevel.1 TopLevel.1
+    set CovTopLevel.1 CovTopLevel.1
 }
-gui_show_window -window ${TopLevel.1} -show_state maximized -rect {{0 60} {1365 767}}
+gui_show_window -window ${CovTopLevel.1} -show_state maximized -rect {{0 60} {1365 767}}
 
 # ToolBar settings
-gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
-gui_set_toolbar_attributes -toolbar {TimeOperations} -offset 0
-gui_show_toolbar -toolbar {TimeOperations}
-gui_hide_toolbar -toolbar {&File}
+gui_set_toolbar_attributes -toolbar {&File} -dock_state top
+gui_set_toolbar_attributes -toolbar {&File} -offset 0
+gui_show_toolbar -toolbar {&File}
 gui_set_toolbar_attributes -toolbar {&Edit} -dock_state top
 gui_set_toolbar_attributes -toolbar {&Edit} -offset 0
 gui_show_toolbar -toolbar {&Edit}
-gui_hide_toolbar -toolbar {CopyPaste}
-gui_set_toolbar_attributes -toolbar {&Trace} -dock_state top
-gui_set_toolbar_attributes -toolbar {&Trace} -offset 0
-gui_show_toolbar -toolbar {&Trace}
-gui_hide_toolbar -toolbar {TraceInstance}
-gui_hide_toolbar -toolbar {BackTrace}
-gui_set_toolbar_attributes -toolbar {&Scope} -dock_state top
-gui_set_toolbar_attributes -toolbar {&Scope} -offset 0
-gui_show_toolbar -toolbar {&Scope}
+gui_set_toolbar_attributes -toolbar {Exclusion} -dock_state top
+gui_set_toolbar_attributes -toolbar {Exclusion} -offset 0
+gui_show_toolbar -toolbar {Exclusion}
+gui_set_toolbar_attributes -toolbar {Treemap} -dock_state top
+gui_set_toolbar_attributes -toolbar {Treemap} -offset 0
+gui_show_toolbar -toolbar {Treemap}
+gui_set_toolbar_attributes -toolbar {Navigation} -dock_state top
+gui_set_toolbar_attributes -toolbar {Navigation} -offset 0
+gui_show_toolbar -toolbar {Navigation}
+gui_set_toolbar_attributes -toolbar {PathNavigation} -dock_state top
+gui_set_toolbar_attributes -toolbar {PathNavigation} -offset 0
+gui_show_toolbar -toolbar {PathNavigation}
+gui_set_toolbar_attributes -toolbar {Review} -dock_state top
+gui_set_toolbar_attributes -toolbar {Review} -offset 0
+gui_show_toolbar -toolbar {Review}
+gui_set_toolbar_attributes -toolbar {ReviewScope} -dock_state top
+gui_set_toolbar_attributes -toolbar {ReviewScope} -offset 0
+gui_show_toolbar -toolbar {ReviewScope}
 gui_set_toolbar_attributes -toolbar {&Window} -dock_state top
 gui_set_toolbar_attributes -toolbar {&Window} -offset 0
 gui_show_toolbar -toolbar {&Window}
-gui_set_toolbar_attributes -toolbar {Signal} -dock_state top
-gui_set_toolbar_attributes -toolbar {Signal} -offset 0
-gui_show_toolbar -toolbar {Signal}
 gui_set_toolbar_attributes -toolbar {Zoom} -dock_state top
 gui_set_toolbar_attributes -toolbar {Zoom} -offset 0
 gui_show_toolbar -toolbar {Zoom}
 gui_set_toolbar_attributes -toolbar {Zoom And Pan History} -dock_state top
 gui_set_toolbar_attributes -toolbar {Zoom And Pan History} -offset 0
 gui_show_toolbar -toolbar {Zoom And Pan History}
-gui_set_toolbar_attributes -toolbar {Grid} -dock_state top
-gui_set_toolbar_attributes -toolbar {Grid} -offset 0
-gui_show_toolbar -toolbar {Grid}
-gui_set_toolbar_attributes -toolbar {Simulator} -dock_state top
-gui_set_toolbar_attributes -toolbar {Simulator} -offset 0
-gui_show_toolbar -toolbar {Simulator}
-gui_set_toolbar_attributes -toolbar {Interactive Rewind} -dock_state top
-gui_set_toolbar_attributes -toolbar {Interactive Rewind} -offset 0
-gui_show_toolbar -toolbar {Interactive Rewind}
-gui_set_toolbar_attributes -toolbar {Testbench} -dock_state top
-gui_set_toolbar_attributes -toolbar {Testbench} -offset 0
-gui_show_toolbar -toolbar {Testbench}
 
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 285]
-catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
-catch { set Stack.1 [gui_share_window -id ${HSPane.1} -type Stack -silent] }
-catch { set Class.1 [gui_share_window -id ${HSPane.1} -type Class -silent] }
-catch { set Object.1 [gui_share_window -id ${HSPane.1} -type Object -silent] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 285
-gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
-gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 284} {height 301} {dock_state left} {dock_on_new_line true} {child_hier_colhier 173} {child_hier_coltype 107} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 192]
-catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
-catch { set Local.1 [gui_share_window -id ${DLPane.1} -type Local -silent] }
-catch { set Member.1 [gui_share_window -id ${DLPane.1} -type Member -silent] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 192
-gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 300
-gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 191} {height 301} {dock_state left} {dock_on_new_line true} {child_data_colvariable 140} {child_data_colvalue 100} {child_data_coltype 40} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 300]
-gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1306
-gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 300
+set CovHier.1 [gui_create_window -type CovHier -parent ${CovTopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 200]
+gui_set_window_pref_key -window ${CovHier.1} -key dock_width -value_type integer -value 200
+gui_set_window_pref_key -window ${CovHier.1} -key dock_height -value_type integer -value 260
+gui_set_window_pref_key -window ${CovHier.1} -key dock_offset -value_type integer -value 0
+gui_update_layout -id ${CovHier.1} {{left 0} {top 0} {width 199} {height 418} {dock_state left} {dock_on_new_line true} {child_covhier_colhier 140} {child_covhier_coltype 100} {child_covhier_col1 1} {child_covhier_col2 2}}
+set Console.1 [gui_create_window -type Console -parent ${CovTopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 180]
+gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 689
+gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 180
 gui_set_window_pref_key -window ${Console.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1365} {height 299} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1365} {height 179} {dock_state bottom} {dock_on_new_line true}}
 #### Start - Readjusting docked view's offset / size
 set dockAreaList { top left right bottom }
 foreach dockArea $dockAreaList {
@@ -154,23 +131,18 @@ foreach dockArea $dockAreaList {
   }
 }
 #### End - Readjusting docked view's offset / size
-gui_sync_global -id ${TopLevel.1} -option true
 
 # MDI window settings
-set Source.1 [gui_create_window -type {Source}  -parent ${TopLevel.1}]
-gui_show_window -window ${Source.1} -show_state maximized
-gui_update_layout -id ${Source.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false}}
+set CoverageTable.1 [gui_create_window -type {CoverageTable}  -parent ${CovTopLevel.1}]
+gui_show_window -window ${CoverageTable.1} -show_state maximized
+gui_update_layout -id ${CoverageTable.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {Layout_CoverageTable_covtblFGroupsList_names Group,    , ,  ,   ,Score,Assert,} {Layout_CoverageTable_covtblFGroupsList_widths 220,0,25,0,0,125,125,} {Layout_CoverageTable_covtblFGroupsList_orders 4,0,1,2,3,5,6,} {Layout_CoverageTable_covtblInstancesList_names Name,    , ,  ,   ,Score,Line,Toggle,Condition,Branch,Assert,} {Layout_CoverageTable_covtblInstancesList_widths 220,0,25,0,0,125,125,125,125,125,125,} {Layout_CoverageTable_covtblInstancesList_orders 4,0,1,2,3,5,6,7,8,9,10,} {Layout_CoverageTable_covtblModulesList_names Name,    , ,  ,   ,Score,Line,Toggle,Condition,Branch,Assert,} {Layout_CoverageTable_covtblModulesList_widths 220,0,25,0,0,125,125,125,125,125,125,} {Layout_CoverageTable_covtblModulesList_orders 4,0,1,2,3,5,6,7,8,9,10,}}
 
 # End MDI window settings
 
-gui_set_env TOPLEVELS::TARGET_FRAME(Source) ${TopLevel.1}
-gui_set_env TOPLEVELS::TARGET_FRAME(Schematic) ${TopLevel.1}
-gui_set_env TOPLEVELS::TARGET_FRAME(PathSchematic) ${TopLevel.1}
-gui_set_env TOPLEVELS::TARGET_FRAME(Wave) none
-gui_set_env TOPLEVELS::TARGET_FRAME(List) none
-gui_set_env TOPLEVELS::TARGET_FRAME(Memory) ${TopLevel.1}
-gui_set_env TOPLEVELS::TARGET_FRAME(DriverLoad) none
-gui_update_statusbar_target_frame ${TopLevel.1}
+gui_set_env TOPLEVELS::TARGET_FRAME(CovDetail) ${CovTopLevel.1}
+gui_set_env TOPLEVELS::TARGET_FRAME(CoverageTable) ${CovTopLevel.1}
+gui_set_env TOPLEVELS::TARGET_FRAME(CoverageMap) ${CovTopLevel.1}
+gui_update_statusbar_target_frame ${CovTopLevel.1}
 
 #</WindowLayout>
 
@@ -178,23 +150,14 @@ gui_update_statusbar_target_frame ${TopLevel.1}
 
 # DVE Open design session: 
 
-if { [llength [lindex [gui_get_db -design Sim] 0]] == 0 } {
-gui_set_env SIMSETUP::SIMARGS {{}}
-gui_set_env SIMSETUP::SIMEXE {./simv}
-gui_set_env SIMSETUP::ALLOW_POLL {0}
-if { ![gui_is_db_opened -db {/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv}] } {
-gui_sim_run Ucli -exe simv -args { -ucligui} -dir /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif -nosource
-}
-}
-if { ![gui_sim_state -check active] } {error "Simulator did not start correctly" error}
-gui_set_precision 1ns
-gui_set_time_units 1ns
+gui_open_cov  -hier {simv.vdb/}   -testdir {simv.vdb/} -autoopen False  -test { {simv/test} } -merge {MergedTest}
+gui_cov_show_cond_ids -show off
+gui_set_precision 1s
+gui_set_time_units 1s
 #</Database>
 
 # DVE Global setting session: 
 
-
-# Global: Breakpoints
 
 # Global: Bus
 
@@ -205,77 +168,7 @@ gui_set_time_units 1ns
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {tb_top.u_top}
 
-
-set _session_group_1 u_top
-gui_sg_create "$_session_group_1"
-set u_top "$_session_group_1"
-
-gui_sg_addsignal -group "$_session_group_1" { tb_top.u_top.data_wdata_o tb_top.u_top.data_gnt_i tb_top.u_top.scan_rst_ni tb_top.u_top.RegFile tb_top.u_top.rvfi_rs2_rdata tb_top.u_top.rvfi_mode tb_top.u_top.irq_fast_i tb_top.u_top.rvfi_order tb_top.u_top.rvfi_trap tb_top.u_top.instr_addr_o tb_top.u_top.rvfi_insn tb_top.u_top.instr_gnt_i tb_top.u_top.hart_id_i tb_top.u_top.SecureIbex tb_top.u_top.debug_req_i tb_top.u_top.PMPEnable tb_top.u_top.fetch_enable_i tb_top.u_top.PMPNumRegions tb_top.u_top.irq_nm_i tb_top.u_top.irq_external_i tb_top.u_top.rvfi_rs2_addr tb_top.u_top.rvfi_intr tb_top.u_top.data_err_i tb_top.u_top.DbgHwBreakNum tb_top.u_top.rvfi_pc_rdata tb_top.u_top.data_we_o tb_top.u_top.BranchPredictor tb_top.u_top.rvfi_mem_rdata tb_top.u_top.rvfi_rs1_rdata tb_top.u_top.DmExceptionAddr tb_top.u_top.rvfi_ixl tb_top.u_top.instr_err_i tb_top.u_top.crash_dump_o tb_top.u_top.MHPMCounterWidth tb_top.u_top.rvfi_mem_rmask tb_top.u_top.BranchTargetALU tb_top.u_top.data_rvalid_i tb_top.u_top.rst_ni tb_top.u_top.data_rdata_i tb_top.u_top.data_addr_o tb_top.u_top.alert_minor_o tb_top.u_top.WritebackStage tb_top.u_top.alert_major_o tb_top.u_top.rvfi_rs3_rdata tb_top.u_top.rvfi_rs1_addr tb_top.u_top.rvfi_mem_addr tb_top.u_top.instr_rvalid_i tb_top.u_top.clk_i tb_top.u_top.core_sleep_o tb_top.u_top.rvfi_pc_wdata tb_top.u_top.rvfi_rd_addr tb_top.u_top.rvfi_mem_wdata tb_top.u_top.PMPGranularity tb_top.u_top.RV32B tb_top.u_top.data_req_o tb_top.u_top.RV32E tb_top.u_top.instr_rdata_i tb_top.u_top.data_be_o {tb_top.u_top.$unit} tb_top.u_top.RV32M tb_top.u_top.ICache tb_top.u_top.rvfi_rs3_addr tb_top.u_top.rvfi_rd_wdata tb_top.u_top.ram_cfg_i tb_top.u_top.DbgTriggerEn tb_top.u_top.boot_addr_i tb_top.u_top.MHPMCounterNum tb_top.u_top.rvfi_mem_wmask tb_top.u_top.instr_req_o tb_top.u_top.DmHaltAddr }
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RegFile}
-gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RegFile}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.SecureIbex}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.PMPEnable}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPNumRegions}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPNumRegions}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.BranchPredictor}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmExceptionAddr}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmExceptionAddr}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.BranchTargetALU}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.WritebackStage}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPGranularity}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPGranularity}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32B}
-gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32B}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.RV32E}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32M}
-gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32M}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.ICache}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.DbgTriggerEn}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterNum}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterNum}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmHaltAddr}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmHaltAddr}
-
-set _session_group_2 u_top_1
-gui_sg_create "$_session_group_2"
-set u_top_1 "$_session_group_2"
-
-gui_sg_addsignal -group "$_session_group_2" { tb_top.u_top.rvfi_halt tb_top.u_top.data_wdata_o tb_top.u_top.irq_software_i tb_top.u_top.ICacheECC tb_top.u_top.test_en_i tb_top.u_top.irq_timer_i tb_top.u_top.rvfi_valid tb_top.u_top.data_gnt_i tb_top.u_top.scan_rst_ni tb_top.u_top.RegFile tb_top.u_top.rvfi_rs2_rdata tb_top.u_top.rvfi_mode tb_top.u_top.irq_fast_i tb_top.u_top.rvfi_order tb_top.u_top.rvfi_trap tb_top.u_top.instr_addr_o tb_top.u_top.rvfi_insn tb_top.u_top.instr_gnt_i tb_top.u_top.hart_id_i tb_top.u_top.SecureIbex tb_top.u_top.debug_req_i tb_top.u_top.PMPEnable tb_top.u_top.fetch_enable_i tb_top.u_top.PMPNumRegions tb_top.u_top.irq_nm_i tb_top.u_top.irq_external_i tb_top.u_top.rvfi_rs2_addr tb_top.u_top.rvfi_intr tb_top.u_top.data_err_i tb_top.u_top.DbgHwBreakNum tb_top.u_top.rvfi_pc_rdata tb_top.u_top.data_we_o tb_top.u_top.BranchPredictor tb_top.u_top.rvfi_mem_rdata tb_top.u_top.rvfi_rs1_rdata tb_top.u_top.DmExceptionAddr tb_top.u_top.rvfi_ixl tb_top.u_top.instr_err_i tb_top.u_top.crash_dump_o tb_top.u_top.MHPMCounterWidth tb_top.u_top.rvfi_mem_rmask tb_top.u_top.BranchTargetALU tb_top.u_top.data_rvalid_i tb_top.u_top.rst_ni tb_top.u_top.data_rdata_i tb_top.u_top.data_addr_o tb_top.u_top.alert_minor_o tb_top.u_top.WritebackStage tb_top.u_top.alert_major_o tb_top.u_top.rvfi_rs3_rdata tb_top.u_top.rvfi_rs1_addr tb_top.u_top.rvfi_mem_addr tb_top.u_top.instr_rvalid_i tb_top.u_top.clk_i tb_top.u_top.core_sleep_o tb_top.u_top.rvfi_pc_wdata tb_top.u_top.rvfi_rd_addr tb_top.u_top.rvfi_mem_wdata tb_top.u_top.PMPGranularity tb_top.u_top.RV32B tb_top.u_top.data_req_o tb_top.u_top.RV32E tb_top.u_top.instr_rdata_i tb_top.u_top.data_be_o {tb_top.u_top.$unit} tb_top.u_top.RV32M tb_top.u_top.ICache tb_top.u_top.rvfi_rs3_addr tb_top.u_top.rvfi_rd_wdata tb_top.u_top.ram_cfg_i tb_top.u_top.DbgTriggerEn tb_top.u_top.boot_addr_i tb_top.u_top.MHPMCounterNum tb_top.u_top.rvfi_mem_wmask tb_top.u_top.instr_req_o tb_top.u_top.DmHaltAddr }
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.ICacheECC}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RegFile}
-gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RegFile}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.SecureIbex}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.PMPEnable}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPNumRegions}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPNumRegions}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DbgHwBreakNum}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.BranchPredictor}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmExceptionAddr}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmExceptionAddr}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterWidth}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.BranchTargetALU}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.WritebackStage}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.PMPGranularity}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.PMPGranularity}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32B}
-gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32B}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.RV32E}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.RV32M}
-gui_set_radix -radix {twosComplement} -signals {Sim:tb_top.u_top.RV32M}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.ICache}
-gui_set_radix -radix {strength} -signals {Sim:tb_top.u_top.DbgTriggerEn}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.MHPMCounterNum}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.MHPMCounterNum}
-gui_set_radix -radix {decimal} -signals {Sim:tb_top.u_top.DmHaltAddr}
-gui_set_radix -radix {unsigned} -signals {Sim:tb_top.u_top.DmHaltAddr}
 
 # Global: Highlighting
 
@@ -285,13 +178,20 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 361
+gui_set_time -C1_only 0
 
 
 
 # Save global setting...
 
 # Wave/List view global setting
+## Load User Defined Groups
+## Load Exclusion File
+#reload all efliles:
+#unmappable review objects:
+#mappable review objects:
+gui_cov_set_review_status -sync
+
 gui_cov_show_value -switch false
 
 # Close all empty TopLevel windows
@@ -303,49 +203,45 @@ foreach __top [gui_ekki_get_window_ids -type TopLevel] {
 gui_set_loading_session_type noSession
 # DVE View/pane content session: 
 
-
-# Hier 'Hier.1'
-gui_show_window -window ${Hier.1}
-gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtPowSwitch 0} {UnnamedProcess 1} {UDP 0} {Function 1} {Block 1} {SrsnAndSpaCell 0} {OVA Unit 1} {LeafScCell 1} {LeafVlgCell 1} {Interface 1} {LeafVhdCell 1} {$unit 1} {NamedBlock 1} {Task 1} {VlgPackage 1} {ClassDef 1} {VirtIsoCell 0} }
-gui_list_set_filter -id ${Hier.1} -text {*}
-gui_hier_list_init -id ${Hier.1}
-gui_change_design -id ${Hier.1} -design Sim
-catch {gui_list_expand -id ${Hier.1} tb_top}
-catch {gui_list_select -id ${Hier.1} {tb_top.u_top}}
-gui_view_scroll -id ${Hier.1} -vertical -set 171
-gui_view_scroll -id ${Hier.1} -horizontal -set 0
-
-# Class 'Class.1'
-gui_list_set_filter -id ${Class.1} -list { {OVM 1} {VMM 1} {All 1} {Object 1} {UVM 1} {RVM 1} }
-gui_list_set_filter -id ${Class.1} -text {*}
-gui_change_design -id ${Class.1} -design Sim
-
-# Member 'Member.1'
-gui_list_set_filter -id ${Member.1} -list { {InternalMember 0} {RandMember 1} {All 0} {BaseMember 0} {PrivateMember 1} {LibBaseMember 0} {AutomaticMember 1} {VirtualMember 1} {PublicMember 1} {ProtectedMember 1} {OverRiddenMember 0} {InterfaceClassMember 1} {StaticMember 1} }
-gui_list_set_filter -id ${Member.1} -text {*}
-
-# Data 'Data.1'
-gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
-gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {tb_top.u_top}
-gui_view_scroll -id ${Data.1} -vertical -set 0
-gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 171
-gui_view_scroll -id ${Hier.1} -horizontal -set 0
-
-# Source 'Source.1'
-gui_src_value_annotate -id ${Source.1} -switch false
-gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active {uvm_pkg.\uvm_root::run_test } /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh
-gui_view_scroll -id ${Source.1} -vertical -set 3888
-gui_src_set_reusable -id ${Source.1}
-# Warning: Class view not found.
+gui_list_set_filter -id ${CovHier.1} -list { {Cover Property 1} {All 1} {Cover Sequence 1} {Assertion 1} {Cover Group 1} }
+gui_list_set_filter -id ${CovHier.1} -text {*}
+catch {gui_list_expand -id ${CovHier.1} {/<Design Hierarchy>}}
+gui_covtable_show -id CoverageTable.1 -show {Design Hierarchy}  -cumulative 1
+catch {gui_list_expand -id ${CoverageTable.1} tb_top}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.core_clock_gate_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.core_clock_gate_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.core_clock_gate_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.core_clock_gate_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i}
+catch {gui_list_expand -id ${CoverageTable.1} tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i}
+catch {gui_list_select -id ${CoverageTable.1} {tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.alu_i}}
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane
-if {[gui_exist_window -window ${TopLevel.1}]} {
-	gui_set_active_window -window ${TopLevel.1}
-	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${HSPane.1}
+if {[gui_exist_window -window ${CovTopLevel.1}]} {
+	gui_set_active_window -window ${CovTopLevel.1}
+	gui_set_active_window -window ${CoverageTable.1}
 }
 #</Session>
 

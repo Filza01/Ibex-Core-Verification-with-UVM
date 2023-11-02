@@ -1,0 +1,150 @@
+Assertions
+
+
+Assertions by Category
+           ASSERT PROPERTIES SEQUENCES
+Total         104          0         0
+Category 0    104          0         0
+
+-------------------------------------------------------------------------------
+
+Assertions by Severity
+           ASSERT PROPERTIES SEQUENCES
+Total         104          0         0
+Severity 0    104          0         0
+
+-------------------------------------------------------------------------------
+
+Summary for Assertions
+                 NUMBER PERCENT
+Total Number        104  100.00
+Uncovered            30   28.85
+Success              74   71.15
+Failure               1    0.96
+Incomplete            0    0.00
+Without Attempts      2    1.92
+
+-------------------------------------------------------------------------------
+
+Detail Report for Assertions
+
+Assertions Uncovered:
+                                             ASSERTIONS                                              CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+tb_top.u_top.u_ibex_top.u_ibex_core.IbexCsrWdataIntKnown                                                    0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.NoMemResponseWithoutPendingAccess                                       0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.IbexCsrOpEnRequiresAccess                                0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.gen_no_wb_stage.NoMemRFWriteWithoutPendingLoad                          0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IllegalInsnStallMustBeMemStall                               0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.NeverDoubleBranch                                            0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.AlwaysInstrClearOnMispredict                    0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexExceptionPrioOnehot                         0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexNoDoubleExceptionReq                        0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexNoDoubleSpecialReqPCSet                     0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexNoPCSetOnSpecialReqIfNotExpected            0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexSetExceptionPCOnSpecialReqIfExpected        0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.gen_no_stall_mem.IbexStallIfValidInstrNotExecuting           0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexDataAddrUnaligned                                 0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexDataAddrUnknown                                   0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexDataOffsetKnown                                   0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexDataTypeKnown                                     0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryBranchCorrect                                  0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryCSRAccessCorrect                               0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryDRetCorrect                                    0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryEBreakDbgCorrect                               0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryEBreakExcCorrect                               0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryECallCorrect                                   0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryFenceICorrect                                  0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryLoadCorrect                                    0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryMRetCorrect                                    0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryStoreCorrect                                   0        0    24188              0        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryWFICorrect                                     0        0    24188              0        0          0
+uvm_pkg.\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1                                                      0        0        0              0        0          0
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1                                                     0        0        0              0        0          0
+
+Assertions Success:
+                                                     ASSERTIONS                                                      CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+tb_top.u_top.u_ibex_top.IbexAlertMajorX                                                                                     0        0    24199          24189        0          0
+tb_top.u_top.u_ibex_top.IbexAlertMinorX                                                                                     0        0    24199          24189        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.IbexCsrOpValid                                                                          0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.IbexCsrWdataIntKnownKnownEnable                                                         0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.IllegalParamSecure                                                                      0        0        1              1        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_cpuctrl_csr.IbexCSREnValid                                             0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_dcsr_csr.IbexCSREnValid                                                0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_depc_csr.IbexCSREnValid                                                0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_dscratch0_csr.IbexCSREnValid                                           0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_dscratch1_csr.IbexCSREnValid                                           0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mcause_csr.IbexCSREnValid                                              0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mepc_csr.IbexCSREnValid                                                0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mie_csr.IbexCSREnValid                                                 0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mscratch_csr.IbexCSREnValid                                            0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mstack_cause_csr.IbexCSREnValid                                        0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mstack_csr.IbexCSREnValid                                              0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mstack_epc_csr.IbexCSREnValid                                          0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mstatus_csr.IbexCSREnValid                                             0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mtval_csr.IbexCSREnValid                                               0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.cs_registers_i.u_mtvec_csr.IbexCSREnValid                                               0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.DivEnKnown                                        0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.IbexMultDivStateValid                             0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.MultDivEnKnown                                    0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.MultEnKnown                                       0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.gen_multdiv_fast.multdiv_i.gen_mult_fast.IbexMultStateKnown                  0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexAluAOpMuxSelValid                                                        0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexAluOpMuxSelKnown                                                         0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexAluOpMuxSelKnownKnownEnable                                              0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBTAluAOpMuxSelKnown                                                      0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBTAluAOpMuxSelKnownKnownEnable                                           0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBTAluAOpMuxSelValid                                                      0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBTAluBOpMuxSelKnown                                                      0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBTAluBOpMuxSelKnownKnownEnable                                           0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBTAluBOpMuxSelValid                                                      0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBranchDecisionValid                                                      0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexBranchDecisionValidKnownEnable                                           0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexDuplicateInstrMatch                                                      0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexIdInstrALUKnown                                                          0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexIdInstrALUKnownKnownEnable                                               0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexIdInstrKnown                                                             0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexIdInstrKnownKnownEnable                                                  0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexMulticycleEnableUnique                                                   0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexRegfileWdataSelValid                                                     0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.IbexWbStateKnown                                                             0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.NeverDoubleJump                                                              0        0    24188              1        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.StallIDIfMulticycle                                                          0        0    24188           1011        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexCtrlStateValid                                              0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq                                        0        0    24188              1    12796          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexSpecImpliesSetPC                                            0        0    24188              3        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.decoder_i.IbexRegImmAluOpKnown                                               0        0    24188           5887        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.g_nobtalu.IbexImmBMuxSelValid                                                0        0    24188          17897        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.IbexBootAddrUnaligned                                                        0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.IbexExcPcMuxKnown                                                            0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.IbexInstrAddrUnaligned                                                       0        0    24188          15839        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.IbexInstrAddrUnknown                                                         0        0    24188          15839        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexC0Known1                                            0        0    24188            495        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexC1Known1                                            0        0    24188           4884        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexC1Known2                                            0        0    24188           2288        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexC1Known3                                            0        0    24188           1564        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexC2Known1                                            0        0    24188           1129        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown                                      0        0    24188          16639        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.compressed_decoder_i.IbexInstrValidKnown                                     0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.g_no_branch_predictor_asserts.IbexPcMuxValid                                 0        0    24188              3        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i.fifo_i.IbexFetchFifoPushFull           0        0    24188           5226        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i.gen_prefetch_buffer.prefetch_buffer_i.fifo_i.IbexFetchFifoPushPopFull        0        0    24188           3182        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexDataTypeQKnown                                                    0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexLsuStateValid                                                     0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.load_store_unit_i.IbexRDataOffsetQKnown                                                 0        0    24188          24188        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryALUCorrect                                                     0        0    24188           5495        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryDivCorrect                                                     0        0    24188          10183        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryJumpCorrect                                                    0        0    24188              2        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.u_fcov_bind.InstrCategoryMulCorrect                                                     0        0    24188           2217        0          0
+tb_top.u_top.u_ibex_top.u_ibex_core.wb_stage_i.RFWriteFromOneSourceOnly                                                     0        0    24188          24188        0          0
+vcs_paramclassrepository.\uvm_component_name_check_visitor::visit .unnamed$$_0                                              0        0       69             69        0          0
+
+Assertions Failure:
+                                     ASSERTIONS                                      CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i.controller_i.IbexDontSkipExceptionReq        0        0    24188              1    12796          0
+
+Assertions Without Attempts:
+                       ASSERTIONS                       CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uvm_pkg.\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1         0        0        0              0        0          0
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1        0        0        0              0        0          0
+
+

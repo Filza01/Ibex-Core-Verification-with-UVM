@@ -19,7 +19,7 @@ PRODUCT_TIMESTAMP=product_timestamp
 # Path to runtime library
 DEPLIBS=
 VCSUCLI=/usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsucli.so
-RUNTIME=/usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsnew.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libsimprofile.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libuclinative.so $(DEPLIBS) 
+RUNTIME=/usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsnew.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libsimprofile.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libreader_common.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libBA.a /usr/synopsys/vcs-L-2016.06/linux64/lib/libuclinative.so $(DEPLIBS) 
 
 VCS_SAVE_RESTORE_OBJ=/usr/synopsys/vcs-L-2016.06/linux64/lib/vcs_save_restore_new.o
 

@@ -21,7 +21,7 @@ TB_TOP		:= verif/			#add your testbench filename here
 IRUN		:= $(shell command -v irun)
 
 BINARY		:= $(OUT_SEED_TEST)/$(ASM_TEST).bin
-ASM_TEST	:= ld_st
+ASM_TEST	:= riscv_arithmetic_basic_test_1
 
 ISA		:= rv32imcb
 MABI		:= ilp32
@@ -43,7 +43,7 @@ $(gen-dirs): %:
 	mkdir -p $@
 
 #test compilation only
-test-compile: $(gen-dirs)
+test-compile-simple: $(gen-dirs)
 ifndef RISCV_TOOLCHAIN
 	$(error "Please set environment variable RISCV_TOOLCHAIN")
 endif
@@ -51,6 +51,14 @@ endif
 	$(RISCV_GCC) -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles $(OUT_SEED_TEST)/$(ASM_TEST).S -Ttext 0x80000000 -mno-strict-align -o $(OUT_SEED_TEST)/$(ASM_TEST).o -march=rv64gc
 	$(RISCV_OBJDUMP) -D $(OUT_SEED_TEST)/$(ASM_TEST).o > $(OUT_SEED_TEST)/$(ASM_TEST).dump
 	$(RISCV_OBJCOPY) -O binary $(OUT_SEED_TEST)/$(ASM_TEST).o $(OUT_SEED_TEST)/$(ASM_TEST).bin
+
+test-compile-dv: $(gen-dirs)
+ifndef RISCV_TOOLCHAIN
+	$(error "Please set environment variable RISCV_TOOLCHAIN")
+endif
+	$(RISCV_GCC) -march=rv32gc -mabi=ilp32 -nostdlib -Tlink.ld $(ASM_TEST).S -o $(ASM_TEST).elf 
+	$(RISCV_OBJDUMP) -d $(ASM_TEST).elf &> dis.ass
+	$(RISCV_OBJCOPY) -O binary $(ASM_TEST).elf $(ASM_TEST).bin
 
 #rtl compilation only
 rtl-compile: $(gen-dirs)

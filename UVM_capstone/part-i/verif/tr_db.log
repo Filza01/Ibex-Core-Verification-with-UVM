@@ -253,3 +253,15 @@
   CREATE_STREAM @234 {NAME:seq_inst T:Transactions SCOPE:uvm_test_top.env_instance.sequencer STREAM:1146}
   CREATE_STREAM @234 {NAME:inst_mem T:Transactions SCOPE:uvm_test_top.env_instance.inst_agent.ins_seqr STREAM:1149}
   CREATE_STREAM @234 {NAME:data_mem T:Transactions SCOPE:uvm_test_top.env_instance.da_agent.data_seqr STREAM:1152}
+  CREATE_STREAM @234 {NAME:seq_inst T:Transactions SCOPE:uvm_test_top.env_instance.sequencer STREAM:1146}
+  CREATE_STREAM @234 {NAME:inst_mem T:Transactions SCOPE:uvm_test_top.env_instance.inst_agent.ins_seqr STREAM:1149}
+  CREATE_STREAM @234 {NAME:data_mem T:Transactions SCOPE:uvm_test_top.env_instance.da_agent.data_seqr STREAM:1152}
+  CREATE_STREAM @234 {NAME:seq_inst T:Transactions SCOPE:uvm_test_top.env_instance.sequencer STREAM:1146}
+  CREATE_STREAM @234 {NAME:inst_mem T:Transactions SCOPE:uvm_test_top.env_instance.inst_agent.ins_seqr STREAM:1149}
+  CREATE_STREAM @234 {NAME:data_mem T:Transactions SCOPE:uvm_test_top.env_instance.da_agent.data_seqr STREAM:1152}
+  CREATE_STREAM @234 {NAME:seq_inst T:Transactions SCOPE:uvm_test_top.env_instance.sequencer STREAM:1146}
+  CREATE_STREAM @234 {NAME:inst_mem T:Transactions SCOPE:uvm_test_top.env_instance.inst_agent.ins_seqr STREAM:1149}
+  CREATE_STREAM @234 {NAME:data_mem T:Transactions SCOPE:uvm_test_top.env_instance.da_agent.data_seqr STREAM:1152}
+  CREATE_STREAM @234 {NAME:seq_inst T:Transactions SCOPE:uvm_test_top.env_instance.sequencer STREAM:1146}
+  CREATE_STREAM @234 {NAME:inst_mem T:Transactions SCOPE:uvm_test_top.env_instance.inst_agent.ins_seqr STREAM:1149}
+  CREATE_STREAM @234 {NAME:data_mem T:Transactions SCOPE:uvm_test_top.env_instance.da_agent.data_seqr STREAM:1152}

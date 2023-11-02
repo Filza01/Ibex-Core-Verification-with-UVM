@@ -869,6 +869,6 @@ fHsCgOptMuxMClk                    	0
 fHsCgOptMuxFrc                     	0
 fHsimCongruencyConfigFile          	0
 fHsimCongruencyLogFile             	0
-fHsimCoverageEnabled               	0
-fHsimCoverageOptions               	0
-fHsimCoverageDir                   	NULL
+fHsimCoverageEnabled               	1
+fHsimCoverageOptions               	403
+fHsimCoverageDir                   	simv.vdb

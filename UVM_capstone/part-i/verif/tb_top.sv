@@ -32,6 +32,9 @@ import uvm_pkg::*;
 
 `include "/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ibex_top_tracing.sv"
 
+`include "core_ibex_fcov_if.sv"
+`include "core_ibex_fcov_bind.sv"
+
 module tb_top();
 
     wire clk, reset;

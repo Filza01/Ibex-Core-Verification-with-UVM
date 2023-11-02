@@ -1,3 +1,4 @@
+gui_exclusion -set_force true
 # Preference setting overrides
 gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
 gui_create_pref_category -category {schem_obj_name}
@@ -6,6 +7,7 @@ gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {str
 
 # State setting overrides
 gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/DVEfiles//crash_10.31-18.21/dve_session10.31-18.21.tcl}}
 gui_set_state_value -category Layout -key child_console_size_x -value 1365
 gui_set_state_value -category Layout -key child_console_size_y -value 299
 gui_set_state_value -category Layout -key child_data_size_x -value 191
@@ -65,177 +67,19 @@ gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab p
 gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_VPDCombo} -value_type string -value inter.vpd
 gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_argsCombo} -value_type string -value {{-ucligui }}
 gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value {/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif /home/user100/VM /home/user100/VM/AHB3_Lite_Interface_Verification /home/user100/VM/code_files /home/user100/VM/tb_mem}
-gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value {/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv /home/user100/VM/simv ./simv /home/user100/VM/AHB3_Lite_Interface_Verification/simv /home/user100/VM/code_files/simv}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value {/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif/simv ./simv /home/user100/VM/simv /home/user100/VM/AHB3_Lite_Interface_Verification/simv /home/user100/VM/code_files/simv}
 gui_state_default_create -off
 
 # Begin command logging
-gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
-gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
-gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
-gui_list_expand -id  Hier.1   tb_top
-gui_list_select -id Hier.1 -current_item_name tb_top.u_top -current_item_type Scope  -selected  { tb_top.u_top   }
-gui_open_window Wave
-gui_list_add -id Wave.1 -from Hier.1 { tb_top.u_top } -insertionbar
-gui_list_set_filter -id Wave.1 -type All -value 0
-gui_list_set_filter -id Wave.1 -type Input -value 1
-gui_list_set_filter -id Wave.1 -type Output -value 1
-gui_list_select -id Hier.1 -current_item_name tb_top.ins_if -current_item_type Scope  -selected  { tb_top.ins_if   }
-gui_open_window Wave
-gui_list_add -id Wave.2 -from Hier.1 { tb_top.ins_if } -insertionbar
-gui_list_select -id Hier.1 -current_item_name tb_top.dut_if -current_item_type Scope  -selected  { tb_top.dut_if   }
-gui_list_select -id Hier.1 -current_item_name tb_top.data_if -current_item_type Scope  -selected  { tb_top.data_if   }
-gui_open_window Wave
-gui_list_add -id Wave.3 -from Hier.1 { tb_top.data_if } -insertionbar
-gui_sim_continue  
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.2 1587
-gui_wv_scroll_hslidermove -id  Wave.2 0
-gui_set_env SIMSETUP::SIMCURRENTDIR /home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/verif
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 8486
-gui_wv_scroll_hslidermove -id  Wave.2 351
-gui_wv_scrollleft -id  Wave.3  page
-gui_wv_scrollleft -id  Wave.3  page
-gui_wv_scrollleft -id  Wave.3  page
-gui_wv_scroll_hslidermove -id  Wave.3 5007
-gui_list_select -id Wave.3 -selected  { {tb_top.data_if.data_wdata_o[31:0]}   }
-gui_list_set_selected_property -id Wave.3 -radix decimal
-gui_wv_scroll_hslidermove -id  Wave.3 5007
-gui_wv_scrollleft -id  Wave.3  page
-gui_wv_scrollleft -id  Wave.3  page
-gui_wv_scroll_hslidermove -id  Wave.3 0
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_software_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.test_en_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_timer_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.scan_rst_ni   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.irq_fast_i[14:0]}   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_addr_o[31:0]}   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.hart_id_i[31:0]}   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.debug_req_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.hart_id_i[31:0]}   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_nm_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.irq_external_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.rst_ni   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.alert_minor_o   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.alert_major_o   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_addr_o[31:0]}   }
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.core_sleep_o   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.clk_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after u_top {{tb_top.u_top.clk_i}}
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.ram_cfg_i   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.boot_addr_i[31:0]}   }
-gui_delete_selected -id  Wave.1
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_be_o[3:0]}   }
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_addr_o[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.instr_addr_o[31:0]}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_req_o   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.instr_req_o}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_gnt_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_req_o {{tb_top.u_top.instr_gnt_i}} 
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.instr_rdata_i[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_addr_o[31:0]} {{tb_top.u_top.instr_rdata_i[31:0]}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_rvalid_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_addr_o[31:0]} {{tb_top.u_top.instr_rvalid_i}} 
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_rdata_i[31:0]} {{tb_top.u_top.instr_rvalid_i}} 
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_gnt_i {{tb_top.u_top.instr_rvalid_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.fetch_enable_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.fetch_enable_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.rst_ni   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.clk_i {{tb_top.u_top.rst_ni}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.instr_err_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.instr_rvalid_i {{tb_top.u_top.instr_err_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_req_o   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_top.u_top.instr_rdata_i[31:0]} {{tb_top.u_top.data_req_o}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_gnt_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_req_o {{tb_top.u_top.data_gnt_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_rvalid_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_gnt_i {{tb_top.u_top.data_rvalid_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_err_i   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_rvalid_i {{tb_top.u_top.data_err_i}} 
-gui_list_select -id Wave.1 -selected  { tb_top.u_top.data_we_o   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_top.u_top.data_err_i {{tb_top.u_top.data_we_o}} 
-gui_list_select -id Wave.1 -selected  { {New Group}   }
-gui_zoom -window Wave.1 -factor 0.5
-gui_wv_scroll_hslidermove -id  Wave.1 230
-gui_marker_move -id  Wave.1 C1 224
-gui_marker_select -id  Wave.1 { C1 }
-gui_marker_move -id  Wave.1 C1 244
-gui_marker_move -id  Wave.1 C1 264
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_sim_stop 
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_list_select -id Wave.1 -selected  { {tb_top.u_top.data_wdata_o[31:0]}   }
-gui_list_set_selected_property -id Wave.1 -radix decimal
-gui_wv_scroll_hslidermove -id  Wave.1 221
-gui_wv_scroll_hslidermove -id  Wave.1 2565
-gui_marker_move -id  Wave.1 C1 1804
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_marker_move -id  Wave.1 C1 5436
-gui_wv_scroll_hslidermove -id  Wave.1 6782
-gui_marker_move -id  Wave.1 C1 4664
-gui_marker_move -id  Wave.1 C1 4684
-gui_marker_move -id  Wave.1 C1 4842
-gui_wv_scroll_hslidermove -id  Wave.1 7244
-gui_marker_move -id  Wave.1 C1 4966
-gui_wv_scroll_hslidermove -id  Wave.1 3502
-gui_wv_scroll_hslidermove -id  Wave.1 883
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 1676
-gui_sim_restart -build {vcs -lca -debug_access+all -sverilog -timescale=1ns/1ns -ntb_opts uvm-1.2 +incdir+/home/user100/VM/Ibex-Core-Verification-with-UVM/UVM_capstone/part-i/rtl/ tb_top.sv 
-}
-gui_sim_continue  
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 4447
+gui_open_cov -hier simv.vdb/ -testdir {} -test {simv/test} -merge MergedTest
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top
+gui_list_collapse -id  CoverageTable.1   -list {covtblInstancesList} tb_top
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top.u_ibex_top
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top.u_ibex_top.core_clock_gate_i
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top.u_ibex_top.u_ibex_core
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top.u_ibex_top.u_ibex_core.if_stage_i
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top.u_ibex_top.u_ibex_core.id_stage_i
+gui_list_expand -id  CoverageTable.1   -list {covtblInstancesList} tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i
+gui_list_select -id CoverageTable.1 -list covtblInstancesList { tb_top.u_top.u_ibex_top.u_ibex_core.ex_block_i.alu_i   }

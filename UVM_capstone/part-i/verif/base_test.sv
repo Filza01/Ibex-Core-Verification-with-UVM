@@ -56,7 +56,7 @@ class base_test extends uvm_test;
         phase.raise_objection(this);
         `uvm_info(get_name(), "<run_phase> started, objection raised.", UVM_NONE)
 
-        load_bin_to_mem("test_cases/mix_test.bin");
+        load_bin_to_mem("test_cases/riscv_arithmetic_basic_test_1.bin");
 
         $display("back from load_bin_to_mem to run_phase");
 
@@ -116,9 +116,9 @@ class base_test extends uvm_test;
             break; 
         end
         else begin
-            // ins_if.clk_pos(1); // waiting for change in driver inputs req_o and addr_o
+            // ins_if.clk_pos(1); 
             // clk_if.wait_clks(1);
-            @(ins_if.cb_driver);
+            @(ins_if.cb_driver); // waiting for change in driver inputs req_o and addr_o
         end
     end
     endtask
