@@ -26,7 +26,7 @@ class ins_monitor extends uvm_monitor;
         forever begin
             `uvm_info(get_full_name,"Instruction monitor class started", UVM_NONE)
             ins_inst = ins_mem_seq_item::type_id::create("ins_inst",this);
-            ins_if.clk_pos(4);
+            ins_if.clk_pos(3);
             ins_inst.instr_req_o = `MON_IF.instr_req_o;
             ins_inst.instr_addr_o = `MON_IF.instr_addr_o;
             ins_port_item.write(ins_inst);

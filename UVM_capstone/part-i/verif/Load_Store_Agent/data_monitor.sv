@@ -26,7 +26,7 @@ class data_monitor extends uvm_monitor;
         forever begin
             `uvm_info(get_full_name,"Data monitor class started", UVM_NONE)
             data_inst = data_mem_seq_item::type_id::create("data_inst",this);
-            data_if.clk_pos(4);
+            data_if.clk_pos(3);
             data_inst.data_req_o = `MON_IF.data_req_o;
             data_inst.data_we_o = `MON_IF.data_we_o;
             data_inst.data_be_o = `MON_IF.data_be_o;
