@@ -1,2 +1,4 @@
 # Ibex-Core-Verification-with-UVM
 Creating a UVM based verification environment for the verification of the Ibex core. Ibex is an open-source 32-bit RISC-V CPU core developed in SystemVerilog. This CPU core is highly customizable and ideal for use in embedded control systems. The goal of this project is to create a UVM based verification environment of the Ibex core. Instructions are loaded into memory through a binary file and the core simulation is started. The test ends when the ECALL instruction is detected. A trace log is generated which indicates the executed instructions. Also, a result log is generated at the end from which the execution of the verification environment can be tracked
+
+![uvm_capstone_diag](https://github.com/Filza01/Ibex-Core-Verification-with-UVM/assets/140054781/bd22a393-bcc6-436e-b634-62a9b99fdef4)
